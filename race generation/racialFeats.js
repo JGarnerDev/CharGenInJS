@@ -67,20 +67,86 @@ const stonecunning = {
   desc:
     "Whenever you make an Intelligence (History) check related to the Origin of stonework, you are considered proficient in the History skill and add double your Proficiency Bonus to the check, instead of your normal Proficiency Bonus."
 };
-const QQQ = {
-  name: "",
-  desc: ""
+const keenSenses = {
+  name: "Keen Senses",
+  desc: "You have proficiency in the Perception skill."
 };
+const feyAncestry = {
+  name: "Fey Ancestry",
+  desc:
+    "You have advantage on Saving Throws against being Charmed, and magic can’t put you to sleep."
+};
+const trance = {
+  name: "Trance",
+  desc:
+    "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After Resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+};
+const gnomeCunning = {
+  name: "Gnome Cunning",
+  desc:
+    "You have advantage on all Intelligence, Wisdom, and Charisma Saving Throws against magic."
+};
+
+const relentlessEndurace = {
+  name: "Relentless Endurace",
+  desc:
+    "When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a Long Rest."
+};
+const savageAttacks = {
+  name: "Savage Attacks",
+  desc:
+    "When you score a critical hit with a melee weapon Attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit."
+};
+
+const lucky = {
+  name: "Lucky",
+  desc:
+    "When you roll a 1 on The D20 for an Attack roll, ability check, or saving throw, you can reroll the die and must use the new roll."
+};
+
+const brave = {
+  name: "Brave",
+  desc: "You have advantage on Saving Throws against being Frightened."
+};
+
+const halflingNimbleness = {
+  name: "Halfling Nimbleness",
+  desc:
+    "You can move through the space of any creature that is of a size larger than yours."
+};
+
+const hellishResistance = {
+    name: "Hellish Resistance",
+    desc: "You have Resistance to fire damage."
+}
+
+const infernalLegacy = {
+    name: "Infernal Legacy",
+    desc: "You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a Long Rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a Long Rest. Charisma is your Spellcasting Ability for these Spells."
+}
 
 /////////////////
 
-const racialFeats = [
-  breathWeapon,
-  darkvision,
-  draconicAncestry,
-  draconicDamageResistance,
-  dwarvenResilience,
-  dwarvenCombatTraining,
-  toolProficiency,
-  stonecunning
-];
+const racialFeats = {
+  breathWeapon: breathWeapon,
+  darkvision: darkvision,
+  draconicAncestry: draconicAncestry,
+  draconicDamageResistance: draconicDamageResistance,
+  dwarvenResilience: dwarvenResilience,
+  dwarvenCombatTraining: dwarvenCombatTraining,
+  toolProficiency: toolProficiency,
+  stonecunning: stonecunning,
+  keenSenses: keenSenses,
+  feyAncestry: feyAncestry,
+  trance: trance,
+  gnomeCunning: gnomeCunning,
+  feyAncestry: feyAncestry,
+  relentlessEndurace: relentlessEndurace,
+  savageAttacks: savageAttacks,
+  lucky: lucky,
+  brave: brave,
+  halflingNimbleness: halflingNimbleness,
+  hellishResistance: hellishResistance
+};
+
+module.exports = racialFeats
