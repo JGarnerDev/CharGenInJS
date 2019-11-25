@@ -9,7 +9,7 @@ const classes = require("../class generation/classesMain");
 let races = require("../race generation/racesMain");
 races = races[0];
 
-let stats = statsRoll();
+let stats = statsRoll(3);
 
 let clss = classes[Math.floor(Math.random() * classes.length)];
 
@@ -22,8 +22,8 @@ let character = { stats, clss, race };
 
 
 
-console.log("STATS: ", character.stats.join(" "));
-console.log("CLASS: ", Object.values(character.clss).join(" / "));
-console.log("RACE: ", character.race.race + " (" + character.race.subrace.name + ")");
+// console.log("STATS: ", character.stats.join(" "));
+// console.log("CLASS: ", Object.values(character.clss).join(" / "));
+// console.log("RACE: ", character.race.race + " (" + character.race.subrace.name + ")");
 
-// console.log(character.stats.toString(), character.clss, character.race);
+console.log(Object.values(character.clss).toString());

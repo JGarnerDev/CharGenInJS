@@ -127,7 +127,7 @@ const infernalLegacy = {
 
 /////////////////
 
-const racialFeats = {
+const racialFeatures = {
   breathWeapon: breathWeapon,
   darkvision: darkvision,
   draconicAncestry: draconicAncestry,
@@ -151,4 +151,4 @@ const racialFeats = {
   infernalLegacy: infernalLegacy
 };
 
-module.exports = racialFeats
+module.exports = racialFeatures
