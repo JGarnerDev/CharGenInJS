@@ -134,6 +134,7 @@ const racialFeats = {
   draconicDamageResistance: draconicDamageResistance,
   dwarvenResilience: dwarvenResilience,
   dwarvenCombatTraining: dwarvenCombatTraining,
+  hvyArmrSpeed: hvyArmrSpeed,
   toolProficiency: toolProficiency,
   stonecunning: stonecunning,
   keenSenses: keenSenses,
@@ -146,7 +147,8 @@ const racialFeats = {
   lucky: lucky,
   brave: brave,
   halflingNimbleness: halflingNimbleness,
-  hellishResistance: hellishResistance
+  hellishResistance: hellishResistance,
+  infernalLegacy: infernalLegacy
 };
 
 module.exports = racialFeats

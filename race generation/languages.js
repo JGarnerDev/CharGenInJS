@@ -55,6 +55,7 @@ const languages = {
   draconic: draconic,
   dwarvish: dwarvish,
   elvish: elvish,
+  orc: orc,
   gnomish: gnomish,
   halfling: halfling,
   infernal: infernal,

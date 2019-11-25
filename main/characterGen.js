@@ -16,6 +16,7 @@ let clss = classes[Math.floor(Math.random() * classes.length)];
 let race = races[Math.floor(Math.random() * races.length)];
 
 race.subrace = race.subraces[Math.floor(Math.random() * race.subraces.length)];
+if (race.subrace === undefined){race.subrace = { name: "Standard" }}
 
 let character = { stats, clss, race };
 
@@ -23,6 +24,6 @@ let character = { stats, clss, race };
 
 console.log("STATS: ", character.stats.join(" "));
 console.log("CLASS: ", Object.values(character.clss).join(" / "));
-console.log("RACE: ", character.race.race, character.race.subrace);
+console.log("RACE: ", character.race.race + " (" + character.race.subrace.name + ")");
 
 // console.log(character.stats.toString(), character.clss, character.race);
