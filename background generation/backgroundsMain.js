@@ -1,9 +1,14 @@
+let skillProficiency = require("../skills generation/skillsMain");
+let toolProficiency = require("../skills generation/toolProficiency");
+let languages = require("../race generation/languages");
+let equipment = require("../equipment generation/equipmentMain");
+
 const acolyte = {
   name: "Acolyte",
   details:
     "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power. Choose a god, a pantheon of gods, or some other quasi-divine being, and work with your DM to detail the nature of your religious service. The Gods of the Multiverse section contains a sample pantheon, from the Forgotten Realms setting. Were you a lesser functionary in a temple, raised from childhood to assist the priests in the sacred rites? Or were you a high priest who suddenly experienced a call to serve your god in a different way? Perhaps you were the leader of a small cult outside of any established temple structure, or even an occult group that served a fiendish master that you now deny.",
   skillProficiencies: [skillProficiency.insight, skillProficiency.religion],
-  toolProficiencies: undefined,
+  toolProficiencies: [],
   languages: [languages.any2Lang],
   equipment: [
     equipment.holySymbol,
@@ -11,7 +16,7 @@ const acolyte = {
     equipment.stickOfIncense,
     equipment.vestments,
     equipment.commonClothes,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: {
     "Shelter of the Faithful":
@@ -72,12 +77,12 @@ const charlatan = {
     skillProficiency.sleightOfHand
   ],
   toolProficiencies: [toolProficiency.disguiseKit, toolProficiency.forgeryKit],
-  languages: undefined,
+  languages: [],
   equipment: [
     equipment.fineClothes,
     equipment.disguiseKit,
     equipment.charlatanChoice,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: {
     "False Identity":
@@ -145,11 +150,11 @@ const criminal = {
     "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.",
   skillProficiencies: [skillProficiency.deception, skillProficiency.stealth],
   toolProficiencies: [toolProficiency.gamingSet, toolProficiency.thievesTools],
-  languages: undefined,
+  languages: [],
   equipment: [
     equipment.crowbar,
     equipment.darkCommonClothes,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: {
     "Criminal Contact":
@@ -228,12 +233,12 @@ const gladiator = {
     toolProficiency.disguiseKit,
     toolProficiency.musicalInstrument
   ],
-  languages: undefined,
+  languages: [],
   equipment: [
     equipment.exoticWeapon,
     equipment.entertainerOption,
     equipment.costume,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: {
     "By Popular Demand":
@@ -311,12 +316,12 @@ const entertainer = {
     toolProficiency.disguiseKit,
     toolProficiency.musicalInstrument
   ],
-  languages: undefined,
+  languages: [],
   equipment: [
     equipment.musicalInstrument,
     equipment.entertainerOption,
     equipment.costume,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: {
     "By Popular Demand":
@@ -394,13 +399,13 @@ const folkHero = {
     toolProficiency.artisansTools,
     toolProficiency.vehiclesLand
   ],
-  languages: undefined,
+  languages: [],
   equipment: [
     equipment.artisansTools,
     equipment.shovel,
     equipment.ironPot,
     equipment.commonClothes,
-    { 10: equipment.gold }
+    equipment.currency.gold(10)
   ],
   feature: {
     "Rustic Hospitality":
@@ -426,7 +431,7 @@ const folkHero = {
         "Freedom. Tyrants must not be allowed to oppress the people. (Chaotic)",
         "Might. If I become strong, I can take what I want—what I deserve. (Evil)",
         "Sincerity. There’s no good in pretending to be something I’m not. (Neutral)",
-        "	Destiny. Nothing and no one can steer me away from my higher calling. (Any)"
+        "Destiny. Nothing and no one can steer me away from my higher calling. (Any)"
       ]
     },
     {
@@ -478,7 +483,7 @@ const guildArtisan = {
     equipment.artisansTools,
     equipment.letterFromGuild,
     equipment.travelersClothes,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: [
     "Guild Membership",
@@ -571,7 +576,7 @@ const guildMerchant = {
     { pick: [equipment.artisansTools, equipment.muleAndCart] },
     equipment.letterFromGuild,
     equipment.travelersClothes,
-    equipment.gold(15)
+    equipment.currency.gold(15)
   ],
   feature: [
     "Guild Membership",
@@ -632,336 +637,669 @@ const guildMerchant = {
 };
 const hermit = {
   name: "Hermit",
-  details: undefined,
+  details:
+    "You lived in seclusion – either in a sheltered community such as a monastery, or entirely alone – for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.",
   skillProficiencies: [skillProficiency.medicine, skillProficiency.religion],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { Discovery: undefined },
+  toolProficiencies: [toolProficiency.herbalismKit],
+  languages: [languages.any1Lang],
+  equipment: [
+    equipment.hermitScrollCase,
+    equipment.winterBlanket,
+    equipment.commonClothes,
+    equipment.herbalismKit,
+    equipment.currency.gold(5)
+  ],
+  feature: {
+    Discovery:
+      "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who or consigned you to exile, and hence the reason for your return to society. Work with your DM to determine the details of your discovery and its impact on the campaign."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "I've been isolated for so long that I rarely speak, preferring gestures and the occasional grunt.",
+        "I am utterly serene, even in the face of disaster.",
+        "The leader of my community had something wise to say on every topic, and I am eager to share that wisdom.",
+        "I feel tremendous empathy for all who suffer.",
+        "I'm oblivious to etiquette and social expectations.",
+        "I connect everything that happens to me to a grand, cosmic plan.",
+        "I often get lost in my own thoughts and contemplation, becoming oblivious to my surroundings.",
+        "I am working on a grand philosophical theory and love sharing my ideas."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Greater Good. My gifts are meant to be shared with all, not used for my own benefit. (Good)",
+        "Logic. Emotions must not cloud our sense of what is right and true, or our logical thinking. (Lawful)",
+        "Free Thinking. Inquiry and curiosity are the pillars of progress. (Chaotic)",
+        "Power. Solitude and contemplation are paths toward mystical or magical power. (Evil)",
+        "Live and Let Live. Meddling in the affairs of others only causes trouble. (Neutral)",
+        "Self-Knowledge. If you know yourself, there's nothing left to know. (Any)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "Nothing is more important than the other members of my hermitage, order, or association.",
+        "I entered seclusion to hide from the ones who might still be hunting me. I must someday confront them.",
+        "I'm still seeking the enlightenment I pursued in my seclusion, and it still eludes me.",
+        "I entered seclusion because I loved someone I could not have.",
+        "Should my discovery come to light, it could bring ruin to the world.",
+        "My isolation gave me great insight into a great evil that only I can destroy."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
+      flaw: [
+        "Now that I've returned to the world, I enjoy its delights a little too much.",
+        "I harbor dark, bloodthirsty thoughts that my isolation and meditation failed to quell.",
+        "I am dogmatic in my thoughts and philosophy.",
+        "I let my need to win arguments overshadow friendships and harmony.",
+        "I'd risk too much to uncover a lost bit of knowledge.",
+        "I like keeping secrets and won't share them with anyone."
+      ]
     },
-    { "": ["", "", "", "", "", ""] }
+    {
+      "Life of Seclusion: What was the reason for your isolation, and what changed to allow you to end your solitude? You can work with your DM to determine the exact nature of your seclusion, or you can choose to roll on the table below to determine the reason behind your seclusion.": [
+        "I was searching for spiritual enlightenment.",
+        "I was partaking of communal living in accordance with the dictates of a religious order.",
+        "I was exiled for a crime I didn't commit.",
+        "I retreated from society after a life-altering event.",
+        "I needed a quiet place to work on my art, literature, music, or manifesto.",
+        "I needed to commune with nature, far from civilization.",
+        "I was the caretaker of an ancient ruin or relic.",
+        "I was a pilgrim in search of a person, place, or relic of spiritual significance."
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: undefined
 };
 
 const knight = {
   name: "Knight",
-  details: undefined,
+  details:
+    "A knighthood is among the lowest noble titles in most societies, but it can be a path to higher status. One of your commoner retainers is replaced by a noble who serves as your squire, aiding you in exchange for training on his or her own path to knighthood. Your two remaining retainers might include a groom to care for your horse and a servant who polishes your armor (and even helps you put it on). As an emblem of chivalry and the ideals of courtly love, you might include among your equipment a banner or other token from a noble lord or lady to whom you have given your heart — in a chaste sort of devotion. This person could be your bond.",
   skillProficiencies: [skillProficiency.history, skillProficiency.persuasion],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { Retainers: undefined },
+  toolProficiencies: [toolProficiency.gamingSet],
+  languages: [languages.any1Lang],
+  equipment: [
+    { pick: [equipment.banner, equipment.tokenOfNoble] },
+    equipment.fineClothes,
+    equipment.signetRing,
+    equipment.scrollOfPidigree,
+    equipment.currency.gold(25)
+  ],
+  feature: {
+    Retainers:
+      "You have the service of three retainers loyal to your family. These retainers can be attendants or messengers, and one might be a majordomo. Your retainers are commoners who can perform mundane tasks for you, but they do not fight for you, will not follow you into obviously dangerous areas (such as dungeons), and will leave if they are frequently endangered or abused."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
+        "The common folk love me for my kindness and generosity.",
+        "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses.",
+        "I take great pains to always look my best and follow the latest fashions.",
+        "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations.",
+        "Despite my noble birth, I do not place myself above other folk. We all have the same blood.",
+        "My favor, once lost, is lost forever.",
+        "If you do me an injury, I will crush you, ruin your name, and salt your fields."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
+        "Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",
+        "Independence. I must prove that I can handle myself without the coddling of my family. (Chaotic)",
+        "Power. If I can attain more power, no one will tell me what to do. (Evil)",
+        "Family. Blood runs thicker than water. (Any)",
+        "Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "I will face any challenge to win the approval of my family.",
+        "My house’s alliance with another noble family must be sustained at all costs.",
+        "Nothing is more important than the other members of my family.",
+        "I am in love with the heir of a family that my family despises.",
+        "My loyalty to my sovereign is unwavering.",
+        "The common folk must see me as a hero of the people."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    { "": ["", "", "", "", "", ""] }
+      flaw: [
+        "I secretly believe that everyone is beneath me.",
+        "I hide a truly scandalous secret that could ruin my family forever.",
+        "I too often hear veiled insults and threats in every word addressed to me, and I’m quick to anger.",
+        "I have an insatiable desire for carnal pleasures.",
+        "In fact, the world does revolve around me.",
+        "By my words and actions, I often bring shame to my family."
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: "noble"
 };
 const noble = {
   name: "Noble",
-  details: undefined,
+  details:
+    "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them. Work with your DM to come up with an appropriate title and determine how much authority that title carries. A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you. Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them? What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family? Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family? These details help establish your family and your title as features of the world of the campaign.",
   skillProficiencies: [skillProficiency.history, skillProficiency.persuasion],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { "Position of Privilege": undefined },
+  toolProficiencies: [toolProficiency.gamingSet],
+  languages: [languages.any1Lang],
+  equipment: [
+    equipment.fineClothes,
+    equipment.signetRing,
+    equipment.scrollOfPidigree,
+    equipment.currency.gold(25)
+  ],
+  feature: {
+    "Position of Privilege":
+      "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
+        "The common folk love me for my kindness and generosity.",
+        "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses.",
+        "I take great pains to always look my best and follow the latest fashions.",
+        "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations.",
+        "Despite my noble birth, I do not place myself above other folk. We all have the same blood.",
+        "My favor, once lost, is lost forever.",
+        "If you do me an injury, I will crush you, ruin your name, and salt your fields."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Respect. Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
+        "Responsibility. It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",
+        "Independence. I must prove that I can handle myself without the coddling of my family. (Chaotic)",
+        "Power. If I can attain more power, no one will tell me what to do. (Evil)",
+        "Family. Blood runs thicker than water. (Any)",
+        "Noble Obligation. It is my duty to protect and care for the people beneath me. (Good)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "I will face any challenge to win the approval of my family.",
+        "My house’s alliance with another noble family must be sustained at all costs.",
+        "Nothing is more important than the other members of my family.",
+        "I am in love with the heir of a family that my family despises.",
+        "My loyalty to my sovereign is unwavering.",
+        "The common folk must see me as a hero of the people."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    { "": ["", "", "", "", "", ""] }
+      flaw: [
+        "I secretly believe that everyone is beneath me.",
+        "I hide a truly scandalous secret that could ruin my family forever.",
+        "I too often hear veiled insults and threats in every word addressed to me, and I’m quick to anger.",
+        "I have an insatiable desire for carnal pleasures.",
+        "In fact, the world does revolve around me.",
+        "By my words and actions, I often bring shame to my family."
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: "knight"
 };
 const outlander = {
   name: "Outlander",
-  details: undefined,
+  details:
+    "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don't know the specific features of the terrain, you know the ways of the wild.",
   skillProficiencies: [skillProficiency.athletics, skillProficiency.survival],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { Wanderer: undefined },
+  toolProficiencies: [toolProficiency.musicalInstrument],
+  languages: [languages.any1Lang],
+  equipment: [
+    equipment.staff,
+    equipment.huntingTrap,
+    equipment.animalTrophy,
+    equipment.travelersClothes,
+    equipment.currency.gold(10)
+  ],
+  feature: {
+    Wanderer:
+      "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "I'm driven by a wanderlust that led me away from home.",
+        "I watch over my friends as if they were a litter of newborn pups.",
+        "I once ran twenty-five miles without stopping to warn my clan of an approaching orc horde. I'd do it again if I had to.",
+        "I have a lesson for every situation, drawn from observing nature.",
+        "I place no stock in wealthy or well-mannered folk. Money and manners won't save you from a hungry owlbear.",
+        "I'm always picking things up, absently fiddling with them, and sometimes accidentally breaking them.",
+        "I feel far more comfortable around animals than people.",
+        "I was, in fact, raised by wolves."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Change. Life is like the seasons, in constant change, and we must change with it. (Chaotic)",
+        "Greater Good. It is each person's responsibility to make the most happiness for the whole tribe. (Good)",
+        "Honor. If I dishonor myself, I dishonor my whole clan. (Lawful)",
+        "Might. The strongest are meant to rule. (Evil)",
+        "Nature. The natural world is more important than all the constructs of civilization. (Neutral)",
+        "Glory. I must earn glory in battle, for myself and my clan. (Any)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "My family, clan, or tribe is the most important thing in my life, even when they are far from me.",
+        "An injury to the unspoiled wilderness of my home is an injury to me.",
+        "I will bring terrible wrath down on the evildoers who destroyed my homeland.",
+        "I am the last of my tribe, and it is up to me to ensure their names enter legend.",
+        "I suffer awful visions of a coming disaster and will do anything to prevent it.",
+        "It is my duty to provide children to sustain my tribe."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
+      flaw: [
+        "I am too enamored of ale, wine, and other intoxicants.",
+        "There's no room for caution in a life lived to the fullest.",
+        "I remember every insult I've received and nurse a silent resentment toward anyone who's ever wronged me.",
+        "I am slow to trust members of other races, tribes, and societies.",
+        "Violence is my answer to almost any challenge.",
+        "Don't expect me to save those who can't save themselves. It is nature's way that the strong thrive and the weak perish."
+      ]
     },
-    { "": ["", "", "", "", "", ""] }
+    {
+      "Origin: You've been to strange places and seen things that others cannot begin to fathom. Consider some of the distant lands you have visited, and how they impacted you. You can roll on the following table to determine your occupation during your time in the wild, or choose one that best fits your character.": [
+        "Forester",
+        "Trapper",
+        "Homesteader",
+        "Guide",
+        "Exile or outcast",
+        "Bounty hunter",
+        "Pilgrim",
+        "Tribal nomad",
+        "Hunter-gatherer",
+        "Tribal marauder"
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: undefined
+};
+
+const sage = {
+  name: "Sage",
+  details:
+    "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.",
+  skillProficiencies: [skillProficiency.arcana, skillProficiency.history],
+  toolProficiencies: [],
+  languages: [languages.any2Lang],
+  equipment: [
+    equipment.blackInk,
+    equipment.quill,
+    equipment.smallKnife,
+    equipment.letterFromDeadColleague,
+    equipment.commonClothes,
+    equipment.currency.gold(10)
+  ],
+  feature: {
+    Researcher:
+      "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an aDventure or even a whole campaign."
+  },
+  suggestedCharacteristics: [
+    {
+      personalityTrait: [
+        "I use polysyllabic words that convey the impression of great erudition.",
+        "I've read every book in the world's greatest libraries – or I like to boast that I have.",
+        "I'm used to helping out those who aren't as smart as I am, and I patiently explain anything and everything to others.",
+        "There's nothing I like more than a good mystery.",
+        "I'm willing to listen to every side of an argument before I make my own judgment.",
+        "I… speak… slowly… when talking… to idiots,… which… almost… everyone… is… compared… to me.",
+        "I am horribly, horribly awkward in social situations.",
+        "I'm convinced that people are always trying to steal my secrets."
+      ]
+    },
+    {
+      ideal: [
+        "Knowledge. The path to power and self-improvement is through knowledge. (Neutral)",
+        "Beauty. What is beautiful points us beyond itself toward what is true. (Good)",
+        "Logic. Emotions must not cloud our logical thinking. (Lawful)",
+        "No Limits. Nothing should fetter the infinite possibility inherent in all existence. (Chaotic)",
+        "Power. Knowledge is the path to power and domination. (Evil)",
+        "Self-Improvement. The goal of a life of study is the betterment of oneself. (Any)"
+      ]
+    },
+    {
+      bond: [
+        "It is my duty to protect my students.",
+        "I have an ancient text that holds terrible secrets that must not fall into the wrong hands.",
+        "I work to preserve a library, university, scriptorium, or monastery.",
+        "My life's work is a series of tomes related to a specific field of lore.",
+        "I've been searching my whole life for the answer to a certain question.",
+        "I sold my soul for knowledge. I hope to do great deeds and win it back."
+      ]
+    },
+    {
+      flaw: [
+        "I am easily distracted by the promise of information.",
+        "Most people scream and run when they see a demon. I stop and take notes on its anatomy.",
+        "Unlocking an ancient mystery is worth the price of a civilization.",
+        "I overlook obvious solutions in favor of complicated ones.",
+        "I speak without really thinking through my words, invariably insulting others.",
+        "I can't keep a secret to save my life, or anyone else's."
+      ]
+    },
+    {
+      "Specialty: To determine the nature of your scholarly training, choose one of the following options.": [
+        "Alchemist",
+        "Astronomer",
+        "Discredited academic",
+        "Librarian",
+        "Professor",
+        "Researcher",
+        "Wizard's apprentice",
+        "Scribe"
+      ]
+    }
+  ],
+  variant: undefined
 };
 const pirate = {
   name: "Pirate",
-  details: undefined,
+  details:
+    "You spent your youth under the sway of a dread pirate, a ruthless cutthroat who taught you how to survive in a world of sharks and savages. You've indulged in larceny on the high seas and sent more than one deserving soul to a briny grave. Fear and bloodshed are no strangers to you, and you've garnered a somewhat unsavory reputation in many a port town.",
   skillProficiencies: [skillProficiency.athletics, skillProficiency.perception],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { "Bad Reputation": undefined },
+  toolProficiencies: [
+    toolProficiency.navigatorsTools,
+    toolProficiency.vehiclesWater
+  ],
+  languages: [],
+  equipment: [
+    { pick: [equipment.luckyCharm, equipment.trinket] },
+    equipment.balayingPin,
+    equipment.silkRope,
+    equipment.luckyCharm,
+    equipment.commonClothes,
+    equipment.currency.gold(10)
+  ],
+  feature: {
+    "Bad Reputation":
+      "No matter where you go, people are afraid of you due to your reputation. When you are in a civilized settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "My friends know they can rely on me, no matter what.",
+        "I work hard so that I can play hard when the work is done.",
+        "I enjoy sailing into new ports and making new friends over a flagon of ale.",
+        "I stretch the truth for the sake of a good story.",
+        "To me, a tavern brawl is a nice way to get to know a new city.",
+        "I never pass up a friendly wager.",
+        "My language is as foul as an otyugh nest.",
+        "I like a job well done, especially if I can convince someone else to do it."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    { "": ["", "", "", "", "", ""] }
-  ],
-  variant: { undefined: undefined }
-};
-const sage = {
-  name: "Sage",
-  details: undefined,
-  skillProficiencies: [skillProficiency.arcana, skillProficiency.history],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { Researcher: undefined },
-  suggestedCharacteristics: [
-    {
-      personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+      ideal: [
+        "Respect. The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
+        "Fairness. We all do the work, so we all share in the rewards. (Lawful)",
+        "Freedom. The sea is freedom-the freedom to go anywhere and do anything. (Chaotic)",
+        "Mastery. I'm a predator, and the other ships on the sea are my prey. (Evil)",
+        "People. I'm committed to my crewmates, not to ideals. (Neutral)",
+        "Aspiration. Someday I'll own my own ship and chart my own destiny. (Any)"
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "I'm loyal to my captain first, everything else second.",
+        "The ship is most important – crewmates and captains come and go.",
+        "I'll always remember my first ship.",
+        "In a harbor town, I have a paramour whose eyes nearly stole me from the sea.",
+        "I was cheated out of my fair share of the profits, and I want to get my due.",
+        "Ruthless pirates murdered my captain and crewmates, plundered our ship, and left me to die. Vengeance will be mine."
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    { "": ["", "", "", "", "", ""] }
+      flaw: [
+        "I follow orders, even if I think they're wrong.",
+        "I'll say anything to avoid having to do extra work.",
+        "Once someone questions my courage, I never back down no matter how dangerous the situation.",
+        "Once I start drinking, it's hard for me to stop.",
+        "I can't help but pocket loose coins and other trinkets I come across.",
+        "My pride will probably lead to my destruction."
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: "sailor"
 };
 const sailor = {
   name: "Sailor",
-  details: undefined,
+  details:
+    "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new. Discuss the nature of the ship you previously sailed with your DM. Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it missing and presumed lost with all hands? What were your duties on board – boatswain, captain, navigator, cook, or some other position? Who were the captain and first mate? Did you leave your ship on good terms with your fellows, or on the run?",
   skillProficiencies: [skillProficiency.athletics, skillProficiency.perception],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { "Ship's Passage": undefined },
+  toolProficiencies: [
+    toolProficiency.navigatorsTools,
+    toolProficiency.vehiclesWater
+  ],
+  languages: [],
+  equipment: [
+    { pick: [equipment.luckyCharm, equipment.trinket] },
+    equipment.balayingPin,
+    equipment.silkRope,
+    equipment.luckyCharm,
+    equipment.commonClothes,
+    equipment.currency.gold(10)
+  ],
+  feature: {
+    "Ship's Passage":
+      "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you're calling in a favor, you can't be certain of a schedule or route that will meet your every need. Your DM will determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "My friends know they can rely on me, no matter what.",
+        "I work hard so that I can play hard when the work is done.",
+        "I enjoy sailing into new ports and making new friends over a flagon of ale.",
+        "I stretch the truth for the sake of a good story.",
+        "To me, a tavern brawl is a nice way to get to know a new city.",
+        "I never pass up a friendly wager.",
+        "My language is as foul as an otyugh nest.",
+        "I like a job well done, especially if I can convince someone else to do it."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Respect. The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
+        "Fairness. We all do the work, so we all share in the rewards. (Lawful)",
+        "Freedom. The sea is freedom-the freedom to go anywhere and do anything. (Chaotic)",
+        "Mastery. I'm a predator, and the other ships on the sea are my prey. (Evil)",
+        "People. I'm committed to my crewmates, not to ideals. (Neutral)",
+        "Aspiration. Someday I'll own my own ship and chart my own destiny. (Any)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "I'm loyal to my captain first, everything else second.",
+        "The ship is most important – crewmates and captains come and go.",
+        "I'll always remember my first ship.",
+        "In a harbor town, I have a paramour whose eyes nearly stole me from the sea.",
+        "I was cheated out of my fair share of the profits, and I want to get my due.",
+        "Ruthless pirates murdered my captain and crewmates, plundered our ship, and left me to die. Vengeance will be mine."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    { "": ["", "", "", "", "", ""] }
+      flaw: [
+        "I follow orders, even if I think they're wrong.",
+        "I'll say anything to avoid having to do extra work.",
+        "Once someone questions my courage, I never back down no matter how dangerous the situation.",
+        "Once I start drinking, it's hard for me to stop.",
+        "I can't help but pocket loose coins and other trinkets I come across.",
+        "My pride will probably lead to my destruction."
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: "pirate"
 };
 const soldier = {
   name: "Soldier",
-  details: undefined,
+  details:
+    "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war. When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company.",
   skillProficiencies: [
     skillProficiency.athletics,
     skillProficiency.intimidation
   ],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { "Military Rank": undefined },
+  toolProficiencies: [toolProficiency.gamingSet, toolProficiency.vehiclesLand],
+  languages: [],
+  equipment: [
+    { pick: [equipment.setOfDice, equipment.deckOfCards] },
+    equipment.insigniaOfRank,
+    equipment.enemyTrophy,
+    equipment.commonClothes,
+    equipment.currency.gold(10)
+  ],
+  feature: {
+    "Military Rank":
+      "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "I’m always polite and respectful.",
+        "I’m haunted by memories of war. I can’t get the images of violence out of my mind.",
+        "I’ve lost too many friends, and I’m slow to make new ones.",
+        "I’m full of inspiring and cautionary tales from my military experience relevant to almost every combat situation.",
+        "I can stare down a hell hound without flinching.",
+        "I enjoy being strong and like breaking things.",
+        "I have a crude sense of humor.",
+        "I face problems head-on. A simple, direct solution is the best path to success."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Greater Good. Our lot is to lay down our lives in defense of others. (Good)",
+        "Responsibility. I do what I must and obey just authority. (Lawful)",
+        "Independence. When people follow orders blindly, they embrace a kind of tyranny. (Chaotic)",
+        "Might. In life as in war, the stronger force wins. (Evil)",
+        "Live and Let Live. Ideals aren’t worth killing over or going to war for. (Neutral)",
+        "Nation. My city, nation, or people are all that matter. (Any)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "I would still lay down my life for the people I served with.",
+        "Someone saved my life on the battlefield. To this day, I will never leave a friend behind.",
+        "My honor is my life.",
+        "I’ll never forget the crushing defeat my company suffered or the enemies who dealt it.",
+        "Those who fight beside me are those worth dying for.",
+        "I fight for those who cannot fight for themselves."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
+      flaw: [
+        "The monstrous enemy we faced in battle still leaves me quivering with fear.",
+        "I have little respect for anyone who is not a proven warrior.",
+        "I made a terrible mistake in battle that cost many lives—and I would do anything to keep that mistake secret.",
+        "My hatred of my enemies is blind and unreasoning.",
+        "I obey the law, even if the law causes misery.",
+        "I’d rather eat my armor than admit when I’m wrong."
+      ]
     },
-    { "": ["", "", "", "", "", ""] }
+    {
+      "Specialty: During your time as a soldier, you had a specific role to play in your unit or army. Roll a d8 or choose from the options in the table below to determine your role:": [
+        "Officer",
+        "Scout",
+        "Infantry",
+        "Cavalry",
+        "Healer",
+        "Quartermaster",
+        "Standard bearer",
+        "Support staff (cook, blacksmith, or the like)"
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: undefined
 };
 const urchin = {
   name: "Urchin",
-  details: undefined,
+  details:
+    "You grew up on the streets alone, orphaned, and poor, You had no one to watch over you or to provide for you, so you learned to provide for yourself. You fought fiercely over food and kept a constant watch out for other desperate souls who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. You've survived despite all odds, and did so through cunning, strength, speed, or some combination of each. You begin your adventuring career with enough money to live modestly but securely for at least ten days. How did you come by that money? What allowed you to break free of your desperate circumstances and embark on a better life?",
   skillProficiencies: [
     skillProficiency.sleightOfHand,
     skillProficiency.stealth
   ],
-  toolProficiencies: [toolProficiency.a, toolProficiency.a],
-  languages: [languages.a],
-  equipment: [equipment.a, equipment.a, equipment.gold(15)],
-  feature: { "City Secrets": undefined },
+  toolProficiencies: [
+    toolProficiency.disguiseKit,
+    toolProficiency.thievesTools
+  ],
+  languages: [],
+  equipment: [
+    equipment.smallKnife,
+    equipment.mapOfHomeCity,
+    equipment.petMouse,
+    equipment.tokenOfParents,
+    equipment.commonClothes,
+    equipment.currency.gold(10)
+  ],
+  feature: {
+    "City Secrets":
+      "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow."
+  },
   suggestedCharacteristics: [
     {
       personalityTrait: [
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined
+        "I hide scraps of food and trinkets away in my pockets.",
+        "I ask a lot of questions.",
+        "I like to squeeze into small places where no one else can get to me.",
+        "I sleep with my back to a wall or tree, with everything I own wrapped in a bundle in my arms.",
+        "I eat like a pig and have bad manners.",
+        "I think anyone who's nice to me is hiding evil intent.",
+        "I don't like to bathe.",
+        "I bluntly say what other people are hinting at or hiding."
       ]
     },
     {
-      ideal: [undefined, undefined, undefined, undefined, undefined, undefined]
+      ideal: [
+        "Respect. All people, rich or poor, deserve respect. (Good)",
+        "Community. We have to take care of each other, because no one else is going to do it. (Lawful)",
+        "Change. The low are lifted up, and the high and mighty are brought down. Change is the nature of things. (Chaotic)",
+        "Retribution. The rich need to be shown what life and death are like in the gutters. (Evil)",
+        "People. I help the people who help me-that's what keeps us alive. (Neutral)",
+        "Aspiration. I'm going to prove that I'm worthy of a better life. (Any)"
+      ]
     },
     {
-      bond: [undefined, undefined, undefined, undefined, undefined, undefined]
+      bond: [
+        "My town or city is my home, and I'll fight to defend it.",
+        "I sponsor an orphanage to keep others from enduring what I was forced to endure.",
+        "I owe my survival to another urchin who taught me to live on the streets.",
+        "I owe a debt I can never repay to the person who took pity on me.",
+        "I escaped my life of poverty by robbing an important person, and I'm wanted for it.",
+        "No one else should have to endure the hardships I've been through."
+      ]
     },
     {
-      flaw: [undefined, undefined, undefined, undefined, undefined, undefined]
-    },
-    { "": ["", "", "", "", "", ""] }
+      flaw: [
+        "If I'm outnumbered, I will run away from a fight.",
+        "Gold seems like a lot of money to me, and I'll do just about anything for more of it.",
+        "I will never fully trust anyone other than myself.",
+        "I'd rather kill someone in their sleep then fight fair.",
+        "It's not stealing if I need it more than someone else.",
+        "People who can't take care of themselves get what they deserve."
+      ]
+    }
   ],
-  variant: { undefined: undefined }
+  variant: undefined
 };
 
-const background = {
-  acolyte: acolyte,
-  charlatan: charlatan,
-  criminal: criminal,
-  entertainer: entertainer,
-  folkHero: folkHero,
-  gladiator: gladiator,
-  guildArtisan: guildArtisan,
-  guildMerchant: guildMerchant,
-  hermit: hermit,
-  knight: knight,
-  noble: noble,
-  outlander: outlander,
-  pirate: pirate,
-  sage: sage,
-  sailor: sailor,
-  soldier: soldier,
-  urchin: urchin
-};
+const backgrounds = [
+  acolyte,
+  charlatan,
+  criminal,
+  entertainer,
+  folkHero,
+  gladiator,
+  guildArtisan,
+  guildMerchant,
+  hermit,
+  knight,
+  noble,
+  outlander,
+  pirate,
+  sage,
+  sailor,
+  soldier,
+  urchin
+];
 
-module.exports = background;
+module.exports = backgrounds;

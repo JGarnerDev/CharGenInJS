@@ -68,16 +68,16 @@ const humanVariant = {
   racialFeatures: [racialFeatures.any1Skill, racialFeatures.any1Feat]
 };
 
-const subraces = {
-  hillDwarf: hillDwarf,
-  mountainDwarf: mountainDwarf,
-  highElf: highElf,
-  darkElf: darkElf,
-  deepGnome: deepGnome,
-  rockGnome: rockGnome,
-  lightfootHalfling: lightfootHalfling,
-  stoutHalfling: stoutHalfling,
-  humanVariant: humanVariant
-};
+const subraces = [
+  hillDwarf,
+  mountainDwarf,
+  highElf,
+  darkElf,
+  deepGnome,
+  rockGnome,
+  lightfootHalfling,
+  stoutHalfling,
+  humanVariant
+];
 
 module.exports = subraces;
