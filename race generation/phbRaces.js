@@ -4,7 +4,7 @@ const phbSubraces = require("./phbSubRaces")
 
 const dragonborn = {
   race: "Dragonborn",
-  subraces: undefined,
+  subraces: [],
   abilityMod: { str: +2, cha: +1 },
   movement: { walking: "30", swim: undefined , fly: undefined , climb: undefined  },
   details: {
@@ -48,7 +48,7 @@ const dwarf = {
 };
 const elf = {
   race: "Elf",
-  subraces: [phbSubraces.highElf, phbSubraces.woodElf, phbSubraces.drow],
+  subraces: [phbSubraces.highElf, phbSubraces.woodElf, phbSubraces.darkElf],
   abilityMod: { dex: +2 },
   movement: { walking: "30", swim: undefined , fly: undefined , climb: undefined  },
   details: {
@@ -84,7 +84,7 @@ const gnome = {
 };
 const halfElf = {
   race: "Half-Elf",
-  subraces: undefined,
+  subraces: [],
   abilityMod: { cha: +2, any: +1 },
   movement: { walking: "30", swim: undefined , fly: undefined , climb: undefined  },
   details: {
@@ -99,7 +99,7 @@ const halfElf = {
 };
 const halfOrc = {
   race: "Half-Orc",
-  subraces: undefined,
+  subraces: [],
   abilityMod: { str: +2, con: +1 },
   movement: { walking: "30", swim: undefined , fly: undefined , climb: undefined  },
   details: {
@@ -153,7 +153,7 @@ const human = {
 };
 const tiefling = {
   race: "Tiefling",
-  subraces: undefined,
+  subraces: [],
   abilityMod: { cha: +2, int: +1 },
   movement: { walking: "30", swim: undefined , fly: undefined , climb: undefined  },
   details: {

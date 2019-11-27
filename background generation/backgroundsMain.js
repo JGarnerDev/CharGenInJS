@@ -388,7 +388,7 @@ const entertainer = {
   variant: "gladiator"
 };
 const folkHero = {
-  name: "FolkHero",
+  name: "Folk Hero",
   details:
     "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
   skillProficiencies: [
