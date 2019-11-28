@@ -92,4 +92,4 @@ character.skills = skills
 
 
 
-console.log(character.background.equipment);
+console.log(character);
