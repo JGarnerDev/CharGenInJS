@@ -4,7 +4,7 @@ var character = {
   race: undefined,
   subrace: undefined,
   background: undefined,
-  skills: undefined
+  skills: undefined,
 };
 //  Procedure:
 //      - Import and define the elements involved in character construction 
@@ -16,10 +16,8 @@ var character = {
 //          feats (and their effects on character composition), spells, and equipment)
 //      - Collect and organize, then represent this in an accessible way! 
 
-
-
-
-
+//----------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------
 
 //  1. Stats, classes, races, skills, and backgrounds are imported...
 
@@ -30,30 +28,30 @@ const backgrounds = require("../background generation/backgroundsMain");
 const skills = require("../skills generation/skillsMain")
 
 //      1a. 'Races' is reassigned to the value of it's own first index
-//          - (this is because races from outside the Player's Handbook will be options in the future)
+//              (this is because races from outside the Player's Handbook will be options in the future)
 
 races = races[0];
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
-//  2. Stats ('Abilities' in Dungeons and Dragons) are then generated...
+//  2. Stats ('Abilities' in Dungeons and Dragons) are the return value the 'statsRoll' function...
 
 //      2a. Passing no argument through the 'statsRoll' function generates each stat from the sum of 'rolling' three six-sided dice.
 
 //      2b. Passing a number ('x') as an argument generates each stat from the sum of rolling 'x' six-sided dice
-//          with 'x-3' of the lowest dice deducted from that sum.
+//              with 'x-3' of the lowest dice deducted from that sum. x = 2 seems to work well.
 
-character.stats = statsRoll(3);
+character.stats = statsRoll(2);
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
-//  3. One class is selected randomly ...
+//  3. One class is selected and assigned randomly ...
 
 character.clss = classes[Math.floor(Math.random() * classes.length)];
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
-//  4. Then one race is selected randomly ...
+//  4. Then one race is selected and assigned randomly ...
 
 character.race = races[Math.floor(Math.random() * races.length)];
 
@@ -65,7 +63,7 @@ if (character.race.subraces.length === 0) {
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
-//  5. Then one subrace is selected randomly from the race's subrace(s) ...
+//  5. Then one subrace is selected and assigned randomly from the race's subrace(s) ...
 
 character.subrace =
   character.race.subraces[
@@ -74,25 +72,24 @@ character.subrace =
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
-//  6. Then one background is selected randomly ...
+//  6. Then one background is selected and assigned randomly ...
 
 character.background =
   backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
-//  7. The list of skills are attached to the character, since all characters may use any skill
+//  7. The list of skills are made as a value of the character, since all characters may use any skill
 
 character.skills = skills
 
 //----------------------------------------------------------------------------------------------------------------------------------
-// (To be continued! Test it out with variables in the console.log)
+
+// (To be continued! Test it out with variables in the console.log below)
 
 
 
-console.log(character);
-console.log(character.stats.join(' '))
-console.log(character.clss.name)
-console.log(character.race.race)
-console.log(character.subrace.name)
-console.log(character.background.name)
+
+
+
+console.log(character.background.equipment);

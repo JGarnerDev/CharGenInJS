@@ -11,11 +11,11 @@ const acolyte = {
   toolProficiencies: [],
   languages: [languages.any2Lang],
   equipment: [
-    equipment.holySymbol,
-    equipment.prayerBook,
-    equipment.stickOfIncense,
-    equipment.vestments,
-    equipment.commonClothes,
+    equipment.adventuringGear.holySymbol,
+    equipment.adventuringGear.prayerBook,
+    equipment.adventuringGear.stickOfIncense,
+    equipment.adventuringGear.vestments,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(15)
   ],
   feature: {
@@ -79,9 +79,9 @@ const charlatan = {
   toolProficiencies: [toolProficiency.disguiseKit, toolProficiency.forgeryKit],
   languages: [],
   equipment: [
-    equipment.fineClothes,
-    equipment.disguiseKit,
-    equipment.charlatanChoice,
+    equipment.adventuringGear.fineClothes,
+    equipment.adventuringGear.disguiseKit,
+    equipment.adventuringGear.charlatanChoice,
     equipment.currency.gold(15)
   ],
   feature: {
@@ -152,8 +152,8 @@ const criminal = {
   toolProficiencies: [toolProficiency.gamingSet, toolProficiency.thievesTools],
   languages: [],
   equipment: [
-    equipment.crowbar,
-    equipment.darkCommonClothes,
+    equipment.adventuringGear.crowbar,
+    equipment.adventuringGear.darkCommonClothes,
     equipment.currency.gold(15)
   ],
   feature: {
@@ -236,8 +236,8 @@ const gladiator = {
   languages: [],
   equipment: [
     equipment.exoticWeapon,
-    equipment.entertainerOption,
-    equipment.costume,
+    equipment.adventuringGear.entertainerOption,
+    equipment.adventuringGear.costume,
     equipment.currency.gold(15)
   ],
   feature: {
@@ -318,9 +318,9 @@ const entertainer = {
   ],
   languages: [],
   equipment: [
-    equipment.musicalInstrument,
-    equipment.entertainerOption,
-    equipment.costume,
+    equipment.adventuringGear.musicalInstrument,
+    equipment.adventuringGear.entertainerOption,
+    equipment.adventuringGear.costume,
     equipment.currency.gold(15)
   ],
   feature: {
@@ -401,10 +401,10 @@ const folkHero = {
   ],
   languages: [],
   equipment: [
-    equipment.artisansTools,
-    equipment.shovel,
-    equipment.ironPot,
-    equipment.commonClothes,
+    equipment.adventuringGear.artisansTools,
+    equipment.adventuringGear.shovel,
+    equipment.adventuringGear.ironPot,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(10)
   ],
   feature: {
@@ -480,9 +480,9 @@ const guildArtisan = {
   toolProficiencies: [toolProficiency.artisansTools],
   languages: [languages.any1Lang],
   equipment: [
-    equipment.artisansTools,
-    equipment.letterFromGuild,
-    equipment.travelersClothes,
+    equipment.adventuringGear.artisansTools,
+    equipment.adventuringGear.letterFromGuild,
+    equipment.adventuringGear.travelersClothes,
     equipment.currency.gold(15)
   ],
   feature: [
@@ -574,8 +574,8 @@ const guildMerchant = {
   languages: [languages.any1Lang],
   equipment: [
     { pick: [equipment.artisansTools, equipment.muleAndCart] },
-    equipment.letterFromGuild,
-    equipment.travelersClothes,
+    equipment.adventuringGear.letterFromGuild,
+    equipment.adventuringGear.travelersClothes,
     equipment.currency.gold(15)
   ],
   feature: [
@@ -643,10 +643,10 @@ const hermit = {
   toolProficiencies: [toolProficiency.herbalismKit],
   languages: [languages.any1Lang],
   equipment: [
-    equipment.hermitScrollCase,
-    equipment.winterBlanket,
-    equipment.commonClothes,
-    equipment.herbalismKit,
+    equipment.adventuringGear.hermitScrollCase,
+    equipment.adventuringGear.winterBlanket,
+    equipment.adventuringGear.commonClothes,
+    equipment.adventuringGear.herbalismKit,
     equipment.currency.gold(5)
   ],
   feature: {
@@ -720,10 +720,10 @@ const knight = {
   toolProficiencies: [toolProficiency.gamingSet],
   languages: [languages.any1Lang],
   equipment: [
-    { pick: [equipment.banner, equipment.tokenOfNoble] },
-    equipment.fineClothes,
-    equipment.signetRing,
-    equipment.scrollOfPidigree,
+    { pick: [equipment.adventuringGear.banner, equipment.adventuringGear.tokenOfNoble] },
+    equipment.adventuringGear.fineClothes,
+    equipment.adventuringGear.signetRing,
+    equipment.adventuringGear.scrollOfPidigree,
     equipment.currency.gold(25)
   ],
   feature: {
@@ -784,9 +784,9 @@ const noble = {
   toolProficiencies: [toolProficiency.gamingSet],
   languages: [languages.any1Lang],
   equipment: [
-    equipment.fineClothes,
-    equipment.signetRing,
-    equipment.scrollOfPidigree,
+    equipment.adventuringGear.fineClothes,
+    equipment.adventuringGear.signetRing,
+    equipment.adventuringGear.scrollOfPidigree,
     equipment.currency.gold(25)
   ],
   feature: {
@@ -847,10 +847,10 @@ const outlander = {
   toolProficiencies: [toolProficiency.musicalInstrument],
   languages: [languages.any1Lang],
   equipment: [
-    equipment.staff,
-    equipment.huntingTrap,
-    equipment.animalTrophy,
-    equipment.travelersClothes,
+    equipment.adventuringGear.staff,
+    equipment.adventuringGear.huntingTrap,
+    equipment.adventuringGear.animalTrophy,
+    equipment.adventuringGear.travelersClothes,
     equipment.currency.gold(10)
   ],
   feature: {
@@ -926,11 +926,11 @@ const sage = {
   toolProficiencies: [],
   languages: [languages.any2Lang],
   equipment: [
-    equipment.blackInk,
-    equipment.quill,
-    equipment.smallKnife,
-    equipment.letterFromDeadColleague,
-    equipment.commonClothes,
+    equipment.adventuringGear.ink,
+    equipment.adventuringGear.quill,
+    equipment.adventuringGear.smallKnife,
+    equipment.adventuringGear.letterFromDeadColleague,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(10)
   ],
   feature: {
@@ -1006,11 +1006,11 @@ const pirate = {
   ],
   languages: [],
   equipment: [
-    { pick: [equipment.luckyCharm, equipment.trinket] },
-    equipment.balayingPin,
-    equipment.silkRope,
-    equipment.luckyCharm,
-    equipment.commonClothes,
+    { pick: [equipment.adventuringGear.luckyCharm, equipment.adventuringGear.trinket] },
+    equipment.adventuringGear.balayingPin,
+    equipment.adventuringGear.silkRope,
+    equipment.adventuringGear.luckyCharm,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(10)
   ],
   feature: {
@@ -1074,11 +1074,11 @@ const sailor = {
   ],
   languages: [],
   equipment: [
-    { pick: [equipment.luckyCharm, equipment.trinket] },
-    equipment.balayingPin,
-    equipment.silkRope,
-    equipment.luckyCharm,
-    equipment.commonClothes,
+    { pick: [equipment.adventuringGear.luckyCharm, equipment.adventuringGear.trinket] },
+    equipment.adventuringGear.balayingPin,
+    equipment.adventuringGear.silkRope,
+    equipment.adventuringGear.luckyCharm,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(10)
   ],
   feature: {
@@ -1142,10 +1142,10 @@ const soldier = {
   toolProficiencies: [toolProficiency.gamingSet, toolProficiency.vehiclesLand],
   languages: [],
   equipment: [
-    { pick: [equipment.setOfDice, equipment.deckOfCards] },
-    equipment.insigniaOfRank,
-    equipment.enemyTrophy,
-    equipment.commonClothes,
+    { pick: [equipment.adventuringGear.diceSet, equipment.adventuringGear.playingCardSet] },
+    equipment.adventuringGear.insigniaOfRank,
+    equipment.adventuringGear.enemyTrophy,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(10)
   ],
   feature: {
@@ -1224,11 +1224,11 @@ const urchin = {
   ],
   languages: [],
   equipment: [
-    equipment.smallKnife,
-    equipment.mapOfHomeCity,
-    equipment.petMouse,
-    equipment.tokenOfParents,
-    equipment.commonClothes,
+    equipment.adventuringGear.smallKnife,
+    equipment.adventuringGear.mapOfHomeCity,
+    equipment.adventuringGear.petMouse,
+    equipment.adventuringGear.tokenOfParents,
+    equipment.adventuringGear.commonClothes,
     equipment.currency.gold(10)
   ],
   feature: {

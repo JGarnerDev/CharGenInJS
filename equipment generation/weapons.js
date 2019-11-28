@@ -1,7 +1,228 @@
-const dagger = {
-    name: "Dagger",
-    cost: {2: "Gold"},
-    damage: [1,4],
-    weight: {1:"lb"},
-    properties: [properties.finesse, properties.thrown]
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
 }
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+function a(x) {
+    let q = 1
+    if (x>1){q = x}
+  return {a:q};
+}
+
+
+var weapons = {
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a,
+  a: a
+};
+
+module.exports = weapons;

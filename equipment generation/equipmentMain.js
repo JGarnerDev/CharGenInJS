@@ -1,31 +1,13 @@
-var backgroundEquipment = require("../main/characterGen");
-
-var characterEquipment = {};
-
-function copper(x) {
-  equipment.copper += x;
-}
-function silver(x) {
-  equipment.silver += x;
-}
-function electrum(x) {
-  equipment.electrum += x;
-}
-function gold(x) {
-  equipment.gold += x;
-}
-function platinum(x) {
-  equipment.platinum += x;
-}
+var armor = require("./armor");
+var adventuringGear = require("./adventuringGear");
+var currency = require("./currency");
+var weapons = require("./weapons");
 
 const equipment = {
-  currency: {
-    copper: copper,
-    silver: silver,
-    electrum: electrum,
-    gold: gold,
-    platinum: platinum
-  }
+  adventuringGear: adventuringGear,
+  armor: armor,
+  currency: currency,
+  weapons:weapons
 };
 
 module.exports = equipment;
