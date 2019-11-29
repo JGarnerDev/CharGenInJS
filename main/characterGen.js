@@ -41,7 +41,7 @@ races = races[0];
 //      2b. Passing a number ('x') as an argument generates each stat from the sum of rolling 'x' six-sided dice
 //              with 'x-3' of the lowest dice deducted from that sum. x = 2 seems to work well.
 
-character.stats = statsRoll(2);
+character.stats = statsRoll();
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
@@ -93,3 +93,8 @@ character.skills = skills
 
 
 console.log(character);
+console.log(character.stats.join(' '));
+console.log(character.race);
+console.log(character.race.details);
+console.log(character.subrace);
+// console.log(character.race);

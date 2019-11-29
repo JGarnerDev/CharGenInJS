@@ -4,13 +4,11 @@ function animalTrophy(x) {
     q = x;
   }
   return {
-    animalTrophy: {
-      name: "Animal trophy",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Animal trophy",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function artisansTools(x) {
@@ -19,13 +17,24 @@ function artisansTools(x) {
     q = x;
   }
   return {
-    artisansTools: {
-      name: "Artisans tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Artisans tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
+  };
+}
+function arrow(x) {
+  let q = 1;
+  if (x > q) {
+    q = x;
+  }
+  return {
+    name: "Arrow",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function backpack(x) {
@@ -34,13 +43,11 @@ function backpack(x) {
     q = x;
   }
   return {
-    backpack: {
-      name: "Backpack",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Backpack",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function balayingPin(x) {
@@ -49,13 +56,11 @@ function balayingPin(x) {
     q = x;
   }
   return {
-    balayingPin: {
-      name: "Balaying Pin",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Balaying Pin",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function bedroll(x) {
@@ -64,13 +69,11 @@ function bedroll(x) {
     q = x;
   }
   return {
-    bedroll: {
-      name: "Bedroll",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Bedroll",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function blanket(x) {
@@ -79,13 +82,24 @@ function blanket(x) {
     q = x;
   }
   return {
-    blanket: {
-      name: "Blanket",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Blanket",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
+  };
+}
+function bolt(x) {
+  let q = 1;
+  if (x > q) {
+    q = x;
+  }
+  return {
+    name: "Bolt",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function caltrops(x) {
@@ -94,13 +108,11 @@ function caltrops(x) {
     q = x;
   }
   return {
-    caltrops: {
-      name: "Caltrops",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Caltrops",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function candle(x) {
@@ -109,13 +121,11 @@ function candle(x) {
     q = x;
   }
   return {
-    candle: {
-      name: "Candle",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Candle",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function carpentersTools(x) {
@@ -124,13 +134,11 @@ function carpentersTools(x) {
     q = x;
   }
   return {
-    carpentersTools: {
-      name: "Carpenters tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Carpenters tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function cartographersTools(x) {
@@ -139,13 +147,11 @@ function cartographersTools(x) {
     q = x;
   }
   return {
-    cartographersTools: {
-      name: "Cartographers tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Cartographers tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function chain(x) {
@@ -153,18 +159,14 @@ function chain(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    chain: { name: "Chain", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Chain", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function chalk(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    chalk: { name: "Chalk", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Chalk", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function charlatanChoice(x) {
   let q = 1;
@@ -172,12 +174,10 @@ function charlatanChoice(x) {
     q = x;
   }
   return {
-    charlatanChoice: {
-      name: "Charlatan choice",
-      quantity: q,
-      desc: "",
-      pick: []
-    }
+    name: "Charlatan choice",
+    quantity: q,
+    desc: "",
+    pick: []
   };
 }
 function climbersKit(x) {
@@ -186,13 +186,11 @@ function climbersKit(x) {
     q = x;
   }
   return {
-    climbersKit: {
-      name: "Climber's kit",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Climber's kit",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function cobblersTools(x) {
@@ -201,13 +199,11 @@ function cobblersTools(x) {
     q = x;
   }
   return {
-    cobblersTools: {
-      name: "Cobbler's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Cobbler's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function commonClothes(x) {
@@ -216,13 +212,11 @@ function commonClothes(x) {
     q = x;
   }
   return {
-    commonClothes: {
-      name: "Common clothes",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Common clothes",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function componentPouch(x) {
@@ -231,13 +225,11 @@ function componentPouch(x) {
     q = x;
   }
   return {
-    componentPouch: {
-      name: "Component pouch",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Component pouch",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function cooksUtensils(x) {
@@ -246,13 +238,11 @@ function cooksUtensils(x) {
     q = x;
   }
   return {
-    cooksUtensils: {
-      name: "Cook's utensils",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Cook's utensils",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function costume(x) {
@@ -261,13 +251,11 @@ function costume(x) {
     q = x;
   }
   return {
-    costume: {
-      name: "Costume",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Costume",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function crossbowBoltCase(x) {
@@ -276,13 +264,11 @@ function crossbowBoltCase(x) {
     q = x;
   }
   return {
-    crossbowBoltCase: {
-      name: "Crossbow bolt case",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Crossbow bolt case",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function crowbar(x) {
@@ -291,13 +277,11 @@ function crowbar(x) {
     q = x;
   }
   return {
-    crowbar: {
-      name: "Crowbar",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Crowbar",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function darkCommonClothes(x) {
@@ -306,13 +290,11 @@ function darkCommonClothes(x) {
     q = x;
   }
   return {
-    darkCommonClothes: {
-      name: "Dark common clothes",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Dark common clothes",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function diceSet(x) {
@@ -321,13 +303,11 @@ function diceSet(x) {
     q = x;
   }
   return {
-    diceSet: {
-      name: "Dice set",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Dice set",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function disguiseKit(x) {
@@ -336,12 +316,10 @@ function disguiseKit(x) {
     q = x;
   }
   return {
-    disguiseKit: {
-      name: "Disguise kit",
-      quantity: q,
-      desc: "",
-      kit: []
-    }
+    name: "Disguise kit",
+    quantity: q,
+    desc: "",
+    kit: []
   };
 }
 function drum(x) {
@@ -350,7 +328,12 @@ function drum(x) {
     q = x;
   }
   return {
-    drum: { name: "Drum", quantity: q, desc: "", weight: 0 * q, value: 1 * q, instrument: true }
+    name: "Drum",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q,
+    instrument: true
   };
 }
 function dulcimer(x) {
@@ -359,13 +342,11 @@ function dulcimer(x) {
     q = x;
   }
   return {
-    dulcimer: {
-      name: "Dulcimer",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Dulcimer",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function entertainerOption(x) {
@@ -374,13 +355,11 @@ function entertainerOption(x) {
     q = x;
   }
   return {
-    entertainerOption: {
-      name: "Entertainer option",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Entertainer option",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function enemyTrophy(x) {
@@ -389,13 +368,11 @@ function enemyTrophy(x) {
     q = x;
   }
   return {
-    enemyTrophy: {
-      name: "Enemy trophy",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Enemy trophy",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function fineClothes(x) {
@@ -404,13 +381,11 @@ function fineClothes(x) {
     q = x;
   }
   return {
-    fineClothes: {
-      name: "Fine clothes",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Fine clothes",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function fishingTackle(x) {
@@ -419,13 +394,11 @@ function fishingTackle(x) {
     q = x;
   }
   return {
-    fishingTackle: {
-      name: "Fishing tackle",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Fishing tackle",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function flask(x) {
@@ -433,18 +406,14 @@ function flask(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    flask: { name: "Flask", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Flask", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function flute(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    flute: { name: "Flute", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Flute", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function forgeryKit(x) {
   let q = 1;
@@ -452,13 +421,11 @@ function forgeryKit(x) {
     q = x;
   }
   return {
-    forgeryKit: {
-      name: "Forgery kit",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Forgery kit",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function glassblowersTools(x) {
@@ -467,13 +434,11 @@ function glassblowersTools(x) {
     q = x;
   }
   return {
-    glassblowersTools: {
-      name: "Glassblower's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Glassblower's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function grapplingHook(x) {
@@ -482,13 +447,11 @@ function grapplingHook(x) {
     q = x;
   }
   return {
-    grapplingHook: {
-      name: "Grappling hook",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Grappling hook",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function hammer(x) {
@@ -497,13 +460,11 @@ function hammer(x) {
     q = x;
   }
   return {
-    hammer: {
-      name: "Hammer",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Hammer",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function healersKit(x) {
@@ -512,13 +473,11 @@ function healersKit(x) {
     q = x;
   }
   return {
-    healersKit: {
-      name: "Healer's kit",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Healer's kit",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function hempenRope(x) {
@@ -527,13 +486,11 @@ function hempenRope(x) {
     q = x;
   }
   return {
-    hempenRope: {
-      name: "Hempen rope",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Hempen rope",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function herbalismKit(x) {
@@ -542,13 +499,11 @@ function herbalismKit(x) {
     q = x;
   }
   return {
-    herbalismKit: {
-      name: "Herbalism kit",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Herbalism kit",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function hermitScrollCase(x) {
@@ -557,13 +512,11 @@ function hermitScrollCase(x) {
     q = x;
   }
   return {
-    hermitScrollCase: {
-      name: "Hermit scroll case",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Hermit scroll case",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function holyWater(x) {
@@ -572,13 +525,11 @@ function holyWater(x) {
     q = x;
   }
   return {
-    holyWater: {
-      name: "Holy water",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Holy water",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function holySymbol(x) {
@@ -587,13 +538,11 @@ function holySymbol(x) {
     q = x;
   }
   return {
-    holySymbol: {
-      name: "Holy symbol",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Holy symbol",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function horn(x) {
@@ -601,9 +550,7 @@ function horn(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    horn: { name: "Horn", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Horn", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function hoodedLantern(x) {
   let q = 1;
@@ -611,13 +558,11 @@ function hoodedLantern(x) {
     q = x;
   }
   return {
-    hoodedLantern: {
-      name: "Hooded lantern",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Hooded lantern",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function hourglass(x) {
@@ -626,13 +571,11 @@ function hourglass(x) {
     q = x;
   }
   return {
-    hourglass: {
-      name: "Hourglass",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Hourglass",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function huntingTrap(x) {
@@ -641,13 +584,11 @@ function huntingTrap(x) {
     q = x;
   }
   return {
-    huntingTrap: {
-      name: "Hunting trap",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Hunting trap",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function ink(x) {
@@ -655,9 +596,7 @@ function ink(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    ink: { name: "Ink", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Ink", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function inkPen(x) {
   let q = 1;
@@ -665,13 +604,11 @@ function inkPen(x) {
     q = x;
   }
   return {
-    inkPen: {
-      name: "Ink pen",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Ink pen",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function insigniaOfRank(x) {
@@ -680,13 +617,11 @@ function insigniaOfRank(x) {
     q = x;
   }
   return {
-    insigniaOfRank: {
-      name: "Insignia of rank",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Insignia of rank",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function ironPot(x) {
@@ -695,13 +630,11 @@ function ironPot(x) {
     q = x;
   }
   return {
-    ironPot: {
-      name: "Iron pot",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Iron pot",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function ironSpikes(x) {
@@ -710,13 +643,11 @@ function ironSpikes(x) {
     q = x;
   }
   return {
-    ironSpikes: {
-      name: "Iron spikes",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Iron spikes",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function jewelersTools(x) {
@@ -725,13 +656,11 @@ function jewelersTools(x) {
     q = x;
   }
   return {
-    jewelersTools: {
-      name: "Jeweler's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Jeweler's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function jug(x) {
@@ -739,9 +668,7 @@ function jug(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    jug: { name: "Jug", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Jug", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function ladder(x) {
   let q = 1;
@@ -749,13 +676,11 @@ function ladder(x) {
     q = x;
   }
   return {
-    ladder: {
-      name: "Ladder",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Ladder",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function lamp(x) {
@@ -763,9 +688,7 @@ function lamp(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    lamp: { name: "Lamp", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Lamp", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function letterFromGuild(x) {
   let q = 1;
@@ -773,13 +696,11 @@ function letterFromGuild(x) {
     q = x;
   }
   return {
-    letterFromGuild: {
-      name: "Letter from guild",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Letter from guild",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function letterFromDeadColleague(x) {
@@ -788,13 +709,11 @@ function letterFromDeadColleague(x) {
     q = x;
   }
   return {
-    letterFromDeadColleague: {
-      name: "Letter from dead colleague",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Letter from dead colleague",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function lock(x) {
@@ -802,9 +721,7 @@ function lock(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    lock: { name: "Lock", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Lock", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function luckyCharm(x) {
   let q = 1;
@@ -812,13 +729,11 @@ function luckyCharm(x) {
     q = x;
   }
   return {
-    luckyCharm: {
-      name: "Lucky charm",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Lucky charm",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function lute(x) {
@@ -826,18 +741,14 @@ function lute(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    lute: { name: "Lute", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Lute", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function lyre(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    lyre: { name: "Lyre", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Lyre", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function magnifyingGlass(x) {
   let q = 1;
@@ -845,13 +756,11 @@ function magnifyingGlass(x) {
     q = x;
   }
   return {
-    magnifyingGlass: {
-      name: "Magnifying glass",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Magnifying glass",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function manacles(x) {
@@ -860,13 +769,11 @@ function manacles(x) {
     q = x;
   }
   return {
-    manacles: {
-      name: "Manacles",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Manacles",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function mapCase(x) {
@@ -875,13 +782,11 @@ function mapCase(x) {
     q = x;
   }
   return {
-    mapCase: {
-      name: "Map case",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Map case",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function scrollCase(x) {
@@ -890,13 +795,11 @@ function scrollCase(x) {
     q = x;
   }
   return {
-    scrollCase: {
-      name: "Scroll case",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Scroll case",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function mapOfHomeCity(x) {
@@ -905,13 +808,11 @@ function mapOfHomeCity(x) {
     q = x;
   }
   return {
-    mapOfHomeCity: {
-      name: "Map of home city",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Map of home city",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function masonsTools(x) {
@@ -920,13 +821,11 @@ function masonsTools(x) {
     q = x;
   }
   return {
-    masonsTools: {
-      name: "Mason's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Mason's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function merchantsScale(x) {
@@ -935,13 +834,11 @@ function merchantsScale(x) {
     q = x;
   }
   return {
-    merchantsScale: {
-      name: "Merchant's scale",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Merchant's scale",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function messKit(x) {
@@ -950,13 +847,11 @@ function messKit(x) {
     q = x;
   }
   return {
-    messKit: {
-      name: "Mess kit",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Mess kit",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function minersPick(x) {
@@ -965,13 +860,11 @@ function minersPick(x) {
     q = x;
   }
   return {
-    minersPick: {
-      name: "Miner's pick",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Miner's pick",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function musicalInstrument(x) {
@@ -980,13 +873,11 @@ function musicalInstrument(x) {
     q = x;
   }
   return {
-    musicalInstrument: {
-      name: "MusicalInstrument",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "MusicalInstrument",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function navigatorsTools(x) {
@@ -995,13 +886,11 @@ function navigatorsTools(x) {
     q = x;
   }
   return {
-    navigatorsTools: {
-      name: "Navigator's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Navigator's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function oil(x) {
@@ -1009,18 +898,14 @@ function oil(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    oil: { name: "Oil", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Oil", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function orb(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    orb: { name: "Orb", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Orb", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function paintersSupplies(x) {
   let q = 1;
@@ -1028,13 +913,11 @@ function paintersSupplies(x) {
     q = x;
   }
   return {
-    paintersSupplies: {
-      name: "Painter's supplies",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Painter's supplies",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function panFlute(x) {
@@ -1043,13 +926,11 @@ function panFlute(x) {
     q = x;
   }
   return {
-    panFlute: {
-      name: "Pan flute",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Pan flute",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function paper(x) {
@@ -1057,9 +938,7 @@ function paper(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    paper: { name: "Paper", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Paper", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function parchment(x) {
   let q = 1;
@@ -1067,13 +946,11 @@ function parchment(x) {
     q = x;
   }
   return {
-    parchment: {
-      name: "Parchment",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Parchment",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function perfume(x) {
@@ -1082,13 +959,11 @@ function perfume(x) {
     q = x;
   }
   return {
-    perfume: {
-      name: "Perfume",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Perfume",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function petMouse(x) {
@@ -1097,13 +972,11 @@ function petMouse(x) {
     q = x;
   }
   return {
-    petMouse: {
-      name: "Pet mouse",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Pet mouse",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function piton(x) {
@@ -1111,9 +984,7 @@ function piton(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    piton: { name: "Piton", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Piton", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function playingCardSet(x) {
   let q = 1;
@@ -1121,13 +992,11 @@ function playingCardSet(x) {
     q = x;
   }
   return {
-    playingCardSet: {
-      name: "Playing card set",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Playing card set",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function poisonersKit(x) {
@@ -1136,13 +1005,11 @@ function poisonersKit(x) {
     q = x;
   }
   return {
-    poisonersKit: {
-      name: "Poisoner's kit",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Poisoner's kit",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function pole(x) {
@@ -1150,9 +1017,7 @@ function pole(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    pole: { name: "Pole", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Pole", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function portableRam(x) {
   let q = 1;
@@ -1160,13 +1025,11 @@ function portableRam(x) {
     q = x;
   }
   return {
-    portableRam: {
-      name: "Portable ram",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Portable ram",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function pottersTools(x) {
@@ -1175,13 +1038,11 @@ function pottersTools(x) {
     q = x;
   }
   return {
-    pottersTools: {
-      name: "Potter's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Potter's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function pouch(x) {
@@ -1189,9 +1050,7 @@ function pouch(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    pouch: { name: "Pouch", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Pouch", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function prayerBook(x) {
   let q = 1;
@@ -1199,13 +1058,11 @@ function prayerBook(x) {
     q = x;
   }
   return {
-    prayerBook: {
-      name: "Prayer book",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Prayer book",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function quill(x) {
@@ -1213,9 +1070,7 @@ function quill(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    quill: { name: "Quill", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Quill", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function quiver(x) {
   let q = 1;
@@ -1223,13 +1078,11 @@ function quiver(x) {
     q = x;
   }
   return {
-    quiver: {
-      name: "Quiver",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Quiver",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function ration(x) {
@@ -1238,13 +1091,11 @@ function ration(x) {
     q = x;
   }
   return {
-    ration: {
-      name: "Ration",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Ration",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function reliquary(x) {
@@ -1253,13 +1104,11 @@ function reliquary(x) {
     q = x;
   }
   return {
-    reliquary: {
-      name: "Reliquary",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Reliquary",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function robes(x) {
@@ -1267,27 +1116,21 @@ function robes(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    robes: { name: "Robes", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Robes", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function rod(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    rod: { name: "Rod", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Rod", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function sack(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    sack: { name: "Sack", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Sack", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function scrollOfPedigree(x) {
   let q = 1;
@@ -1295,13 +1138,11 @@ function scrollOfPedigree(x) {
     q = x;
   }
   return {
-    scrollOfPidigree: {
-      name: "Scroll of pedigree",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Scroll of pedigree",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function sealingWax(x) {
@@ -1310,13 +1151,11 @@ function sealingWax(x) {
     q = x;
   }
   return {
-    sealingWax: {
-      name: "Sealing wax",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Sealing wax",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function setOfDice(x) {
@@ -1325,13 +1164,11 @@ function setOfDice(x) {
     q = x;
   }
   return {
-    setOfDice: {
-      name: "Set of dice",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Set of dice",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function shawn(x) {
@@ -1339,9 +1176,7 @@ function shawn(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    shawn: { name: "Shawn", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Shawn", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function shovel(x) {
   let q = 1;
@@ -1349,13 +1184,11 @@ function shovel(x) {
     q = x;
   }
   return {
-    shovel: {
-      name: "Shovel",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Shovel",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function signalWhistle(x) {
@@ -1364,13 +1197,11 @@ function signalWhistle(x) {
     q = x;
   }
   return {
-    signalWhistle: {
-      name: "Signal whistle",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Signal whistle",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function signetRing(x) {
@@ -1379,13 +1210,11 @@ function signetRing(x) {
     q = x;
   }
   return {
-    signetRing: {
-      name: "Signet ring",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Signet ring",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function silkRope(x) {
@@ -1394,13 +1223,11 @@ function silkRope(x) {
     q = x;
   }
   return {
-    silkRope: {
-      name: "Silk rope",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Silk rope",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function sledgeHammer(x) {
@@ -1409,13 +1236,11 @@ function sledgeHammer(x) {
     q = x;
   }
   return {
-    sledgeHammer: {
-      name: "SledgeHammer",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "SledgeHammer",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function smallKnife(x) {
@@ -1424,13 +1249,11 @@ function smallKnife(x) {
     q = x;
   }
   return {
-    smallKnife: {
-      name: "Small knife",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Small knife",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function smithsTools(x) {
@@ -1439,13 +1262,11 @@ function smithsTools(x) {
     q = x;
   }
   return {
-    smithsTools: {
-      name: "Smith's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Smith's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function soap(x) {
@@ -1453,9 +1274,7 @@ function soap(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    soap: { name: "Soap", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Soap", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function spellbook(x) {
   let q = 1;
@@ -1463,13 +1282,11 @@ function spellbook(x) {
     q = x;
   }
   return {
-    spellbook: {
-      name: "Spellbook",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Spellbook",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function spyglass(x) {
@@ -1478,13 +1295,11 @@ function spyglass(x) {
     q = x;
   }
   return {
-    spyglass: {
-      name: "Spyglass",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Spyglass",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function staff(x) {
@@ -1492,9 +1307,7 @@ function staff(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    staff: { name: "Staff", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Staff", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function steelMirror(x) {
   let q = 1;
@@ -1502,13 +1315,11 @@ function steelMirror(x) {
     q = x;
   }
   return {
-    steelMirror: {
-      name: "Steel mirror",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Steel mirror",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function stickOfIncense(x) {
@@ -1517,13 +1328,11 @@ function stickOfIncense(x) {
     q = x;
   }
   return {
-    stickOfIncense: {
-      name: "Stick of incense",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Stick of incense",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function tent(x) {
@@ -1531,9 +1340,7 @@ function tent(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    tent: { name: "Tent", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Tent", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function thievesTools(x) {
   let q = 1;
@@ -1541,13 +1348,11 @@ function thievesTools(x) {
     q = x;
   }
   return {
-    thievesTools: {
-      name: "Thieve's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Thieve's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function tinderbox(x) {
@@ -1556,13 +1361,11 @@ function tinderbox(x) {
     q = x;
   }
   return {
-    tinderbox: {
-      name: "Tinderbox",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Tinderbox",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function tinkersTools(x) {
@@ -1571,13 +1374,11 @@ function tinkersTools(x) {
     q = x;
   }
   return {
-    tinkersTools: {
-      name: "Tinker's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Tinker's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function tokenOfParents(x) {
@@ -1586,13 +1387,11 @@ function tokenOfParents(x) {
     q = x;
   }
   return {
-    tokenOfParents: {
-      name: "Token of parents",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Token of parents",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function torch(x) {
@@ -1600,18 +1399,14 @@ function torch(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    torch: { name: "Torch", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Torch", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function totem(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    totem: { name: "Totem", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Totem", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function travelersClothes(x) {
   let q = 1;
@@ -1619,13 +1414,11 @@ function travelersClothes(x) {
     q = x;
   }
   return {
-    travelersClothes: {
-      name: "Traveler's clothes",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Traveler's clothes",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function trinket(x) {
@@ -1634,13 +1427,11 @@ function trinket(x) {
     q = x;
   }
   return {
-    trinket: {
-      name: "Trinket",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Trinket",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function vial(x) {
@@ -1648,27 +1439,21 @@ function vial(x) {
   if (x > q) {
     q = x;
   }
-  return {
-    vial: { name: "Vial", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Vial", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function viol(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    viol: { name: "Viol", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Viol", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function wand(x) {
   let q = 1;
   if (x > q) {
     q = x;
   }
-  return {
-    wand: { name: "Wand", quantity: q, desc: "", weight: 0 * q, value: 1 * q }
-  };
+  return { name: "Wand", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
 function waterskin(x) {
   let q = 1;
@@ -1676,13 +1461,11 @@ function waterskin(x) {
     q = x;
   }
   return {
-    waterskin: {
-      name: "Waterskin",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Waterskin",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function weversTools(x) {
@@ -1691,13 +1474,11 @@ function weversTools(x) {
     q = x;
   }
   return {
-    weversTools: {
-      name: "Weaver's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Weaver's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function whetstone(x) {
@@ -1706,13 +1487,11 @@ function whetstone(x) {
     q = x;
   }
   return {
-    whetstone: {
-      name: "Whetstone",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Whetstone",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function winterBlanket(x) {
@@ -1721,13 +1500,11 @@ function winterBlanket(x) {
     q = x;
   }
   return {
-    winterBlanket: {
-      name: "Winter blanket",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Winter blanket",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function woodcarversTools(x) {
@@ -1736,13 +1513,11 @@ function woodcarversTools(x) {
     q = x;
   }
   return {
-    woodcarversTools: {
-      name: "Woodcarver's tools",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Woodcarver's tools",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function woodenStaff(x) {
@@ -1751,13 +1526,11 @@ function woodenStaff(x) {
     q = x;
   }
   return {
-    woodenStaff: {
-      name: "Wooden Staff",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Wooden Staff",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function vestments(x) {
@@ -1766,13 +1539,11 @@ function vestments(x) {
     q = x;
   }
   return {
-    vestments: {
-      name: "Vestments",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Vestments",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 function yewWand(x) {
@@ -1781,22 +1552,22 @@ function yewWand(x) {
     q = x;
   }
   return {
-    yewWand: {
-      name: "Yew Wand",
-      quantity: q,
-      desc: "",
-      weight: 0 * q,
-      value: 1 * q
-    }
+    name: "Yew Wand",
+    quantity: q,
+    desc: "",
+    weight: 0 * q,
+    value: 1 * q
   };
 }
 const adventuringGear = {
   animalTrophy: animalTrophy,
+  arrow: arrow, //////////////////////////////
   artisansTools: artisansTools,
   backpack: backpack,
   balayingPin: balayingPin,
   bedroll: bedroll,
   blanket: blanket,
+  bolt: bolt, //////////////////////////
   caltrops: caltrops,
   candle: candle,
   carpentersTools: carpentersTools,
@@ -1913,7 +1684,6 @@ const adventuringGear = {
   travelersClothes: travelersClothes,
   trinket: trinket,
   vial: vial,
-  viol: viol,
   wand: wand,
   waterskin: waterskin,
   weversTools: weversTools,

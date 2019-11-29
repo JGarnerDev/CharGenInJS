@@ -3,35 +3,35 @@ function copper(x) {
   if (x > 1) {
     q = x;
   }
-  return { copper: q };
+  return { name: "Copper", quantity: q, weight: 0.02 * q };
 }
 function silver(x) {
   let q = 1;
   if (x > 1) {
     q = x;
   }
-  return { silver: q };
+  return { name: "Silver", quantity: q, weight: 0.02 * q };
 }
 function electrum(x) {
   let q = 1;
   if (x > 1) {
     q = x;
   }
-  return { electrum: q };
+  return { name: "Electrum", quantity: q, weight: 0.02 * q };
 }
 function gold(x) {
   let q = 1;
   if (x > 1) {
     q = x;
   }
-  return { gold: q };
+  return { name: "Gold", quantity: q, weight: 0.02 * q };
 }
 function platinum(x) {
   let q = 1;
   if (x > 1) {
     q = x;
   }
-  return { platinum: q };
+  return { name: "Platinum", quantity: q, weight: 0.02 * q };
 }
 
 var currency = {
