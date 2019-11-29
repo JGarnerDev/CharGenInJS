@@ -1,7 +1,7 @@
-let skillProficiency = require("../skills generation/skillsMain");
-let toolProficiency = require("../skills generation/toolProficiency");
-let languages = require("../race generation/languages");
-let equipment = require("../equipment generation/equipmentMain");
+let skillProficiency = require("./skills generation/skillsMain");
+let toolProficiency = require("./skills generation/toolProficiencies");
+let languages = require("./races/languages");
+let equipment = require("./items/equipmentMain");
 
 const acolyte = {
   name: "Acolyte",

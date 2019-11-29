@@ -235,7 +235,7 @@ const toolProficiency = {
     carpentersTools: carpentersTools,
     cartographersTools: cartographersTools,
     cobblersTools: cobblersTools,
-    cookUtensils: cookUtensils,
+    cookUtensils: cooksUtensils,
     glassblowersTools: glassblowersTools,
     jewelersTools: jewelersTools,
     leatherworkersTools: leatherworkersTools,

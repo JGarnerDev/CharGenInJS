@@ -21,11 +21,11 @@ var character = {
 
 //  1. Stats, classes, races, skills, and backgrounds are imported...
 
-const statsRoll = require("../stats generation/statsRoll");
-const classes = require("../class generation/classesMain");
-let races = require("../race generation/racesMain");
-const backgrounds = require("../background generation/backgroundsMain");
-const skills = require("../skills generation/skillsMain")
+const statsRoll = require("./stats/statsRoll");
+const classes = require("./classes/classesMain");
+let races = require("./races/racesMain");
+const backgrounds = require("./backgrounds/backgroundsMain");
+const skills = require("./skills generation/skillsMain")
 
 //      1a. 'Races' is reassigned to the value of it's own first index
 //              (this is because races from outside the Player's Handbook will be options in the future)
@@ -92,9 +92,9 @@ character.skills = skills
 
 
 
-console.log(character);
-console.log(character.stats.join(' '));
-console.log(character.race);
-console.log(character.race.details);
-console.log(character.subrace);
+// console.log(character);
+// console.log(character.stats.join(' '));
+character.race.racialFeatures.forEach(feature => console.log(feature));
+// console.log(character.race.details);
+// console.log(character.subrace);
 // console.log(character.race);
