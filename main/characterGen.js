@@ -25,7 +25,7 @@ const statsRoll = require("./stats/statsRoll");
 const classes = require("./classes/classesMain");
 let races = require("./races/racesMain");
 const backgrounds = require("./backgrounds/backgroundsMain");
-const skills = require("./skills generation/skillsMain")
+const skills = require("./skills/skillsMain")
 
 //      1a. 'Races' is reassigned to the value of it's own first index
 //              (this is because races from outside the Player's Handbook will be options in the future)
