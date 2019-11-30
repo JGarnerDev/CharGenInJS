@@ -119,7 +119,7 @@ const gnome = {
 const halfElf = {
   race: "Half-Elf",
   subraces: [],
-  abilityMod: { cha: +2, any: +1 },
+  abilityMod: { cha: +2, any1: +1 },
   movement: movement(30),
   details: {
     intro:
