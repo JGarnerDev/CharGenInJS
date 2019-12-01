@@ -47,7 +47,7 @@ const infernal = {
 const undercommon = {
   name: "Undercommon",
   desc:
-    "The svirfneblin dialect is more guttural than surface Gnomish, and most svirfneblin know only a little bit of Common, but those who deal with outsiders (and that includes you as an adventurer) pick up enough Common to get by in other lands."
+    "The Svirfneblin dialect is more guttural than surface Gnomish, and most Svirfneblin know only a little bit of Common, but those who deal with outsiders (and that includes you as an adventurer) pick up enough Common to get by in other lands."
 };
 
 const languages = {

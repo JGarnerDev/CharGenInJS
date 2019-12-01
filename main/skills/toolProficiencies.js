@@ -186,18 +186,18 @@ const toolProficiency = {
     woodcarversTools: woodcarversTools
   },
   gamingSets: { diceSet: diceSet, playingCardSet: playingCardSet },
-  instruments: {
-    drum: drum,
-    bagpipes: bagpipes,
-    dulcimer: dulcimer,
-    flute: flute,
-    lute: lute,
-    lyre: lyre,
-    horn: horn,
-    panFlute: panFlute,
-    shawm: shawm,
-    viol: viol
-  },
+  instruments: 
+    [drum,
+    bagpipes,
+    dulcimer,
+    flute,
+    lute,
+    lyre,
+    horn,
+    panFlute,
+    shawm,
+    viol]
+  ,
   navigatorsTools: navigatorsTools,
   thievesTools: thievesTools,
   vehicles: vehicles
