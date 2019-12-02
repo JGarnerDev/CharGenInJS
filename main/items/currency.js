@@ -35,11 +35,11 @@ function platinum(x) {
 }
 
 var currency = {
-  copper: copper,
-  silver: silver,
-  electrum: electrum,
-  gold: gold,
-  platinum: platinum
+   copper,
+   silver,
+   electrum,
+   gold,
+   platinum
 };
 
 module.exports = currency;

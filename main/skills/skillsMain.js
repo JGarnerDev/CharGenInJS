@@ -141,25 +141,27 @@ var persuasion = {
 };
 
 let skills = {
-    atheletics:atheletics,
-    acrobatics:acrobatics,
-    sleightOfHand:sleightOfHand,
-    stealth:stealth,
-    arcana:arcana,
-    history:history,
-    investigation:investigation,
-    nature:nature,
-    religion:religion,
-    animalHandling:animalHandling,
-    insight:insight,
-    medicine:medicine,
-    perception:perception,
-    survival:survival,
-    deception:deception,
-    intimidation:intimidation,
-    performance:performance,
-    persuasion:persuasion
+    atheletics,
+    acrobatics,
+    sleightOfHand,
+    stealth,
+    arcana,
+    history,
+    investigation,
+    nature,
+    religion,
+    animalHandling,
+    insight,
+    medicine,
+    perception,
+    survival,
+    deception,
+    intimidation,
+    performance,
+    persuasion
 };
+
+
 
 module.exports = skills
 

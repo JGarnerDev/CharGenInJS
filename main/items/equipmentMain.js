@@ -4,10 +4,10 @@ var currency = require("./currency");
 var weapons = require("./weapons");
 
 const equipment = {
-  adventuringGear: adventuringGear,
-  armor: armor,
-  currency: currency,
-  weapons:weapons
+   adventuringGear,
+   armor,
+   currency,
+  weapons
 };
 
 module.exports = equipment;

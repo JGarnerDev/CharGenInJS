@@ -235,7 +235,7 @@ function shield(x) {
     quantity: q,
     desc:
       "A shield is made from wood or metal and is carried in one hand. Wielding a shield increases your Armor Class by 2. You can benefit from only one shield at a time.",
-    type: "Light",
+    type: "Shield",
     metal: false,
     cost: 10 * q,
     ac: [2],
@@ -247,24 +247,24 @@ function shield(x) {
 
 const armor = {
   light: {
-    padded: padded,
-    leather: leather,
-    studdedLeather: studdedLeather
+    padded,
+    leather,
+    studdedLeather
   },
   medium: {
-    hide: hide,
-    chainShirt: chainShirt,
-    scaleMail: scaleMail,
-    breastplate: breastplate,
-    halfPlate: halfPlate
+    hide,
+    chainShirt,
+    scaleMail,
+    breastplate,
+    halfPlate
   },
   heavy: {
-    ringMail: ringMail,
-    chainMail: chainMail,
-    splint: splint,
-    plate: plate
+    ringMail,
+    chainMail,
+    splint,
+    plate
   },
-  shield: shield
+  shield
 };
 
 module.exports = armor;

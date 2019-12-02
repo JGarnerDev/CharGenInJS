@@ -1,4 +1,3 @@
-
 const anyLanguage = {
   name: "Any Language",
   desc: "You gain an extra language."
@@ -219,7 +218,6 @@ const savageAttacks = {
     "When you score a critical hit with a melee weapon Attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit."
 };
 
-
 const stoutResilience = {
   name: "Stout Resilience",
   desc:
@@ -289,47 +287,46 @@ const undercommon = {
 
 /////////////////////
 
-
 const racialFeatures = {
-  anyLanguage: anyLanguage,
-  anyFeat: anyFeat,
-  anySkill: anySkill,
-  artificersLore: artificersLore,
-  brave: brave,
-  breathWeapon: breathWeapon,
-  cantrip: cantrip,
-  darkvision: darkvision,
-  draconicAncestry: draconicAncestry,
-  draconicDamageResistance: draconicDamageResistance,
-  darkElfMagic: darkElfMagic,
-  darkElfWeaponTraining: darkElfWeaponTraining,
-  dwarvenResilience: dwarvenResilience,
-  dwarvenArmorTraining: dwarvenArmorTraining,
-  dwarvenToughness: dwarvenToughness,
-  dwarvenCombatTraining: dwarvenCombatTraining,
-  elfWeaponTraining: elfWeaponTraining,
-  feyAncestry: feyAncestry,
-  fleetOfFoot: fleetOfFoot,
-  gnomeCunning: gnomeCunning,
-  keenSenses: keenSenses,
-  maskOfTheWild: maskOfTheWild,
-  halflingNimbleness: halflingNimbleness,
-  hellishResistance: hellishResistance,
-  hvyArmrSpeed: heavyArmorSpeed,
-  infernalLegacy: infernalLegacy,
-  lucky: lucky,
-  naturallyStealthy: naturallyStealthy,
-  relentlessEndurace: relentlessEndurace,
-  savageAttacks: savageAttacks,
-  stoutResilience: stoutResilience,
-  stoneCamoflauge: stoneCamoflauge,
-  stonecunning: stonecunning,
-  sunlightSensitivity: sunlightSensitivity,
-  superiorDarkvision: superiorDarkvision,
-  tinker: tinker,
-  toolProficiency: toolProficiency,
-  trance: trance,
-  undercommon: undercommon
+  anyLanguage,
+  anyFeat,
+  anySkill,
+  artificersLore,
+  brave,
+  breathWeapon,
+  cantrip,
+  darkvision,
+  draconicAncestry,
+  draconicDamageResistance,
+  darkElfMagic,
+  darkElfWeaponTraining,
+  dwarvenResilience,
+  dwarvenArmorTraining,
+  dwarvenToughness,
+  dwarvenCombatTraining,
+  elfWeaponTraining,
+  feyAncestry,
+  fleetOfFoot,
+  gnomeCunning,
+  keenSenses,
+  maskOfTheWild,
+  halflingNimbleness,
+  hellishResistance,
+  heavyArmorSpeed,
+  infernalLegacy,
+  lucky,
+  naturallyStealthy,
+  relentlessEndurace,
+  savageAttacks,
+  stoutResilience,
+  stoneCamoflauge,
+  stonecunning,
+  sunlightSensitivity,
+  superiorDarkvision,
+  tinker,
+  toolProficiency,
+  trance,
+  undercommon
 };
 
 module.exports = racialFeatures;

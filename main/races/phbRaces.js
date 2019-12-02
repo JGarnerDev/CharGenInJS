@@ -130,7 +130,7 @@ const halfElf = {
       "Half-elves mature at the same rate humans do and reach Adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
     alignment:
       "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others’ demands, and sometimes prove unreliable, or at least unpredictable.",
-    languages: [languages.common, languages.elvish, languages.any1Lang],
+    languages: [languages.common, languages.elvish, languages],
     size:
       "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Their size is Medium."
   },
@@ -202,7 +202,7 @@ const human = {
       "Humans reach adulthood in their late teens and live less than a century.",
     alignment:
       " Humans tend toward no particular alignment. The best and the worst are found among them.",
-    languages: [languages.common, languages.any1Lang],
+    languages: [languages.common, languages],
     size:
       "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, Their size is Medium."
   },
@@ -236,15 +236,15 @@ const tiefling = {
 };
 
 const races = {
-  dragonborn: dragonborn,
-  dwarf: dwarf,
-  elf: elf,
-  gnome: gnome,
-  halfElf: halfElf,
-  halfOrc: halfOrc,
-  halfing: halfling,
-  human: human,
-  tiefling: tiefling
+   dragonborn,
+   dwarf,
+   elf,
+   gnome,
+   halfElf,
+   halfOrc,
+   halfling,
+   human,
+   tiefling
 };
 
 module.exports = races;

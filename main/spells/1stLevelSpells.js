@@ -1338,12 +1338,14 @@ const wizard = [
 ];
 
 const levelOneSpells = {
-  bard: bard,
-  cleric: cleric,
-  druid: druid,
-  paladin: paladin,
-  ranger: ranger,
-  sorcerer: sorcerer,
-  warlock: warlock,
-  wizard: wizard
+   bard,
+   cleric,
+   druid,
+   paladin,
+   ranger,
+   sorcerer,
+   warlock,
+   wizard
 };
+
+module.exports = levelOneSpells

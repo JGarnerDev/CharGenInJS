@@ -82,17 +82,17 @@ const net = {
 };
 
 const weaponProperties = {
-  thrown: thrown,
-  twoHanded: twoHanded,
-  versatile: versatile,
-  ammunition: ammunition,
-  loading: loading,
-  finesse: finesse,
-  heavy: heavy,
-  reach: reach,
-  lance: lance,
-  light: light,
-  net: net
+   thrown,
+   twoHanded,
+   versatile,
+   ammunition,
+   loading,
+   finesse,
+   heavy,
+   reach,
+   lance,
+   light,
+   net
 };
 
 module.exports = weaponProperties;

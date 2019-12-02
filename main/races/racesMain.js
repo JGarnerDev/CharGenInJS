@@ -1,10 +1,6 @@
 const phbRaces = require("./phbRaces")
 
-
-const races = []
-races.push( Object.values(phbRaces) )
-
-
+const races = {phbRaces}
 
 
 

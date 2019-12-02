@@ -599,51 +599,51 @@ function net(x) {
 const weapons = {
   simple: {
     melee: {
-      club: club,
-      dagger: dagger,
-      greatClub: greatClub,
-      handaxe: handaxe,
-      javelin: javelin,
-      lightHammer: lightHammer,
-      mace: mace,
-      quarterstaff: quarterstaff,
-      sickle: sickle,
-      spear: spear
+       club,
+       dagger,
+       greatClub,
+       handaxe,
+       javelin,
+       lightHammer,
+       mace,
+       quarterstaff,
+       sickle,
+       spear
     },
     ranged: {
-      lightCrossbow: lightCrossbow,
-      dart: dart,
-      shortbow: shortbow,
-      sling: sling
+       lightCrossbow,
+       dart,
+       shortbow,
+       sling
     }
   },
   martial: {
     melee: {
-      battleaxe: battleaxe,
-      flail: flail,
-      glaive: glaive,
-      greataxe: greataxe,
-      greatsword: greatsword,
-      halberd: halberd,
-      lance: lance,
-      longsword: longsword,
-      maul: maul,
-      morningstar: morningstar,
-      pike: pike,
-      rapier: rapier,
-      scimitar: scimitar,
-      shortsword: shortsword,
-      trident: trident,
-      warPick: warPick,
-      warhammer: warhammer,
-      whip: whip
+       battleaxe,
+       flail,
+       glaive,
+       greataxe,
+       greatsword,
+       halberd,
+       lance,
+       longsword,
+       maul,
+       morningstar,
+       pike,
+       rapier,
+       scimitar,
+       shortsword,
+       trident,
+       warPick,
+       warhammer,
+       whip
     },
     ranged: {
-      blowgun: blowgun,
-      handCrossbow: handCrossbow,
-      heavyCrossbow: heavyCrossbow,
-      longbow: longbow,
-      net: net
+       blowgun,
+       handCrossbow,
+       heavyCrossbow,
+       longbow,
+       net
     }
   }
 };
