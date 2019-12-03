@@ -41,7 +41,7 @@ const woodElf = {
   ]
 };
 const darkElf = {
-  name: "Dark Elf (Drow)",
+  name: "Dark Elf",
   desc: "Descended from an earlier subrace of dark skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark, patterned after the Way of Lolth. Also called dark elves, the drow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes (so pale as to be mistaken for white) in shades of pale lilac, silver, pink, and blue. They tend to be smaller and thinner than most elves.",
   abilityMod: { cha: +1 },
   racialFeatures: [

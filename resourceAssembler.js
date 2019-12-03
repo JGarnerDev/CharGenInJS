@@ -20,8 +20,4 @@ let resources = {
   statsRoll
 };
 
-Object.values(resources).forEach(x => {console.log(x);
-})
-
-
 module.exports = resources;

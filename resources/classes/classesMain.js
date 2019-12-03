@@ -5,8 +5,8 @@ const barbarian = {
   description:
     "A fierce warrior of primitive background who can enter a battle rage",
   hitDie: 12,
-  primaryAbility: "Strength",
-  savingThrowProficiency: ["Strength", "Constitution"],
+  primaryAbility: "str",
+  savingThrowProficiency: ["str", "con"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Medium armor",
@@ -35,8 +35,8 @@ const bard = {
   name: "Bard",
   description: "An inspiring magician whose power echoes the music of creation",
   hitDie: 8,
-  primaryAbility: "Charisma",
-  savingThrowProficiency: ["Charisma", "Dexterity"],
+  primaryAbility: "cha",
+  savingThrowProficiency: ["cha", "dex"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Simple Weapons",
@@ -65,8 +65,8 @@ const cleric = {
   description:
     "A priestly champion who wields divine magic in service of a higher power",
   hitDie: 8,
-  primaryAbility: "Wisdom",
-  savingThrowProficiency: ["Wisdom", "Charisma"],
+  primaryAbility: "wis",
+  savingThrowProficiency: ["wis", "cha"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Medium armor",
@@ -103,8 +103,8 @@ const druid = {
   description:
     "A priest of the Old Faith, wielding the powers of nature — moonlight and plant growth, fire and lightning — and adopting animal forms",
   hitDie: 8,
-  primaryAbility: "Wisdom",
-  savingThrowProficiency: ["Intelligence", "Wisdom"],
+  primaryAbility: "wis",
+  savingThrowProficiency: ["int", "wis"],
   armorAndWeaponProficiencies: [
     "Light armor (non-metal)",
     "Medium armor (non-metal)",
@@ -136,8 +136,8 @@ const fighter = {
   description:
     "A master of martial combat, skilled with a variety of weapons and armor",
   hitDie: 10,
-  primaryAbility: { or: ["Strength", "Dexterity"] },
-  savingThrowProficiency: ["Strength", "Constitution"],
+  primaryAbility: ["str", "dex"] , /// OR
+  savingThrowProficiency: ["str", "con"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Medium armor",
@@ -180,8 +180,8 @@ const monk = {
   description:
     "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
   hitDie: 8,
-  primaryAbility: { and: ["Dexterity", "Wisdom"] },
-  savingThrowProficiency: ["Strength", "Dexterity"],
+  primaryAbility:  ["dex", "wis"] , //// AND
+  savingThrowProficiency: ["str", "dex"],
   armorAndWeaponProficiencies: ["Simple Weapons", "Shortswords"],
   startingEquipment: [
     [items.weapons.martial.melee.shortsword, items.weapons.simple.any],
@@ -205,8 +205,8 @@ const paladin = {
   name: "Paladin",
   description: "A holy warrior bound to a sacred oath",
   hitDie: 10,
-  primaryAbility: { and: ["Strength", "Charisma"] },
-  savingThrowProficiency: ["Wisdom", "Charisma"],
+  primaryAbility: ["str", "cha"] , /// AND
+  savingThrowProficiency: ["wis", "cha"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Medium armor",
@@ -243,8 +243,8 @@ const ranger = {
   description:
     "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
   hitDie: 10,
-  primaryAbility: { and: ["Dexterity", "Wisdom"] },
-  savingThrowProficiency: ["Strength", "Dexterity"],
+  primaryAbility: ["dex", "wis"], /// AND
+  savingThrowProficiency: ["str", "dex"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Medium armor",
@@ -274,8 +274,8 @@ const rogue = {
   description:
     "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
   hitDie: 8,
-  primaryAbility: "Dexterity",
-  savingThrowProficiency: ["Dexterity", "Intelligence"],
+  primaryAbility: "dex",
+  savingThrowProficiency: ["dex", "int"],
   armorAndWeaponProficiencies: [
     "Light armor",
     "Simple weapons",
@@ -313,8 +313,8 @@ const sorcerer = {
   description:
     "A spellcaster who draws on inherent magic from a gift or bloodline",
   hitDie: 6,
-  primaryAbility: "Charisma",
-  savingThrowProficiency: ["Constitution", "Charisma"],
+  primaryAbility: "cha",
+  savingThrowProficiency: ["con", "cha"],
   armorAndWeaponProficiencies: [
     "Daggers",
     "Darts",
@@ -347,8 +347,8 @@ const warlock = {
   description:
     "A wielder of magic that is derived from a bargain with an extraplanar entity",
   hitDie: 8,
-  primaryAbility: "Charisma",
-  savingThrowProficiency: ["Wisdom", "Charisma"],
+  primaryAbility: "cha",
+  savingThrowProficiency: ["wis", "cha"],
   armorAndWeaponProficiencies: ["Light armor", "Simple weapons"],
   startingEquipment: [
     [
@@ -377,8 +377,8 @@ const wizard = {
   description:
     "A scholarly magic-user capable of manipulating the structures of reality",
   hitDie: 6,
-  primaryAbility: "Intelligence",
-  savingThrowProficiency: ["Intelligence", "Wisdom"],
+  primaryAbility: "int",
+  savingThrowProficiency: ["int", "wis"],
   armorAndWeaponProficiencies: [
     "Daggers",
     "Darts",

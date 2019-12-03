@@ -1,6 +1,6 @@
 const names = {
-  dragonborn: {
-    male: [
+  Dragonborn: {
+    Male: [
       "Alidorim",
       "Alixan",
       "Arkul",
@@ -102,7 +102,7 @@ const names = {
       "Zrarinn",
       "Zraziros"
     ],
-    female: [
+    Female: [
       "Althadin",
       "Amreashtur",
       "Amruajad",
@@ -304,7 +304,7 @@ const names = {
       "Zofsira",
       "Zofthibra"
     ],
-    family: [
+    Family: [
       "Althadin",
       "Amreashtur",
       "Amruajad",
@@ -407,8 +407,8 @@ const names = {
       "Yumputhorguun"
     ]
   },
-  dwarf: {
-    male: [
+  Dwarf: {
+    Male: [
       "Adkuhm",
       "Akadum",
       "Anin",
@@ -610,7 +610,7 @@ const names = {
       "Voggur",
       "Yngvi"
     ],
-    female: [
+    Female: [
       "Aca",
       "Acaida",
       "Adal",
@@ -811,7 +811,7 @@ const names = {
       "Zerun",
       "Zesi"
     ],
-    clanName: [
+    Family: [
       "Akurkam",
       "Alderfist",
       "Ashenforge",
@@ -916,9 +916,9 @@ const names = {
       "Yewhammer"
     ]
   },
-  elf: {
-    highElf: {
-      male: [
+  Elf: {
+    "High Elf": {
+      Male: [
         "Agang",
         "Agoda",
         "Agoton",
@@ -1035,7 +1035,7 @@ const names = {
         "Yisopka",
         "Yisotah"
       ],
-      female: [
+      Female: [
         "Aelalasa",
         "Aeliona",
         "Aemoni",
@@ -1167,7 +1167,7 @@ const names = {
         "Wikoni",
         "Yokirin"
       ],
-      family: [
+      Family: [
         "Adfhar",
         "Aedahl",
         "Aediane",
@@ -1274,8 +1274,8 @@ const names = {
         "Thromthius"
       ]
     },
-    woodElf: {
-      male: [
+    "Wood Elf": {
+      Male: [
         "Adaadro",
         "Aelcakoth",
         "Akkirla",
@@ -1377,7 +1377,7 @@ const names = {
         "Zathokan",
         "Ozloc"
       ],
-      female: [
+      Female: [
         "Adrytheth",
         "Aecesti",
         "Aethin",
@@ -1479,7 +1479,7 @@ const names = {
         "Yytraf",
         "Yyvetrith"
       ],
-      family: [
+      Family: [
         "Acornrock",
         "Acornrun",
         "Acornvale",
@@ -1577,8 +1577,8 @@ const names = {
         "Willowwind"
       ]
     },
-    darkElf: {
-      male: [
+    "Dark Elf": {
+      Male: [
         "Alton",
         "Balok",
         "Baragh",
@@ -1710,7 +1710,7 @@ const names = {
         "Zeerith",
         "Zyn"
       ],
-      female: [
+      Female: [
         "Ahlysaaria",
         "Akordia",
         "Alaunirra",
@@ -1853,7 +1853,7 @@ const names = {
         "Zesstra",
         "Zilvra"
       ],
-      family: [
+      Family: [
         "A'Daragon",
         "Abaeir",
         "Abbylan",
@@ -1931,9 +1931,9 @@ const names = {
       ]
     }
   },
-  gnome: {
-    deepGnome: {
-      male: [
+  Gnome: {
+    "Deep Gnome": {
+      Male: [
         "Baggu",
         "Bathrers",
         "Beeldrec",
@@ -2034,7 +2034,7 @@ const names = {
         "Zindrunk",
         "Zuthrenk"
       ],
-      female: [
+      Female: [
         "Adleddi",
         "Alschini",
         "Arsas",
@@ -2156,7 +2156,7 @@ const names = {
         "Zitina",
         "Zuned"
       ],
-      family: [
+      Family: [
         "Adamantmaker",
         "Alloyfoot",
         "Alloypacker",
@@ -2257,8 +2257,8 @@ const names = {
         "Zirconmender"
       ]
     },
-    rockGnome: {
-      male: [
+    "Rock Gnome": {
+      Male: [
         "Alwin",
         "Alybar",
         "Arimin",
@@ -2403,7 +2403,7 @@ const names = {
         "Zilpip",
         "Zilziver"
       ],
-      female: [
+      Female: [
         "Alumyra",
         "Aluzyre",
         "Banqys",
@@ -2532,7 +2532,7 @@ const names = {
         "Zinla",
         "Zintina"
       ],
-      family: [
+      Family: [
         "Alfaldiob",
         "Alupplucks",
         "Ancuarnfo",
@@ -2646,8 +2646,8 @@ const names = {
       ]
     }
   },
-  halfElf: {
-    male: [
+  "Half-Elf": {
+    Male: [
       "Aego",
       "Aelrindel",
       "Aerendyl",
@@ -2849,7 +2849,7 @@ const names = {
       "Zabbas",
       "Zaltarish"
     ],
-    female: [
+    Female: [
       "Aelene",
       "Aelinor",
       "Aemma",
@@ -3051,7 +3051,7 @@ const names = {
       "Zeale",
       "Zhuirentel"
     ],
-    family: [
+    Family: [
       "Adanell",
       "Aelasar",
       "Aelorothi",
@@ -3254,8 +3254,8 @@ const names = {
       "Yrauos"
     ]
   },
-  halfOrc: {
-    male: [
+  "Half-Orc": {
+    Male: [
       "Aesbad",
       "Aeson",
       "Agis",
@@ -3456,7 +3456,7 @@ const names = {
       "Zogwort",
       "Zugug"
     ],
-    female: [
+    Female: [
       "Adrog",
       "Adstang",
       "Aelbog",
@@ -3657,7 +3657,7 @@ const names = {
       "Zealnaga",
       "Zoguz"
     ],
-    family: [
+    Family: [
       "Angerhunt",
       "Aridsword",
       "Axerest",
@@ -3788,8 +3788,8 @@ const names = {
       "Wolfstrike"
     ]
   },
-  halfling: {
-    male: [
+  Halfling: {
+    Male: [
       "Aaxi",
       "Abbán",
       "Adalard",
@@ -4221,7 +4221,7 @@ const names = {
       "Zeeke",
       "Zuri"
     ],
-    female: [
+    Female: [
       "Adaldrida",
       "Adallinda",
       "Adan",
@@ -4563,7 +4563,7 @@ const names = {
       "Zelenka",
       "Zita"
     ],
-    family: [
+    Family: [
       "Amster",
       "Ashworthy",
       "Autumntrack",
@@ -4726,8 +4726,8 @@ const names = {
       "Zaragamba"
     ]
   },
-  human: {
-    male: [
+  Human: {
+    Male: [
       "Aldo",
       "Alfredo",
       "Allen",
@@ -4829,7 +4829,7 @@ const names = {
       "Yolimar",
       "Wynell"
     ],
-    female: [
+    Female: [
       "Adrienne",
       "Agnea",
       "Aimee",
@@ -4931,7 +4931,7 @@ const names = {
       "Xenia",
       "Yuriko"
     ],
-    family: [
+    Family: [
       "Alli",
       "Anderton",
       "Avalos",
@@ -5034,8 +5034,8 @@ const names = {
       "Yahairo"
     ]
   },
-  tiefling: {
-    male: [
+  Tiefling: {
+    Male: [
       "Adventure",
       "Aetcius",
       "Aetrut",
@@ -5223,7 +5223,7 @@ const names = {
       "Zorron",
       "Zorxikas"
     ],
-    female: [
+    Female: [
       "Achievement",
       "Adventure",
       "Afcyra",
@@ -5413,7 +5413,7 @@ const names = {
       "Zenise",
       "Zeyis"
     ],
-    family: [
+    Family: [
       "Adler",
       "Admon",
       "Ahren",

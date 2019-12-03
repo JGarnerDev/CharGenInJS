@@ -16,8 +16,8 @@ function movement(base) {
 }
 
 const dragonborn = {
-  race: "Dragonborn",
-  subraces: [],
+  name: "Dragonborn",
+  subraces: [{name:"Standard"}],
   abilityMod: { str: +2, cha: +1 },
   movement: movement(30),
   details: {
@@ -42,7 +42,7 @@ const dragonborn = {
 };
 
 const dwarf = {
-  race: "Dwarf",
+  name: "Dwarf",
   subraces: [phbSubraces.hillDwarf, phbSubraces.mountainDwarf],
   abilityMod: { con: +2 },
   movement: movement(25),
@@ -70,7 +70,7 @@ const dwarf = {
   source: "EEPC"
 };
 const elf = {
-  race: "Elf",
+  name: "Elf",
   subraces: [phbSubraces.highElf, phbSubraces.woodElf, phbSubraces.darkElf],
   abilityMod: { dex: +2 },
   movement: movement(30),
@@ -96,7 +96,7 @@ const elf = {
   source: "EEPC"
 };
 const gnome = {
-  race: "Gnome",
+  name: "Gnome",
   subraces: [phbSubraces.deepGnome, phbSubraces.rockGnome],
   abilityMod: { int: +2 },
   movement: movement(30),
@@ -117,8 +117,8 @@ const gnome = {
   source: "EEPC"
 };
 const halfElf = {
-  race: "Half-Elf",
-  subraces: [],
+  name: "Half-Elf",
+  subraces: [{name:"Standard"}],
   abilityMod: { cha: +2, any1: +1 },
   movement: movement(30),
   details: {
@@ -138,8 +138,8 @@ const halfElf = {
   source: "EEPC"
 };
 const halfOrc = {
-  race: "Half-Orc",
-  subraces: [],
+  name: "Half-Orc",
+  subraces: [{name:"Standard"}],
   abilityMod: { str: +2, con: +1 },
   movement: movement(30),
   details: {
@@ -164,7 +164,7 @@ const halfOrc = {
   source: "EEPC"
 };
 const halfling = {
-  race: "Halfling",
+  name: "Halfling",
   subraces: [phbSubraces.lightfootHalfling, phbSubraces.stoutHalfling],
   abilityMod: { dex: +2 },
   movement: movement(30),
@@ -189,8 +189,8 @@ const halfling = {
   source: "EEPC"
 };
 const human = {
-  race: "Human",
-  subraces: [phbSubraces.humanVariant],
+  name: "Human",
+  subraces: [{name:"Standard"},phbSubraces.humanVariant],
   abilityMod: { all: +1 },
   movement: movement(30),
   details: {
@@ -210,8 +210,8 @@ const human = {
   source: "EEPC"
 };
 const tiefling = {
-  race: "Tiefling",
-  subraces: [],
+  name: "Tiefling",
+  subraces: [{name:"Standard"}],
   abilityMod: { cha: +2, int: +1 },
   movement: movement(30),
   details: {
