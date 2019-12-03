@@ -1,7 +1,7 @@
 let skills = require("../skills/skillsMain");
 let toolProficiencies = require("../skills/toolProficiencies");
 let languages = require("../races/languages");
-let equipment = require("../items/equipmentMain");
+let items = require("../items/itemsMain");
 
 const acolyte = {
   name: "Acolyte",
@@ -11,12 +11,12 @@ const acolyte = {
   toolProficiencies: [],
   languages: [languages, languages],
   equipment: [
-    equipment.adventuringGear.holySymbol,
-    equipment.adventuringGear.prayerBook,
-    equipment.adventuringGear.stickOfIncense,
-    equipment.adventuringGear.vestments,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(15)
+    items.adventuringGear.holySymbol,
+    items.adventuringGear.prayerBook,
+    items.adventuringGear.stickOfIncense,
+    items.adventuringGear.vestments,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(15)
   ],
   feature: {
     "Shelter of the Faithful":
@@ -97,10 +97,10 @@ const charlatan = {
   ],
   languages: [],
   equipment: [
-    equipment.adventuringGear.fineClothes,
-    equipment.adventuringGear.disguiseKit,
-    equipment.adventuringGear.charlatanChoice,
-    equipment.currency.gold(15)
+    items.adventuringGear.fineClothes,
+    items.adventuringGear.disguiseKit,
+    items.adventuringGear.charlatanChoice,
+    items.currency.gold(15)
   ],
   feature: {
     "False Identity":
@@ -185,9 +185,9 @@ const criminal = {
   ],
   languages: [],
   equipment: [
-    equipment.adventuringGear.crowbar,
-    equipment.adventuringGear.darkCommonClothes,
-    equipment.currency.gold(15)
+    items.adventuringGear.crowbar,
+    items.adventuringGear.darkCommonClothes,
+    items.currency.gold(15)
   ],
   feature: {
     "Criminal Contact":
@@ -274,10 +274,10 @@ const gladiator = {
   ],
   languages: [],
   equipment: [
-    equipment.weapons.martial,
-    equipment.adventuringGear.entertainerOption,
-    equipment.adventuringGear.costume,
-    equipment.currency.gold(15)
+    items.weapons.martial,
+    items.adventuringGear.entertainerOption,
+    items.adventuringGear.costume,
+    items.currency.gold(15)
   ],
   feature: {
     "By Popular Demand":
@@ -369,10 +369,10 @@ const entertainer = {
   ],
   languages: [],
   equipment: [
-    entertainer.toolProficiencies,
-    equipment.adventuringGear.entertainerOption,
-    equipment.adventuringGear.costume,
-    equipment.currency.gold(15)
+    toolProficiencies,
+    items.adventuringGear.entertainerOption,
+    items.adventuringGear.costume,
+    items.currency.gold(15)
   ],
   feature: {
     "By Popular Demand":
@@ -460,15 +460,15 @@ const folkHero = {
   skillProficiencies: [skills.animalHandling, skills.survival],
   toolProficiencies: [
     toolProficiencies.artisansTools,
-    toolProficiencies.vehicles(land)
+    toolProficiencies.vehicles("land")
   ],
   languages: [],
   equipment: [
-    equipment.adventuringGear.artisansTools,
-    equipment.adventuringGear.shovel,
-    equipment.adventuringGear.ironPot,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(10)
+    items.adventuringGear.artisansTools,
+    items.adventuringGear.shovel,
+    items.adventuringGear.ironPot,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(10)
   ],
   feature: {
     "Rustic Hospitality":
@@ -561,10 +561,10 @@ const guildArtisan = {
   toolProficiencies: [toolProficiencies.artisansTools],
   languages: [languages],
   equipment: [
-    equipment.adventuringGear.artisansTools,
-    equipment.adventuringGear.letterFromGuild,
-    equipment.adventuringGear.travelersClothes,
-    equipment.currency.gold(15)
+    items.adventuringGear.artisansTools,
+    items.adventuringGear.letterFromGuild,
+    items.adventuringGear.travelersClothes,
+    items.currency.gold(15)
   ],
   feature: [
     "Guild Membership",
@@ -663,11 +663,11 @@ const guildMerchant = {
   ],
   languages: [languages],
   equipment: [
-    equipment.adventuringGear.artisansTools,
+    items.adventuringGear.artisansTools,
 
-    equipment.adventuringGear.letterFromGuild,
-    equipment.adventuringGear.travelersClothes,
-    equipment.currency.gold(15)
+    items.adventuringGear.letterFromGuild,
+    items.adventuringGear.travelersClothes,
+    items.currency.gold(15)
   ],
   feature: [
     "Guild Membership",
@@ -746,11 +746,11 @@ const hermit = {
   toolProficiencies: [toolProficiencies.herbalismKit],
   languages: [languages],
   equipment: [
-    equipment.adventuringGear.hermitScrollCase,
-    equipment.adventuringGear.winterBlanket,
-    equipment.adventuringGear.commonClothes,
-    equipment.adventuringGear.herbalismKit,
-    equipment.currency.gold(5)
+    items.adventuringGear.hermitScrollCase,
+    items.adventuringGear.winterBlanket,
+    items.adventuringGear.commonClothes,
+    items.adventuringGear.herbalismKit,
+    items.currency.gold(5)
   ],
   feature: {
     Discovery:
@@ -841,11 +841,11 @@ const knight = {
   toolProficiencies: [toolProficiencies.gamingSets],
   languages: [languages],
   equipment: [
-    [equipment.adventuringGear.banner, equipment.adventuringGear.tokenOfNoble],
-    equipment.adventuringGear.fineClothes,
-    equipment.adventuringGear.signetRing,
-    equipment.adventuringGear.scrollOfPidigree,
-    equipment.currency.gold(25)
+    [items.adventuringGear.banner, items.adventuringGear.tokenOfNoble],
+    items.adventuringGear.fineClothes,
+    items.adventuringGear.signetRing,
+    items.adventuringGear.scrollOfPidigree,
+    items.currency.gold(25)
   ],
   feature: {
     Retainers:
@@ -920,10 +920,10 @@ const noble = {
   toolProficiencies: [toolProficiencies.gamingSets],
   languages: [languages],
   equipment: [
-    equipment.adventuringGear.fineClothes,
-    equipment.adventuringGear.signetRing,
-    equipment.adventuringGear.scrollOfPidigree,
-    equipment.currency.gold(25)
+    items.adventuringGear.fineClothes,
+    items.adventuringGear.signetRing,
+    items.adventuringGear.scrollOfPidigree,
+    items.currency.gold(25)
   ],
   feature: {
     "Position of Privilege":
@@ -998,11 +998,11 @@ const outlander = {
   toolProficiencies: [toolProficiencies.instruments],
   languages: [languages],
   equipment: [
-    equipment.adventuringGear.staff,
-    equipment.adventuringGear.huntingTrap,
-    equipment.adventuringGear.animalTrophy,
-    equipment.adventuringGear.travelersClothes,
-    equipment.currency.gold(10)
+    items.adventuringGear.staff,
+    items.adventuringGear.huntingTrap,
+    items.adventuringGear.animalTrophy,
+    items.adventuringGear.travelersClothes,
+    items.currency.gold(10)
   ],
   feature: {
     Wanderer:
@@ -1086,12 +1086,12 @@ const sage = {
   toolProficiencies: [],
   languages: [languages, languages],
   equipment: [
-    equipment.adventuringGear.ink,
-    equipment.adventuringGear.quill,
-    equipment.adventuringGear.smallKnife,
-    equipment.adventuringGear.letterFromDeadColleague,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(10)
+    items.adventuringGear.ink,
+    items.adventuringGear.quill,
+    items.adventuringGear.smallKnife,
+    items.adventuringGear.letterFromDeadColleague,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(10)
   ],
   feature: {
     Researcher:
@@ -1174,16 +1174,16 @@ const pirate = {
   skillProficiencies: [skills.athletics, skills.perception],
   toolProficiencies: [
     toolProficiencies.navigatorsTools,
-    toolProficiencies.vehicles(water)
+    toolProficiencies.vehicles("water")
   ],
   languages: [],
   equipment: [
-    [equipment.adventuringGear.luckyCharm, equipment.adventuringGear.trinket],
-    equipment.adventuringGear.balayingPin,
-    equipment.adventuringGear.silkRope,
-    equipment.adventuringGear.luckyCharm,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(10)
+    [items.adventuringGear.luckyCharm, items.adventuringGear.trinket],
+    items.adventuringGear.balayingPin,
+    items.adventuringGear.silkRope,
+    items.adventuringGear.luckyCharm,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(10)
   ],
   feature: {
     "Bad Reputation":
@@ -1257,16 +1257,16 @@ const sailor = {
   skillProficiencies: [skills.athletics, skills.perception],
   toolProficiencies: [
     toolProficiencies.navigatorsTools,
-    toolProficiencies.vehicles(water)
+    toolProficiencies.vehicles("water")
   ],
   languages: [],
   equipment: [
-    [equipment.adventuringGear.luckyCharm, equipment.adventuringGear.trinket],
-    equipment.adventuringGear.balayingPin,
-    equipment.adventuringGear.silkRope,
-    equipment.adventuringGear.luckyCharm,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(10)
+    [items.adventuringGear.luckyCharm, items.adventuringGear.trinket],
+    items.adventuringGear.balayingPin,
+    items.adventuringGear.silkRope,
+    items.adventuringGear.luckyCharm,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(10)
   ],
   feature: {
     "Ship's Passage":
@@ -1340,15 +1340,15 @@ const soldier = {
   skillProficiencies: [skills.athletics, skills.intimidation],
   toolProficiencies: [
     toolProficiencies.gamingSets,
-    toolProficiencies.vehicles(land)
+    toolProficiencies.vehicles("land")
   ],
   languages: [],
   equipment: [
-    equipment.adventuringGear.gamingSets,
-    equipment.adventuringGear.insigniaOfRank,
-    equipment.adventuringGear.enemyTrophy,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(10)
+    items.adventuringGear.gamingSets,
+    items.adventuringGear.insigniaOfRank,
+    items.adventuringGear.enemyTrophy,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(10)
   ],
   feature: {
     "Military Rank":
@@ -1432,12 +1432,12 @@ const urchin = {
   ],
   languages: [],
   equipment: [
-    equipment.adventuringGear.smallKnife,
-    equipment.adventuringGear.mapOfHomeCity,
-    equipment.adventuringGear.petMouse,
-    equipment.adventuringGear.tokenOfParents,
-    equipment.adventuringGear.commonClothes,
-    equipment.currency.gold(10)
+    items.adventuringGear.smallKnife,
+    items.adventuringGear.mapOfHomeCity,
+    items.adventuringGear.petMouse,
+    items.adventuringGear.tokenOfParents,
+    items.adventuringGear.commonClothes,
+    items.currency.gold(10)
   ],
   feature: {
     "City Secrets":

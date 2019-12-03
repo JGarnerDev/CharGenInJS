@@ -1,4 +1,7 @@
 let racialFeatures = require("./racialFeatures");
+let feats = require("../feats/featsMain");
+let skills = require("../skills/skillsMain");
+let languages = require("./languages");
 
 const hillDwarf = {
   name: "Hill Dwarf",
@@ -22,7 +25,7 @@ const highElf = {
   racialFeatures: [
     racialFeatures.elfWeaponTraining,
     racialFeatures.cantrip,
-    racialFeatures.extraLanguage
+    languages
   ]
 };
 const woodElf = {
@@ -85,7 +88,7 @@ const humanVariant = {
   desc:
     "If your campaign uses the optional feat rules from the Player’s Handbook, your Dungeon Master might allow these variant traits, all of which replace the human’s Ability Score Increase trait.",
   abilityMod: { any2Stats: +1 },
-  racialFeatures: [racialFeatures.any1Skill, racialFeatures.any1Feat]
+  racialFeatures: [skills, feats]
 };
 
 const subraces = {

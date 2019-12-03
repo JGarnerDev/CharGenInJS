@@ -1,15 +1,3 @@
-const anyLanguage = {
-  name: "Any Language",
-  desc: "You gain an extra language."
-};
-
-const anySkill = {
-  name: "Any Skill",
-  desc: "You gain an extra skill proficiency."
-};
-
-const anyFeat = { name: "Any Feat", desc: "You gain an extra feat." };
-
 const artificersLore = {
   name: "Artificer's Lore",
   desc:
@@ -288,9 +276,6 @@ const undercommon = {
 /////////////////////
 
 const racialFeatures = {
-  anyLanguage,
-  anyFeat,
-  anySkill,
   artificersLore,
   brave,
   breathWeapon,
