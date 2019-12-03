@@ -1340,7 +1340,7 @@ const wizard = [
 const levelOneSpells = {
    bard,
    cleric,
-   druid,
+//    druid,
    paladin,
    ranger,
    sorcerer,
