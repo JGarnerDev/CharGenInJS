@@ -33,6 +33,22 @@ const cooksUtensils = {
   desc:
     "You're proficient with cook's utensils. Your proficiency bonus is added to any ability check you make to create and manipulate ingredients for the purposes of eating."
 };
+const  disguiseKit = {
+  name: "Disguise kit",
+  desc:
+    "You're proficient with disguise kits. Your proficiency bonus is added to any ability check you make to fashion a disguise."
+};
+const forgeryKit = {
+  name: "Forgery kit",
+  desc:
+    "You're proficient with Forgery kits. Your proficiency bonus is added to any ability check you make to falsify documents or create fake ones from scratch."
+};
+const herbalismKit = {
+  name: "Herbalism kit",
+  desc:
+    "You're proficient with herbalism kits. Your proficiency bonus is added to any ability check you make to identify or apply herbs."
+};
+
 const glassblowersTools = {
   name: "Glassblower's Tools",
   desc:
@@ -155,7 +171,7 @@ const thievesTools = {
 };
 function vehicles(x) {
   return {
-    name: "Vehicles(" + x + ")",
+    name: "Vehicles (" + x + ")",
     desc:
       "You're proficient with " +
       x +
@@ -198,6 +214,9 @@ const toolProficiencies = {
     shawm,
     viol
   ],
+  disguiseKit,
+  forgeryKit,
+  herbalismKit,
   navigatorsTools,
   thievesTools,
   vehicles

@@ -51,16 +51,16 @@ const undercommon = {
 };
 
 const languages = {
-   common,
-   draconic,
-   dwarvish,
-   elvish,
-   orc,
-   gnomish,
-   halfling,
-   infernal,
-   primordial,
-   undercommon
+   common, 
+   draconic, 
+   dwarvish, 
+   elvish, 
+   orc, 
+   gnomish, 
+   halfling, 
+   infernal, 
+   primordial, 
+   undercommon 
 };
 
 module.exports = languages

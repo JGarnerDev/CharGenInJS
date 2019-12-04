@@ -1,5 +1,5 @@
 const racialFeatures = require("./racialFeatures");
-const languages = require("./languages");
+const languages = require("../languages/languagesMain");
 const phbSubraces = require("./phbSubRaces");
 
 function movement(base) {
@@ -119,7 +119,7 @@ const gnome = {
 const halfElf = {
   name: "Half-Elf",
   subraces: [{name:"Standard"}],
-  abilityMod: { cha: +2, any1: +1 },
+  abilityMod: { cha: +2, any: +1 },
   movement: movement(30),
   details: {
     intro:
@@ -130,7 +130,7 @@ const halfElf = {
       "Half-elves mature at the same rate humans do and reach Adulthood around the age of 20. They live much longer than humans, however, often exceeding 180 years.",
     alignment:
       "Half-elves share the chaotic bent of their elven heritage. They value both personal freedom and creative expression, demonstrating neither love of leaders nor desire for followers. They chafe at rules, resent others’ demands, and sometimes prove unreliable, or at least unpredictable.",
-    languages: [languages.common, languages.elvish, languages],
+    languages: [languages.common, languages.elvish, "any"],
     size:
       "Half-elves are about the same size as humans, ranging from 5 to 6 feet tall. Their size is Medium."
   },
@@ -202,7 +202,7 @@ const human = {
       "Humans reach adulthood in their late teens and live less than a century.",
     alignment:
       " Humans tend toward no particular alignment. The best and the worst are found among them.",
-    languages: [languages.common, languages],
+    languages: [languages.common, "any"],
     size:
       "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, Their size is Medium."
   },

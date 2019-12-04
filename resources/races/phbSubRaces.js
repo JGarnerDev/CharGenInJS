@@ -1,7 +1,7 @@
 let racialFeatures = require("./racialFeatures");
 let feats = require("../feats/featsMain");
 let skills = require("../skills/skillsMain");
-let languages = require("./languages");
+let languages = require("../languages/languagesMain");
 
 const hillDwarf = {
   name: "Hill Dwarf",
