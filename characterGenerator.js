@@ -200,7 +200,7 @@ for (let i = 0; i < Object.keys(character.race.abilityMod).length; i++) {
     character.abilities.wis += 1;
     character.abilities.int += 1;
     character.abilities.cha += 1;
-    break
+    break;
   }
   let modifier = Object.values(character.race.abilityMod)[i];
   character.abilities[ability] = character.abilities[ability] + modifier;
@@ -299,51 +299,69 @@ character.name = pickRandomName(character.race.name, character.gender);
 
 //      Behold the abilities of our character!
 
-console.log("name === " + character.name)
-console.log(" ")
-console.log("gender === " + character.gender)
-console.log(" ")
+console.log("name === " + character.name);
+console.log(" ");
+console.log("gender === " + character.gender);
+console.log(" ");
 console.log("race === " + character.race.name);
-console.log(" ")
-console.log("subrace === " + character.subrace.name)
-console.log(" ")
+console.log(" ");
+console.log("subrace === " + character.subrace.name);
+console.log(" ");
 console.log("class === " + character.class.name);
-console.log(" ")
-console.log("background === " + character.background.name)
-console.log(" ")
-console.log("personality === " + character.personality.join(' '))
-console.log(" ")
-if(character.languages.length === 1){console.log("languages === " + " " + character.languages[0].name);}
-if(character.languages.length === 2){console.log("languages === " + " " + character.languages[0].name + " " + character.languages[1].name);}
-if(character.languages.length === 3){console.log("languages === " + " " + character.languages[0].name + " " + character.languages[1].name + " " + character.languages[2].name);}
-if(character.languages.length === 4){console.log("languages === " + " " + character.languages[0].name + " " + character.languages[1].name + " " + character.languages[2].name + " " + character.languages[3].name);}
-if(character.languages.length === 5){console.log("languages === " + " " + character.languages[0].name + " " + character.languages[1].name + " " + character.languages[2].name + " " + character.languages[3].name + " " + character.languages[4].name);}
-console.log(" ")
-console.log("character level === " + character.levels.length)
-console.log("proficiencyBonus === " + character.proficiencyBonus)
-console.log(" ")
-console.log(" ")
-console.log("primaryAbility === " + character.proficiencies.primaryAbility)
-console.log(" ")
-console.log("savingThrows === " + character.proficiencies.savingThrows)
-console.log(" ")
-console.log("weapon proficiencies === " + character.proficiencies.weapons)
-console.log(" ")
-console.log("armor proficiencies === " + character.proficiencies.armor)
-console.log(" ")
-console.log("skill proficiencies of character === " + character.proficiencies.skills.join(', '))
-console.log(" ")
-console.log("tool proficiencies === " + character.proficiencies.tools.join(', '))
-console.log(" ")
-console.log("HP === " + character.HP) // Currently just for level 1
-console.log(" ")
-console.log("hitDie === " + character.hitDie)
-console.log(" ")
-console.log("levels === " + character.levels.length)
-console.log(" ")
+console.log(" ");
+console.log("background === " + character.background.name);
+console.log(" ");
+console.log("Personality");
+console.log(" ");
+for (let i = 0; i < character.personality.length; i++) {
+  console.log("- " + character.personality[i]);
+  console.log(" ");
+}
+console.log(" ");
+
+console.log("Languages");
+for (let i = 0; i < character.languages.length; i++) {
+  console.log("- " + character.languages[i].name);
+}
+
+console.log(" ");
+console.log("character level === " + character.levels.length);
+console.log(" ");
+console.log("proficiencyBonus === " + character.proficiencyBonus);
+console.log(" ");
+console.log("primaryAbility === " + character.proficiencies.primaryAbility);
+console.log(" ");
+console.log(
+  "savingThrows === " + character.proficiencies.savingThrows.join(" ")
+);
+console.log(" ");
+console.log("Weapon proficiencies");
+for (let i = 0; i < character.proficiencies.weapons.length; i++) {
+  console.log("- " + character.proficiencies.weapons[i]);
+}
+console.log(" ");
+console.log("armor proficiencies === ");
+for (let i = 0; i < character.proficiencies.armor.length; i++) {
+  console.log("- " + character.proficiencies.armor[i]);
+}
+console.log(" ");
+console.log(
+  "skill proficiencies === " + character.proficiencies.skills.join(", ")
+);
+console.log(" ");
+console.log(
+  "tool proficiencies === " + character.proficiencies.tools.join(", ")
+);
+console.log(" ");
+console.log("HP === " + character.HP); // Currently just for level 1
+console.log(" ");
+console.log("hitDie === " + character.hitDie);
+console.log(" ");
+console.log("levels === " + character.levels.length);
+console.log(" ");
 console.log("abilities === " + Object.keys(character.abilities).join(" "));
 console.log("abilities === " + Object.values(character.abilities).join("  "));
-console.log(" ")
+console.log(" ");
 // console.log("equipment === " + character.equipment)
 // console.log(" ")
 // console.log("weapons === " + character.weapons)
