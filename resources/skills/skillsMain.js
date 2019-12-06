@@ -141,27 +141,50 @@ var persuasion = {
 };
 
 let skills = {
-    atheletics,
-    acrobatics,
-    sleightOfHand,
-    stealth,
-    arcana,
-    history,
-    investigation,
-    nature,
-    religion,
-    animalHandling,
-    insight,
-    medicine,
-    perception,
-    survival,
-    deception,
-    intimidation,
-    performance,
-    persuasion
+  atheletics,
+  acrobatics,
+  sleightOfHand,
+  stealth,
+  arcana,
+  history,
+  investigation,
+  nature,
+  religion,
+  animalHandling,
+  insight,
+  medicine,
+  perception,
+  survival,
+  deception,
+  intimidation,
+  performance,
+  persuasion,
+  byAbility: {
+    str: [atheletics],
+    dex: [acrobatics, sleightOfHand, stealth],
+    con: [],
+    wis: [animalHandling, insight, medicine, perception, survival],
+    int: [arcana, history, investigation, nature, religion],
+    cha: [deception, intimidation, performance, persuasion]
+  },
+  names:[ "atheletics",
+    "acrobatics",
+    "sleightOfHand",
+    "stealth",
+    "arcana",
+    "history",
+    "investigation",
+    "nature",
+    "religion",
+    "animalHandling",
+    "insight",
+    "medicine",
+    "perception",
+    "survival",
+    "deception",
+    "intimidation",
+    "performance",
+    "persuasion"]
 };
 
-
-
-module.exports = skills
-
+module.exports = skills;

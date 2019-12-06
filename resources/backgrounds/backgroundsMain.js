@@ -7,15 +7,15 @@ const acolyte = {
   name: "Acolyte",
   details:
     "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power. Choose a god, a pantheon of gods, or some other quasi-divine being, and work with your DM to detail the nature of your religious service. The Gods of the Multiverse section contains a sample pantheon, from the Forgotten Realms setting. Were you a lesser functionary in a temple, raised from childhood to assist the priests in the sacred rites? Or were you a high priest who suddenly experienced a call to serve your god in a different way? Perhaps you were the leader of a small cult outside of any established temple structure, or even an occult group that served a fiendish master that you now deny.",
-  skillProficiencies: [skills.insight, skills.religion],
+  skillProficiencies: ["Insight", "Religion"],
   toolProficiencies: [],
   languages: ["any", "any"],
-  items: [
-    items.adventuringGear.holySymbol,
-    items.adventuringGear.prayerBook,
-    items.adventuringGear.stickOfIncense,
-    items.adventuringGear.vestments,
-    items.adventuringGear.commonClothes,
+  startingItems: [
+    items.adventuringGear.holySymbol(1),
+    items.adventuringGear.prayerBook(1),
+    items.adventuringGear.stickOfIncense(1),
+    items.adventuringGear.vestments(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(15)
   ],
   feature: {
@@ -82,16 +82,16 @@ const charlatan = {
   name: "Charlatan",
   details:
     "You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It's a useful talent, and one that you're perfectly willing to use for your advantage. You know what people want and you deliver, or rather, you promise to deliver. Common sense should steer people away from things that sound too good to be true, but common sense seems to be in short supply when you're around. The bottle of pink colored liquid will surely cure that unseemly rash, this ointment – nothing more than a bit of fat with a sprinkle of silver dust can restore youth and vigor, and there's a bridge in the city that just happens to be for sale. These marvels sound implausible, but you make them sound like the real deal.",
-  skillProficiencies: [skills.deception, skills.sleightOfHand],
+  skillProficiencies: ["deception", "Sleight of Hand"],
   toolProficiencies: [
     toolProficiencies.disguiseKit,
     toolProficiencies.forgeryKit
   ],
   languages: [],
-  items: [
-    items.adventuringGear.fineClothes,
-    items.adventuringGear.disguiseKit,
-    items.adventuringGear.charlatanChoice,
+  startingItems: [
+    items.adventuringGear.fineClothes(1),
+    items.adventuringGear.disguiseKit(1),
+    items.adventuringGear.charlatanChoice(1),
     items.currency.gold(15)
   ],
   feature: {
@@ -161,15 +161,15 @@ const criminal = {
   name: "Criminal",
   details:
     "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.",
-  skillProficiencies: [skills.deception, skills.stealth],
+  skillProficiencies: ["deception", "Stealth"],
   toolProficiencies: [
     [toolProficiencies.gamingSets],
     toolProficiencies.thievesTools
   ],
   languages: [],
-  items: [
-    items.adventuringGear.crowbar,
-    items.adventuringGear.darkCommonClothes,
+  startingItems: [
+    items.adventuringGear.crowbar(1),
+    items.adventuringGear.darkCommonClothes(1),
     items.currency.gold(15)
   ],
   feature: {
@@ -241,16 +241,16 @@ const gladiator = {
   name: "Gladiator",
   details:
     "A gladiator is as much an entertainer as any minstrel or circus performer trained to make the arts of combat into a spectacle the crowd can enjoy. This kind of flashy combat is your entertainer routine, though you might also have some skills as a tumbler or actor.",
-  skillProficiencies: [skills.acrobatics, skills.performance],
+  skillProficiencies: ["acrobatics", "performance"],
   toolProficiencies: [
     toolProficiencies.disguiseKit,
     [toolProficiencies.instruments]
   ],
   languages: [],
-  items: [
+  startingItems: [
     items.weapons.martial,
-    items.adventuringGear.entertainerOption,
-    items.adventuringGear.costume,
+    items.adventuringGear.entertainerOption(1),
+    items.adventuringGear.costume(1),
     items.currency.gold(15)
   ],
   feature: {
@@ -324,16 +324,16 @@ const entertainer = {
   name: "Entertainer",
   details:
     "You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of those who hear you, awakening grief or joy, laughter or anger. Your music raises their spirits or captures their sorrow. Your dance steps captivate, your humor cuts to the quick. Whatever techniques you use, your art is your life.",
-  skillProficiencies: [skills.acrobatics, skills.performance],
+  skillProficiencies: ["acrobatics", "performance"],
   toolProficiencies: [
     toolProficiencies.disguiseKit,
     [toolProficiencies.instruments]
   ],
   languages: [],
-  items: [
-    toolProficiencies,
-    items.adventuringGear.entertainerOption,
-    items.adventuringGear.costume,
+  startingItems: [
+    items.adventuringGear.instruments,
+    items.adventuringGear.entertainerOption(1),
+    items.adventuringGear.costume(1),
     items.currency.gold(15)
   ],
   feature: {
@@ -407,17 +407,17 @@ const folkHero = {
   name: "Folk Hero",
   details:
     "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
-  skillProficiencies: [skills.animalHandling, skills.survival],
+  skillProficiencies: ["animalHandling", "Survival"],
   toolProficiencies: [
     [toolProficiencies.artisansTools],
     toolProficiencies.vehicles("land")
   ],
   languages: [],
-  items: [
-    items.adventuringGear.artisansTools,
-    items.adventuringGear.shovel,
-    items.adventuringGear.ironPot,
-    items.adventuringGear.commonClothes,
+  startingItems: [
+    items.adventuringGear.artisansTools(1),
+    items.adventuringGear.shovel(1),
+    items.adventuringGear.ironPot(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(10)
   ],
   feature: {
@@ -498,13 +498,13 @@ const guildArtisan = {
   name: "Guild Artisan",
   details:
     "You are a member of an artisan's guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship of your guild, until you became a master in your own right.",
-  skillProficiencies: [skills.insight, skills.persuasion],
+  skillProficiencies: ["Insight", "Persuasion"],
   toolProficiencies: [[toolProficiencies.artisansTools]],
   languages: ["any"],
-  items: [
-    items.adventuringGear.artisansTools,
-    items.adventuringGear.letterFromGuild,
-    items.adventuringGear.travelersClothes,
+  startingItems: [
+    items.adventuringGear.artisansTools(1),
+    items.adventuringGear.letterFromGuild(1),
+    items.adventuringGear.travelersClothes(1),
     items.currency.gold(15)
   ],
   feature: [
@@ -588,17 +588,17 @@ const guildMerchant = {
   name: "Guild Merchant",
   details:
     "Instead of an artisans' guild, you might belong to a guild of traders, caravan masters, or shopkeepers. You don't craft items yourself but earn a living by buying and selling the works of others (or the raw materials artisans need to practice their craft). Your guild might be a large merchant consortium (or family) with interests across the region. Perhaps you transported goods from one place to another, by ship, wagon, or caravan, or bought them from traveling traders and sold them in your own little shop. In some ways, the traveling merchant's life lends itself to adventure far more than the life of an artisan. Rather than proficiency with artisan's tools, you might be proficient with navigator's tools or an additional language. And instead of artisan's tools, you can start with a mule and a cart.",
-  skillProficiencies: [skills.insight, skills.persuasion],
+  skillProficiencies: ["Insight", "Persuasion"],
   toolProficiencies: [
     [toolProficiencies.artisansTools],
     toolProficiencies.navigatorsTools
   ],
   languages: ["any"],
-  items: [
-    items.adventuringGear.artisansTools,
+  startingItems: [
+    items.adventuringGear.artisansTools(1),
 
-    items.adventuringGear.letterFromGuild,
-    items.adventuringGear.travelersClothes,
+    items.adventuringGear.letterFromGuild(1),
+    items.adventuringGear.travelersClothes(1),
     items.currency.gold(15)
   ],
   feature: [
@@ -661,14 +661,14 @@ const hermit = {
   name: "Hermit",
   details:
     "You lived in seclusion – either in a sheltered community such as a monastery, or entirely alone – for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.",
-  skillProficiencies: [skills.medicine, skills.religion],
+  skillProficiencies: ["Medicine", "Religion"],
   toolProficiencies: [toolProficiencies.herbalismKit],
   languages: ["any"],
-  items: [
-    items.adventuringGear.hermitScrollCase,
-    items.adventuringGear.winterBlanket,
-    items.adventuringGear.commonClothes,
-    items.adventuringGear.herbalismKit,
+  startingItems: [
+    items.adventuringGear.hermitScrollCase(1),
+    items.adventuringGear.winterBlanket(1),
+    items.adventuringGear.commonClothes(1),
+    items.adventuringGear.herbalismKit(1),
     items.currency.gold(5)
   ],
   feature: {
@@ -747,13 +747,13 @@ const knight = {
   name: "Knight",
   details:
     "A knighthood is among the lowest noble titles in most societies, but it can be a path to higher status. One of your commoner retainers is replaced by a noble who serves as your squire, aiding you in exchange for training on his or her own path to knighthood. Your two remaining retainers might include a groom to care for your horse and a servant who polishes your armor (and even helps you put it on). As an emblem of chivalry and the ideals of courtly love, you might include among your equipment a banner or other token from a noble lord or lady to whom you have given your heart — in a chaste sort of devotion. This person could be your bond.",
-  skillProficiencies: [skills.history, skills.persuasion],
+  skillProficiencies: ["History", "Persuasion"],
   toolProficiencies: [[toolProficiencies.gamingSets]],
   languages: ["any"],
-  items: [
+  startingItems: [
     [items.adventuringGear.banner, items.adventuringGear.tokenOfNoble],
-    items.adventuringGear.fineClothes,
-    items.adventuringGear.signetRing,
+    items.adventuringGear.fineClothes(1),
+    items.adventuringGear.signetRing(1),
     items.adventuringGear.scrollOfPidigree,
     items.currency.gold(25)
   ],
@@ -818,12 +818,12 @@ const noble = {
   name: "Noble",
   details:
     "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them. Work with your DM to come up with an appropriate title and determine how much authority that title carries. A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you. Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them? What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family? Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family? These details help establish your family and your title as features of the world of the campaign.",
-  skillProficiencies: [skills.history, skills.persuasion],
+  skillProficiencies: ["History", "Persuasion"],
   toolProficiencies: [[toolProficiencies.gamingSets]],
   languages: ["any"],
-  items: [
-    items.adventuringGear.fineClothes,
-    items.adventuringGear.signetRing,
+  startingItems: [
+    items.adventuringGear.fineClothes(1),
+    items.adventuringGear.signetRing(1),
     items.adventuringGear.scrollOfPidigree,
     items.currency.gold(25)
   ],
@@ -888,14 +888,14 @@ const outlander = {
   name: "Outlander",
   details:
     "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don't know the specific features of the terrain, you know the ways of the wild.",
-  skillProficiencies: [skills.atheletics, skills.survival],
+  skillProficiencies: ["Atheletics", "Survival"],
   toolProficiencies: [[toolProficiencies.instruments]],
   languages: ["any"],
-  items: [
-    items.adventuringGear.staff,
-    items.adventuringGear.huntingTrap,
-    items.adventuringGear.animalTrophy,
-    items.adventuringGear.travelersClothes,
+  startingItems: [
+    items.adventuringGear.staff(1),
+    items.adventuringGear.huntingTrap(1),
+    items.adventuringGear.animalTrophy(1),
+    items.adventuringGear.travelersClothes(1),
     items.currency.gold(10)
   ],
   feature: {
@@ -967,15 +967,15 @@ const sage = {
   name: "Sage",
   details:
     "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.",
-  skillProficiencies: [skills.arcana, skills.history],
+  skillProficiencies: ["Arcana", "History"],
   toolProficiencies: [],
   languages: ["any", "any"],
-  items: [
-    items.adventuringGear.ink,
-    items.adventuringGear.quill,
-    items.adventuringGear.smallKnife,
-    items.adventuringGear.letterFromDeadColleague,
-    items.adventuringGear.commonClothes,
+  startingItems: [
+    items.adventuringGear.ink(1),
+    items.adventuringGear.quill(1),
+    items.adventuringGear.smallKnife(1),
+    items.adventuringGear.letterFromDeadColleague(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(10)
   ],
   feature: {
@@ -1047,18 +1047,18 @@ const pirate = {
   name: "Pirate",
   details:
     "You spent your youth under the sway of a dread pirate, a ruthless cutthroat who taught you how to survive in a world of sharks and savages. You've indulged in larceny on the high seas and sent more than one deserving soul to a briny grave. Fear and bloodshed are no strangers to you, and you've garnered a somewhat unsavory reputation in many a port town.",
-  skillProficiencies: [skills.atheletics, skills.perception],
+  skillProficiencies: ["Atheletics", "Perception"],
   toolProficiencies: [
     toolProficiencies.navigatorsTools,
     toolProficiencies.vehicles("water")
   ],
   languages: [],
-  items: [
-    [items.adventuringGear.luckyCharm, items.adventuringGear.trinket],
-    items.adventuringGear.balayingPin,
-    items.adventuringGear.silkRope,
-    items.adventuringGear.luckyCharm,
-    items.adventuringGear.commonClothes,
+  startingItems: [
+    [items.adventuringGear.luckyCharm(1), items.adventuringGear.trinket(1)],
+    items.adventuringGear.balayingPin(1),
+    items.adventuringGear.silkRope(1),
+    items.adventuringGear.luckyCharm(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(10)
   ],
   feature: {
@@ -1122,18 +1122,18 @@ const sailor = {
   name: "Sailor",
   details:
     "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new. Discuss the nature of the ship you previously sailed with your DM. Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it missing and presumed lost with all hands? What were your duties on board – boatswain, captain, navigator, cook, or some other position? Who were the captain and first mate? Did you leave your ship on good terms with your fellows, or on the run?",
-  skillProficiencies: [skills.atheletics, skills.perception],
+  skillProficiencies: ["Atheletics", "Perception"],
   toolProficiencies: [
     toolProficiencies.navigatorsTools,
     toolProficiencies.vehicles("water")
   ],
   languages: [],
-  items: [
-    [items.adventuringGear.luckyCharm, items.adventuringGear.trinket],
-    items.adventuringGear.balayingPin,
-    items.adventuringGear.silkRope,
-    items.adventuringGear.luckyCharm,
-    items.adventuringGear.commonClothes,
+  startingItems: [
+    [items.adventuringGear.luckyCharm(1), items.adventuringGear.trinket(1)],
+    items.adventuringGear.balayingPin(1),
+    items.adventuringGear.silkRope(1),
+    items.adventuringGear.luckyCharm(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(10)
   ],
   feature: {
@@ -1197,17 +1197,17 @@ const soldier = {
   name: "Soldier",
   details:
     "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war. When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company.",
-  skillProficiencies: [skills.atheletics, skills.intimidation],
+  skillProficiencies: ["Atheletics", "Intimidation"],
   toolProficiencies: [
     [toolProficiencies.gamingSets],
     toolProficiencies.vehicles("land")
   ],
   languages: [],
-  items: [
+  startingItems: [
     items.adventuringGear.gamingSets,
-    items.adventuringGear.insigniaOfRank,
-    items.adventuringGear.enemyTrophy,
-    items.adventuringGear.commonClothes,
+    items.adventuringGear.insigniaOfRank(1),
+    items.adventuringGear.enemyTrophy(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(10)
   ],
   feature: {
@@ -1277,18 +1277,18 @@ const urchin = {
   name: "Urchin",
   details:
     "You grew up on the streets alone, orphaned, and poor, You had no one to watch over you or to provide for you, so you learned to provide for yourself. You fought fiercely over food and kept a constant watch out for other desperate souls who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. You've survived despite all odds, and did so through cunning, strength, speed, or some combination of each. You begin your adventuring career with enough money to live modestly but securely for at least ten days. How did you come by that money? What allowed you to break free of your desperate circumstances and embark on a better life?",
-  skillProficiencies: [skills.sleightOfHand, skills.stealth],
+  skillProficiencies: ["Sleight of Hand", "Stealth"],
   toolProficiencies: [
     toolProficiencies.disguiseKit,
     toolProficiencies.thievesTools
   ],
   languages: [],
-  items: [
-    items.adventuringGear.smallKnife,
-    items.adventuringGear.mapOfHomeCity,
-    items.adventuringGear.petMouse,
-    items.adventuringGear.tokenOfParents,
-    items.adventuringGear.commonClothes,
+  startingItems: [
+    items.adventuringGear.smallKnife(1),
+    items.adventuringGear.mapOfHomeCity(1),
+    items.adventuringGear.petMouse(1),
+    items.adventuringGear.tokenOfParents(1),
+    items.adventuringGear.commonClothes(1),
     items.currency.gold(10)
   ],
   feature: {

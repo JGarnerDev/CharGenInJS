@@ -6,19 +6,23 @@ const barbarian = {
     "A fierce warrior of primitive background who can enter a battle rage",
   hitDie: 12,
   primaryAbility: "str",
+  spellcastingLevel: 0,
   savingThrowProficiencies: ["str", "con"],
+  skillProficiencies: [
+    2,
+    "Animal Handling",
+    "Atheletics",
+    "Intimidation",
+    "Nature",
+    "Perception",
+    "Survival"
+  ],
   armorProficiencies: ["armor light", "armor medium", "armor shield"],
   weaponProficiencies: ["weapons simple", "weapons martial "],
-  startingEquipment: [
-    [items.weapons.martial.melee.greataxe, items.weapons.martial.melee.any],
-    [
-      (items.weapons.simple.melee.handaxe, items.weapons.simple.melee.handaxe),
-      items.weapons.simple.melee.any
-    ],
-    (items.weapons.simple.melee.javelin,
-    items.weapons.simple.melee.javelin,
-    items.weapons.simple.melee.javelin,
-    items.weapons.simple.melee.javelin),
+  startingItems: [
+    [items.weapons.martial.melee.greataxe(1), items.weapons.martial.melee.any],
+    [items.weapons.simple.melee.handaxe(2), items.weapons.simple.melee.any],
+    items.weapons.simple.melee.javelin(4),
     items.adventuringGear.explorersPack
   ]
 };
@@ -27,7 +31,9 @@ const bard = {
   description: "An inspiring magician whose power echoes the music of creation",
   hitDie: 8,
   primaryAbility: "cha",
+  spellcastingLevel: 1,
   savingThrowProficiencies: ["cha", "dex"],
+  skillProficiencies: [3],
   armorProficiencies: ["armor light"],
   weaponProficiencies: [
     "weapons simple",
@@ -36,19 +42,19 @@ const bard = {
     "weapons martial melee rapier",
     "weapons martial melee shortsword"
   ],
-  startingEquipment: [
+  startingItems: [
     [
-      items.weapons.martial.melee.rapier,
-      items.weapons.martial.melee.longsword,
+      items.weapons.martial.melee.rapier(1),
+      items.weapons.martial.melee.longsword(1),
       items.weapons.simple.melee.any
     ],
     [
       items.adventuringGear.diplomatsPack,
       items.adventuringGear.entertainersPack
     ],
-    [items.adventuringGear.lute, items.adventuringGear.anyInstrument],
-    items.armor.light.leather,
-    items.weapons.simple.melee.dagger
+    [items.adventuringGear.lute(1), items.adventuringGear.anyInstrument],
+    items.armor.light.leather(1),
+    items.weapons.simple.melee.dagger(1)
   ]
 };
 const cleric = {
@@ -57,26 +63,38 @@ const cleric = {
     "A priestly champion who wields divine magic in service of a higher power",
   hitDie: 8,
   primaryAbility: "wis",
+  spellcastingLevel: 1,
   savingThrowProficiencies: ["wis", "cha"],
+  skillProficiencies: [
+    2,
+    "History",
+    "Insight",
+    "Medicine",
+    "Persuasion",
+    "Religion"
+  ],
   armorProficiencies: ["armor light", "armor medium", "armor shield"],
   weaponProficiencies: ["weapons simple"],
-  startingEquipment: [
-    [items.weapons.simple.melee.mace, items.weapons.martial.melee.warhammer],
+  startingItems: [
     [
-      items.armor.medium.scaleMail,
-      items.armor.light.leather,
-      items.armor.heavy.chainMail
+      items.weapons.simple.melee.mace(1),
+      items.weapons.martial.melee.warhammer(1)
+    ],
+    [
+      items.armor.medium.scaleMail(1),
+      items.armor.light.leather(1),
+      items.armor.heavy.chainMail(1)
     ],
     [
       [
-        items.weapons.simple.ranged.lightCrossbow,
-        items.adventuringGear.crossbowBoltCase
+        items.weapons.simple.ranged.lightCrossbow(1),
+        items.adventuringGear.crossbowBoltCase(1)
       ],
       items.weapons.simple.any
     ],
     [items.adventuringGear.priestsPack, items.adventuringGear.adventurersPack],
-    items.armor.shield,
-    items.adventuringGear.holySymbol
+    items.armor.shield(1),
+    items.adventuringGear.holySymbol(1)
   ]
 };
 const druid = {
@@ -85,7 +103,19 @@ const druid = {
     "A priest of the Old Faith, wielding the powers of nature — moonlight and plant growth, fire and lightning — and adopting animal forms",
   hitDie: 8,
   primaryAbility: "wis",
+  spellcastingLevel: 1,
   savingThrowProficiencies: ["int", "wis"],
+  skillProficiencies: [
+    2,
+    "Arcana",
+    "Animal Handling",
+    "Insight",
+    "Medicine",
+    "Nature",
+    "Perception",
+    "Religion",
+    "Survival"
+  ],
   armorProficiencies: ["armor light", "armor medium", "armor shield"],
   weaponProficiencies: [
     "weapons simple melee club",
@@ -99,10 +129,10 @@ const druid = {
     "weapons simple ranged sling",
     "weapons simple melee spear"
   ],
-  startingEquipment: [
-    [items.armor.shield, items.weapons.simple.any],
-    [items.weapons.martial.melee.scimitar, items.weapons.simple.melee.any],
-    items.armor.light.leather,
+  startingItems: [
+    [items.armor.shield(1), items.weapons.simple.any],
+    [items.weapons.martial.melee.scimitar(1), items.weapons.simple.melee.any],
+    items.armor.light.leather(1),
     items.adventuringGear.explorersPack,
     items.adventuringGear.druidicFocus
   ]
@@ -113,7 +143,19 @@ const fighter = {
     "A master of martial combat, skilled with a variety of weapons and armor",
   hitDie: 10,
   primaryAbility: ["str", "dex"], /// OR
+  spellcastingLevel: 0,
   savingThrowProficiencies: ["str", "con"],
+  skillProficiencies: [
+    2,
+    "Acrobatics",
+    "Animal Handling",
+    "Atheletics",
+    "History",
+    "Insight",
+    "Intimidation",
+    "Perception",
+    "Survival"
+  ],
   armorProficiencies: [
     "armor light",
     "armor medium",
@@ -121,25 +163,28 @@ const fighter = {
     "armor shield"
   ],
   weaponProficiencies: ["weapons simple", "weapons martial"],
-  startingEquipment: [
+  startingItems: [
     [
-      items.armor.heavy.chainMail,
+      items.armor.heavy.chainMail(1),
       [
-        items.armor.light.leather,
-        items.weapons.martial.ranged.longbow,
-        items.adventuringGear.quiver
+        items.armor.light.leather(1),
+        items.weapons.martial.ranged.longbow(1),
+        items.adventuringGear.quiver(1)
       ]
     ],
     [
-      [items.weapons.martial.any, items.armor.shield],
+      [items.weapons.martial.any, items.armor.shield(1)],
       [items.weapons.martial.any, items.weapons.martial.any]
     ],
     [
       [
-        items.weapons.simple.ranged.lightCrossbow,
-        items.adventuringGear.crossbowBoltCase
+        items.weapons.simple.ranged.lightCrossbow(1),
+        items.adventuringGear.crossbowBoltCase(1)
       ],
-      [items.weapons.simple.melee.handaxe, items.weapons.simple.melee.handaxe]
+      [
+        items.weapons.simple.melee.handaxe(1),
+        items.weapons.simple.melee.handaxe(1)
+      ]
     ],
     [items.adventuringGear.dungeoneersPack, items.adventuringGear.explorersPack]
   ]
@@ -150,25 +195,26 @@ const monk = {
     "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection",
   hitDie: 8,
   primaryAbility: ["dex", "wis"], //// AND
+  spellcastingLevel: 0,
   savingThrowProficiencies: ["str", "dex"],
+  skillProficiencies: [
+    2,
+    "Acrobatics",
+    "Atheletics",
+    "History",
+    "Insight",
+    "Religion",
+    "Stealth"
+  ],
   armorProficiencies: [],
   weaponProficiencies: ["weapons simple", "weapons martial melee shortsword"],
-  startingEquipment: [
-    [items.weapons.martial.melee.shortsword, items.weapons.simple.any],
+  startingItems: [
+    [items.weapons.martial.melee.shortsword(1), items.weapons.simple.any],
     [
       items.adventuringGear.dungeoneersPack,
       items.adventuringGear.explorersPack
     ],
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart,
-    items.weapons.simple.ranged.dart
+    items.weapons.simple.ranged.dart(10)
   ]
 };
 const paladin = {
@@ -176,7 +222,17 @@ const paladin = {
   description: "A holy warrior bound to a sacred oath",
   hitDie: 10,
   primaryAbility: ["str", "cha"], /// AND
+  spellcastingLevel: 0.5,
   savingThrowProficiencies: ["wis", "cha"],
+  skillProficiencies: [
+    2,
+    "Atheletics",
+    "Insight",
+    "Intimidation",
+    "Medicine",
+    "Persuasion",
+    "Religion"
+  ],
   armorProficiencies: [
     "armor light",
     "armor medium",
@@ -184,24 +240,15 @@ const paladin = {
     "armor shield"
   ],
   weaponProficiencies: ["weapons simple", "weapons martial"],
-  startingEquipment: [
+  startingItems: [
     [
-      [items.weapons.martial.any, items.armor.shield],
+      [items.weapons.martial.any, items.armor.shield(1)],
       [items.weapons.martial.any, items.weapons.martial.any]
     ],
-    [
-      [
-        items.weapons.simple.melee.javelin,
-        items.weapons.simple.melee.javelin,
-        items.weapons.simple.melee.javelin,
-        items.weapons.simple.melee.javelin,
-        items.weapons.simple.melee.javelin
-      ],
-      items.weapons.simple.melee.any
-    ],
+    [[items.weapons.simple.melee.javelin(5)], items.weapons.simple.melee.any],
     [items.adventuringGear.priestsPack, items.adventuringGear.explorersPack],
-    items.armor.heavy.chainMail,
-    items.adventuringGear.holySymbol
+    items.armor.heavy.chainMail(1),
+    items.adventuringGear.holySymbol(1)
   ]
 };
 const ranger = {
@@ -210,24 +257,33 @@ const ranger = {
     "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization",
   hitDie: 10,
   primaryAbility: ["dex", "wis"], /// AND
+  spellcastingLevel: 0.5,
   savingThrowProficiencies: ["str", "dex"],
+  skillProficiencies: [
+    3,
+    "Animal Handling",
+    "Atheletics",
+    "Insight",
+    "Investigation",
+    "Nature",
+    "Perception",
+    "Stealth",
+    "Survival"
+  ],
   armorProficiencies: ["armor light", "armor medium", "armor shield"],
   weaponProficiencies: ["weapons simple", "weapons martial"],
-  startingEquipment: [
-    [items.armor.medium.scaleMail, items.armor.light.leather],
+  startingItems: [
+    [items.armor.medium.scaleMail(1), items.armor.light.leather(1)],
     [
-      [
-        items.weapons.martial.melee.shortsword,
-        items.weapons.martial.melee.shortsword
-      ],
+      [items.weapons.martial.melee.shortsword(2)],
       [items.weapons.simple.melee.any, items.weapons.simple.melee.any]
     ],
     [
       items.adventuringGear.dungeoneersPack,
       items.adventuringGear.explorersPack
     ],
-    items.weapons.martial.ranged.longbow,
-    items.adventuringGear.quiver
+    items.weapons.martial.ranged.longbow(1),
+    items.adventuringGear.quiver(1)
   ]
 };
 const rogue = {
@@ -236,7 +292,22 @@ const rogue = {
     "A scoundrel who uses stealth and trickery to overcome obstacles and enemies",
   hitDie: 8,
   primaryAbility: "dex",
+  spellcastingLevel: 0,
   savingThrowProficiencies: ["dex", "int"],
+  skillProficiencies: [
+    4,
+    "Acrobatics",
+    "Atheletics",
+    "Deception",
+    "Insight",
+    "Intimidation",
+    "Investigation",
+    "Perception",
+    "Performance",
+    "Persuasion",
+    "Sleight of Hand",
+    "Stealth"
+  ],
   armorProficiencies: ["armor light"],
   weaponProficiencies: [
     "weapons simple",
@@ -245,14 +316,18 @@ const rogue = {
     "weapons martial melee rapier",
     "weapons martial melee shortsword"
   ],
-  startingEquipment: [
+  startingItems: [
     [
-      items.weapons.martial.melee.rapier,
-      items.weapons.martial.melee.shortsword
+      items.weapons.martial.melee.rapier(1),
+      items.weapons.martial.melee.shortsword(1)
     ],
     [
-      [items.weapons.simple.ranged.shortbow, items.adventuringGear.quiver],
-      items.weapons.martial.melee.shortsword
+      [
+        items.weapons.simple.ranged.shortbow(1),
+        items.adventuringGear.quiver(1),
+        items.adventuringGear.arrow(20)
+      ],
+      items.weapons.martial.melee.shortsword(1)
     ],
     [
       items.adventuringGear.burglarsPack,
@@ -260,10 +335,9 @@ const rogue = {
       items.adventuringGear.explorersPack
     ],
     ,
-    items.armor.light.leather,
-    items.weapons.simple.melee.dagger,
-    items.weapons.simple.melee.dagger,
-    items.adventuringGear.thievesTools
+    items.armor.light.leather(1),
+    items.weapons.simple.melee.dagger(2),
+    items.adventuringGear.thievesTools(1)
   ]
 };
 const sorcerer = {
@@ -272,7 +346,17 @@ const sorcerer = {
     "A spellcaster who draws on inherent magic from a gift or bloodline",
   hitDie: 6,
   primaryAbility: "cha",
+  spellcastingLevel: 1,
   savingThrowProficiencies: ["con", "cha"],
+  skillProficiencies: [
+    2,
+    "Arcana",
+    "Deception",
+    "Insight",
+    "Intimidation",
+    "Persuasion",
+    "Religion"
+  ],
   armorProficiencies: [],
   weaponProficiencies: [
     "weapons simple melee dagger",
@@ -281,21 +365,24 @@ const sorcerer = {
     "weapons simple melee quarterstaff",
     "weapons simple ranged lightCrossbow"
   ],
-  startingEquipment: [
+  startingItems: [
     [
       [
-        items.weapons.simple.ranged.lightCrossbow,
-        items.adventuringGear.crossbowBoltCase
+        items.weapons.simple.ranged.lightCrossbow(1),
+        items.adventuringGear.crossbowBoltCase(1),
+        items.adventuringGear.bolt(20)
       ],
       items.weapons.simple.any
     ],
-    [items.adventuringGear.componentPouch, items.adventuringGear.acaneFocus],
+    [
+      items.adventuringGear.componentPouch(1),
+      items.adventuringGear.acaneFocus
+    ],
     [
       items.adventuringGear.dungeoneersPack,
       items.adventuringGear.explorersPack
     ],
-    items.weapons.simple.melee.dagger,
-    items.weapons.simple.melee.dagger
+    items.weapons.simple.melee.dagger(2)
   ]
 };
 const warlock = {
@@ -304,23 +391,37 @@ const warlock = {
     "A wielder of magic that is derived from a bargain with an extraplanar entity",
   hitDie: 8,
   primaryAbility: "cha",
+  spellcastingLevel: 0.3,
   savingThrowProficiencies: ["wis", "cha"],
+  skillProficiencies: [
+    2,
+    "Arcana",
+    "Deception",
+    "History",
+    "Intimidation",
+    "Investigation",
+    "Nature",
+    "Religion"
+  ],
   armorProficiencies: ["armor light"],
   weaponProficiencies: ["weapons simple"],
-  startingEquipment: [
+  startingItems: [
     [
       [
-        items.weapons.simple.ranged.lightCrossbow,
-        items.adventuringGear.crossbowBoltCase
+        items.weapons.simple.ranged.lightCrossbow(1),
+        items.adventuringGear.crossbowBoltCase(1),
+        items.adventuringGear.bolt(20)
       ],
       items.weapons.simple.any
     ],
-    [items.adventuringGear.componentPouch, items.adventuringGear.acaneFocus],
+    [
+      items.adventuringGear.componentPouch(1),
+      items.adventuringGear.acaneFocus
+    ],
     [items.adventuringGear.scholarsPack, items.adventuringGear.dungeoneersPack],
-    items.armor.light.leather,
+    items.armor.light.leather(1),
     items.weapons.simple.any,
-    items.weapons.simple.melee.dagger,
-    items.weapons.simple.melee.dagger
+    items.weapons.simple.melee.dagger(2)
   ]
 };
 const wizard = {
@@ -329,7 +430,17 @@ const wizard = {
     "A scholarly magic-user capable of manipulating the structures of reality",
   hitDie: 6,
   primaryAbility: "int",
+  spellcastingLevel: 1,
   savingThrowProficiencies: ["int", "wis"],
+  skillProficiencies: [
+    2,
+    "Arcana",
+    "History",
+    "Insight",
+    "Investigation",
+    "Medicine",
+    "Religion"
+  ],
   armorProficiencies: [],
   weaponProficiencies: [
     "weapons simple melee dagger",
@@ -338,14 +449,17 @@ const wizard = {
     "weapons simple melee quarterstaff",
     "weapons simple ranged lightCrossbow"
   ],
-  startingEquipment: [
+  startingItems: [
     [
-      items.weapons.simple.melee.quarterstaff,
-      items.weapons.simple.melee.dagger
+      items.weapons.simple.melee.quarterstaff(1),
+      items.weapons.simple.melee.dagger(1)
     ],
-    [items.adventuringGear.componentPouch, items.adventuringGear.acaneFocus],
+    [
+      items.adventuringGear.componentPouch(1),
+      items.adventuringGear.acaneFocus
+    ],
     [items.adventuringGear.scholarsPack, items.adventuringGear.explorersPack],
-    items.adventuringGear.spellbook
+    items.adventuringGear.spellbook(1)
   ]
 };
 
