@@ -2136,7 +2136,7 @@ function climbersBootTip(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "climbersBootTip",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2149,7 +2149,7 @@ function climbersGlove(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "climbersGlove",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2162,7 +2162,7 @@ function climbersHarness(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "climbersHarness",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2175,7 +2175,7 @@ function cosmetics(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "cosmetics",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2188,7 +2188,7 @@ function hairDye(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "hairDye",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2201,7 +2201,7 @@ function disguiseProps(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "disguiseProps",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2214,7 +2214,7 @@ function bandages(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "bandages",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2227,7 +2227,7 @@ function salve(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "salve",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2240,7 +2240,7 @@ function splint(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "splint",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2253,7 +2253,7 @@ function clippers(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "clippers",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2266,7 +2266,7 @@ function cookingPan(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "cookingPan",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2279,7 +2279,7 @@ function cup(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "cup",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2292,7 +2292,7 @@ function cutlery(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "cutlery",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2305,7 +2305,7 @@ function bowl(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "bowl",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2318,7 +2318,7 @@ function chemicals(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "chemicals",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2331,7 +2331,7 @@ function poisonerItems(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "poisonerItems",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2344,7 +2344,7 @@ function waxSeal(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "waxSeal",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2357,7 +2357,7 @@ function goldLeaf(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "goldLeaf",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2370,7 +2370,7 @@ function silverLeaf(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "silverLeaf",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2383,7 +2383,7 @@ function brush(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "brush",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2396,7 +2396,7 @@ function paint(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "paint",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2409,7 +2409,7 @@ function pallet(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "pallet",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2422,7 +2422,7 @@ function canvas(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "canvas",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2435,7 +2435,7 @@ function beakerHolder(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "beakerHolder",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2448,7 +2448,7 @@ function stirringRod(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "stirringRod",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2461,7 +2461,7 @@ function mortarAndPestle(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "mortarAndPestle",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2474,7 +2474,7 @@ function alchemichalIngredients(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "alchemichalIngredients",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2487,7 +2487,7 @@ function largeGlassJug(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "largeGlassJug",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2500,7 +2500,7 @@ function hops(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "hops",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2513,7 +2513,7 @@ function siphon(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "siphon",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2526,7 +2526,7 @@ function tubing(x) {
     q = x;
   }
   return {
-    name: "",
+    name: "tubing",
     quantity: q,
     desc: "",
     weight: 0 * q,
@@ -2950,7 +2950,7 @@ function weaversTools(x) {
       thread(),
       weavingFork(),
       shedStick(),
-      comb(),
+      weaversComb(),
       smallKnife(),
       dowel(),
       loom()
