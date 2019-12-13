@@ -6,6 +6,7 @@ let languages = require("./resources/languages/languagesMain");
 let names = require("./resources/names/namesMain");
 let races = require("./resources/races/racesMain");
 let skills = require("./resources/skills/skillsMain");
+let subraces = require("./resources/races/phbSubRaces");
 let spells = require("./resources/spells/spellsMain");
 let statsRoll = require("./resources/stats/statsRoll");
 
@@ -18,6 +19,7 @@ let resources = {
   names,
   races,
   skills,
+  subraces,
   spells,
   statsRoll
 };

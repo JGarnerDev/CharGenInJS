@@ -20,10 +20,16 @@ const barbarian = {
   armorProficiencies: ["armor light", "armor medium", "armor shield"],
   weaponProficiencies: ["weapons simple", "weapons martial "],
   startingItems: [
-    [items.weapons.martial.melee.greataxe(1), items.weapons.martial.melee.any],
-    [items.weapons.simple.melee.handaxe(2), items.weapons.simple.melee.any],
-    items.weapons.simple.melee.javelin(4),
-    items.adventuringGear.explorersPack
+    [
+      items.weapons.martial.melee.weapon.greataxe(),
+      items.weapons.martial.melee.any(1)
+    ],
+    [
+      items.weapons.simple.melee.weapon.handaxe(2),
+      items.weapons.simple.melee.any(1)
+    ],
+    items.weapons.simple.melee.weapon.javelin(4),
+    items.adventuringGear.explorersPack()
   ]
 };
 const bard = {
@@ -44,17 +50,20 @@ const bard = {
   ],
   startingItems: [
     [
-      items.weapons.martial.melee.rapier(1),
-      items.weapons.martial.melee.longsword(1),
-      items.weapons.simple.melee.any
+      items.weapons.martial.melee.weapon.rapier(),
+      items.weapons.martial.melee.weapon.longsword(),
+      items.weapons.simple.melee.any(1)
     ],
     [
-      items.adventuringGear.diplomatsPack,
-      items.adventuringGear.entertainersPack
+      items.adventuringGear.diplomatsPack(),
+      items.adventuringGear.entertainersPack()
     ],
-    [items.adventuringGear.lute(1), items.adventuringGear.anyInstrument],
-    items.armor.light.leather(1),
-    items.weapons.simple.melee.dagger(1)
+    [
+      items.adventuringGear.lute(),
+      items.adventuringGear.musicalInstrument.any(1)
+    ],
+    items.armor.light.leather(),
+    items.weapons.simple.melee.weapon.dagger()
   ]
 };
 const cleric = {
@@ -77,24 +86,27 @@ const cleric = {
   weaponProficiencies: ["weapons simple"],
   startingItems: [
     [
-      items.weapons.simple.melee.mace(1),
-      items.weapons.martial.melee.warhammer(1)
+      items.weapons.simple.melee.weapon.mace(),
+      items.weapons.martial.melee.weapon.warhammer()
     ],
     [
-      items.armor.medium.scaleMail(1),
-      items.armor.light.leather(1),
-      items.armor.heavy.chainMail(1)
+      items.armor.medium.scaleMail(),
+      items.armor.light.leather(),
+      items.armor.heavy.chainMail()
     ],
     [
       [
-        items.weapons.simple.ranged.lightCrossbow(1),
-        items.adventuringGear.crossbowBoltCase(1)
+        items.weapons.simple.ranged.weapon.lightCrossbow(),
+        items.adventuringGear.crossbowBoltCase()
       ],
-      items.weapons.simple.any
+      items.weapons.simple.any(1)
     ],
-    [items.adventuringGear.priestsPack, items.adventuringGear.adventurersPack],
-    items.armor.shield(1),
-    items.adventuringGear.holySymbol(1)
+    [
+      items.adventuringGear.priestsPack(),
+      items.adventuringGear.explorersPack()
+    ],
+    items.armor.shield(),
+    items.adventuringGear.holySymbol()
   ]
 };
 const druid = {
@@ -130,11 +142,14 @@ const druid = {
     "weapons simple melee spear"
   ],
   startingItems: [
-    [items.armor.shield(1), items.weapons.simple.any],
-    [items.weapons.martial.melee.scimitar(1), items.weapons.simple.melee.any],
-    items.armor.light.leather(1),
-    items.adventuringGear.explorersPack,
-    items.adventuringGear.druidicFocus
+    [items.armor.shield(), items.weapons.simple.any(1)],
+    [
+      items.weapons.martial.melee.weapon.scimitar(),
+      items.weapons.simple.melee.any(1)
+    ],
+    items.armor.light.leather(),
+    items.adventuringGear.explorersPack(),
+    items.adventuringGear.druidicFocus()
   ]
 };
 const fighter = {
@@ -165,28 +180,29 @@ const fighter = {
   weaponProficiencies: ["weapons simple", "weapons martial"],
   startingItems: [
     [
-      items.armor.heavy.chainMail(1),
+      items.armor.heavy.chainMail(),
       [
-        items.armor.light.leather(1),
-        items.weapons.martial.ranged.longbow(1),
-        items.adventuringGear.quiver(1)
+        items.armor.light.leather(),
+        items.weapons.martial.ranged.weapon.longbow(),
+        items.adventuringGear.quiver()
       ]
     ],
     [
-      [items.weapons.martial.any, items.armor.shield(1)],
-      [items.weapons.martial.any, items.weapons.martial.any]
+      [items.weapons.martial.any(1), items.armor.shield()],
+      items.weapons.martial.any(2)
     ],
     [
       [
-        items.weapons.simple.ranged.lightCrossbow(1),
-        items.adventuringGear.crossbowBoltCase(1)
+        items.weapons.simple.ranged.weapon.lightCrossbow(),
+        items.adventuringGear.crossbowBoltCase()
       ],
-      [
-        items.weapons.simple.melee.handaxe(1),
-        items.weapons.simple.melee.handaxe(1)
-      ]
+
+      items.weapons.simple.melee.weapon.handaxe(2)
     ],
-    [items.adventuringGear.dungeoneersPack, items.adventuringGear.explorersPack]
+    [
+      items.adventuringGear.dungeoneersPack(),
+      items.adventuringGear.explorersPack()
+    ]
   ]
 };
 const monk = {
@@ -209,12 +225,15 @@ const monk = {
   armorProficiencies: [],
   weaponProficiencies: ["weapons simple", "weapons martial melee shortsword"],
   startingItems: [
-    [items.weapons.martial.melee.shortsword(1), items.weapons.simple.any],
     [
-      items.adventuringGear.dungeoneersPack,
-      items.adventuringGear.explorersPack
+      items.weapons.martial.melee.weapon.shortsword(),
+      items.weapons.simple.any(1)
     ],
-    items.weapons.simple.ranged.dart(10)
+    [
+      items.adventuringGear.dungeoneersPack(),
+      items.adventuringGear.explorersPack()
+    ],
+    items.weapons.simple.ranged.weapon.dart(10)
   ]
 };
 const paladin = {
@@ -242,13 +261,19 @@ const paladin = {
   weaponProficiencies: ["weapons simple", "weapons martial"],
   startingItems: [
     [
-      [items.weapons.martial.any, items.armor.shield(1)],
-      [items.weapons.martial.any, items.weapons.martial.any]
+      [items.weapons.martial.any(), items.armor.shield()],
+      items.weapons.martial.any(2)
     ],
-    [[items.weapons.simple.melee.javelin(5)], items.weapons.simple.melee.any],
-    [items.adventuringGear.priestsPack, items.adventuringGear.explorersPack],
-    items.armor.heavy.chainMail(1),
-    items.adventuringGear.holySymbol(1)
+    [
+      items.weapons.simple.melee.weapon.javelin(5),
+      items.weapons.simple.melee.any(1)
+    ],
+    [
+      items.adventuringGear.priestsPack(),
+      items.adventuringGear.explorersPack()
+    ],
+    items.armor.heavy.chainMail(),
+    items.adventuringGear.holySymbol()
   ]
 };
 const ranger = {
@@ -273,17 +298,17 @@ const ranger = {
   armorProficiencies: ["armor light", "armor medium", "armor shield"],
   weaponProficiencies: ["weapons simple", "weapons martial"],
   startingItems: [
-    [items.armor.medium.scaleMail(1), items.armor.light.leather(1)],
+    [items.armor.medium.scaleMail(), items.armor.light.leather()],
     [
-      [items.weapons.martial.melee.shortsword(2)],
-      [items.weapons.simple.melee.any, items.weapons.simple.melee.any]
+      items.weapons.martial.melee.weapon.shortsword(2),
+      items.weapons.simple.melee.any(2)
     ],
     [
-      items.adventuringGear.dungeoneersPack,
-      items.adventuringGear.explorersPack
+      items.adventuringGear.dungeoneersPack(),
+      items.adventuringGear.explorersPack()
     ],
-    items.weapons.martial.ranged.longbow(1),
-    items.adventuringGear.quiver(1)
+    items.weapons.martial.ranged.weapon.longbow(),
+    items.adventuringGear.quiver()
   ]
 };
 const rogue = {
@@ -318,26 +343,25 @@ const rogue = {
   ],
   startingItems: [
     [
-      items.weapons.martial.melee.rapier(1),
-      items.weapons.martial.melee.shortsword(1)
+      items.weapons.martial.melee.weapon.rapier(),
+      items.weapons.martial.melee.weapon.shortsword()
     ],
     [
       [
-        items.weapons.simple.ranged.shortbow(1),
-        items.adventuringGear.quiver(1),
+        items.weapons.simple.ranged.weapon.shortbow(),
+        items.adventuringGear.quiver(),
         items.adventuringGear.arrow(20)
       ],
-      items.weapons.martial.melee.shortsword(1)
+      items.weapons.martial.melee.weapon.shortsword()
     ],
     [
-      items.adventuringGear.burglarsPack,
-      items.adventuringGear.dungeoneersPack,
-      items.adventuringGear.explorersPack
+      items.adventuringGear.burglarsPack(),
+      items.adventuringGear.dungeoneersPack(),
+      items.adventuringGear.explorersPack()
     ],
-    ,
-    items.armor.light.leather(1),
-    items.weapons.simple.melee.dagger(2),
-    items.adventuringGear.thievesTools(1)
+    items.armor.light.leather(),
+    items.weapons.simple.melee.weapon.dagger(2),
+    items.adventuringGear.thievesTools()
   ]
 };
 const sorcerer = {
@@ -368,21 +392,21 @@ const sorcerer = {
   startingItems: [
     [
       [
-        items.weapons.simple.ranged.lightCrossbow(1),
-        items.adventuringGear.crossbowBoltCase(1),
+        items.weapons.simple.ranged.weapon.lightCrossbow(),
+        items.adventuringGear.crossbowBoltCase(),
         items.adventuringGear.bolt(20)
       ],
-      items.weapons.simple.any
+      items.weapons.simple.any(1)
     ],
     [
-      items.adventuringGear.componentPouch(1),
-      items.adventuringGear.acaneFocus
+      items.adventuringGear.componentPouch(),
+      items.adventuringGear.arcaneFocus()
     ],
     [
-      items.adventuringGear.dungeoneersPack,
-      items.adventuringGear.explorersPack
+      items.adventuringGear.dungeoneersPack(),
+      items.adventuringGear.explorersPack()
     ],
-    items.weapons.simple.melee.dagger(2)
+    items.weapons.simple.melee.weapon.dagger(2)
   ]
 };
 const warlock = {
@@ -408,20 +432,23 @@ const warlock = {
   startingItems: [
     [
       [
-        items.weapons.simple.ranged.lightCrossbow(1),
-        items.adventuringGear.crossbowBoltCase(1),
+        items.weapons.simple.ranged.weapon.lightCrossbow(),
+        items.adventuringGear.crossbowBoltCase(),
         items.adventuringGear.bolt(20)
       ],
-      items.weapons.simple.any
+      items.weapons.simple.any(1)
     ],
     [
-      items.adventuringGear.componentPouch(1),
-      items.adventuringGear.acaneFocus
+      items.adventuringGear.componentPouch(),
+      items.adventuringGear.arcaneFocus()
     ],
-    [items.adventuringGear.scholarsPack, items.adventuringGear.dungeoneersPack],
-    items.armor.light.leather(1),
-    items.weapons.simple.any,
-    items.weapons.simple.melee.dagger(2)
+    [
+      items.adventuringGear.scholarsPack(),
+      items.adventuringGear.dungeoneersPack()
+    ],
+    items.armor.light.leather(),
+    items.weapons.simple.any(1),
+    items.weapons.simple.melee.weapon.dagger(2)
   ]
 };
 const wizard = {
@@ -451,15 +478,18 @@ const wizard = {
   ],
   startingItems: [
     [
-      items.weapons.simple.melee.quarterstaff(1),
-      items.weapons.simple.melee.dagger(1)
+      items.weapons.simple.melee.weapon.quarterstaff(),
+      items.weapons.simple.melee.weapon.dagger()
     ],
     [
-      items.adventuringGear.componentPouch(1),
-      items.adventuringGear.acaneFocus
+      items.adventuringGear.componentPouch(),
+      items.adventuringGear.arcaneFocus()
     ],
-    [items.adventuringGear.scholarsPack, items.adventuringGear.explorersPack],
-    items.adventuringGear.spellbook(1)
+    [
+      items.adventuringGear.scholarsPack(),
+      items.adventuringGear.explorersPack()
+    ],
+    items.adventuringGear.spellbook()
   ]
 };
 

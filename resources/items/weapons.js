@@ -1,5 +1,42 @@
 const weaponProperties = require("./weaponProperties");
 
+function randomFromArr(x) {
+  return x[Math.floor(Math.random() * x.length)];
+}
+
+////////////////////////////////////////
+
+function anySimple(x) {
+    let options = []
+  options.push(anySimpleMelee())
+  options.push(anySimpleRanged())
+  return randomFromArr(options)
+}
+function anySimpleMelee(x) {
+  let weapon = randomFromArr(simpleMelee)
+  return weapon(x)
+}
+function anySimpleRanged(x) {
+  let weapon = randomFromArr(simpleRanged)
+  return weapon(x);
+}
+function anyMartial(x) {
+    let options = []
+    options.push(anyMartialMelee())
+    options.push(anyMartialRanged())
+    return randomFromArr(options)
+}
+function anyMartialMelee(x) {
+  let weapon = randomFromArr(martialMelee)
+  return weapon(x);
+}
+function anyMartialRanged(x) {
+  let weapon = randomFromArr(martialRanged)
+  return weapon(x);
+}
+
+////////////////////////////////////////
+
 function club(x) {
   let q = 1;
   if (x > q) {
@@ -529,7 +566,7 @@ function handCrossbow(x) {
     q = x;
   }
   return {
-    name: "Hand Crossbow quantity: q,",
+    name: "Hand Crossbow",
     type: "Martial ranged",
     value: 75 * q,
     damage: [1, 6, "bludgeoning"],
@@ -547,7 +584,7 @@ function heavyCrossbow(x) {
     q = x;
   }
   return {
-    name: "Heavy Crossbow quantity: q,",
+    name: "Heavy Crossbow",
     type: "Martial ranged",
     value: 50 * q,
     damage: [1, 10, "bludgeoning"],
@@ -596,56 +633,105 @@ function net(x) {
   };
 }
 
+const simpleMelee = [
+  club,
+  dagger,
+  greatClub,
+  handaxe,
+  javelin,
+  lightHammer,
+  mace,
+  quarterstaff,
+  sickle,
+  spear
+];
+
+const simpleRanged = [lightCrossbow, dart, shortbow, sling];
+
+
+const martialMelee = [
+  battleaxe,
+  flail,
+  glaive,
+  greataxe,
+  greatsword,
+  halberd,
+  lance,
+  longsword,
+  maul,
+  morningstar,
+  pike,
+  rapier,
+  scimitar,
+  shortsword,
+  trident,
+  warPick,
+  warhammer,
+  whip
+];
+
+const martialRanged = [blowgun, handCrossbow, heavyCrossbow, longbow, net];
+
 const weapons = {
   simple: {
+    any: anySimple,
     melee: {
-       club,
-       dagger,
-       greatClub,
-       handaxe,
-       javelin,
-       lightHammer,
-       mace,
-       quarterstaff,
-       sickle,
-       spear
+      any: anySimpleMelee,
+      weapon: {
+        club,
+        dagger,
+        greatClub,
+        handaxe,
+        javelin,
+        lightHammer,
+        mace,
+        quarterstaff,
+        sickle,
+        spear
+      }
     },
     ranged: {
-       lightCrossbow,
-       dart,
-       shortbow,
-       sling
+      any: anySimpleRanged,
+      weapon: {
+        lightCrossbow,
+        dart,
+        shortbow,
+        sling
+      }
     }
   },
   martial: {
+    any: anyMartial,
     melee: {
-       battleaxe,
-       flail,
-       glaive,
-       greataxe,
-       greatsword,
-       halberd,
-       lance,
-       longsword,
-       maul,
-       morningstar,
-       pike,
-       rapier,
-       scimitar,
-       shortsword,
-       trident,
-       warPick,
-       warhammer,
-       whip
+      any: anyMartialMelee,
+      weapon: {
+        battleaxe,
+        flail,
+        glaive,
+        greataxe,
+        greatsword,
+        halberd,
+        lance,
+        longsword,
+        maul,
+        morningstar,
+        pike,
+        rapier,
+        scimitar,
+        shortsword,
+        trident,
+        warPick,
+        warhammer,
+        whip
+      }
     },
     ranged: {
-       blowgun,
-       handCrossbow,
-       heavyCrossbow,
-       longbow,
-       net
+      any: anyMartialRanged,
+      weapon: { blowgun, handCrossbow, heavyCrossbow, longbow, net }
     }
   }
 };
 
 module.exports = weapons;
+
+

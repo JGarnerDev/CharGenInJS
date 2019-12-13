@@ -6,6 +6,7 @@ const feats = resources.feats;
 const items = resources.items;
 const names = resources.names;
 const races = resources.races;
+const subraces = resources.subraces;
 const skills = resources.skills;
 const spells = resources.spells;
 const statsRoll = resources.statsRoll;
@@ -71,7 +72,7 @@ let character = {
     int: null,
     cha: null
   },
-  equipment: { weapons: [], armor: [], magicItems: [] },
+  equipment: { weapons: [], armor: [], clothes: [], magicItems: [] },
   skills: {
     atheletics: [0, false],
     acrobatics: [0, false],
@@ -161,13 +162,6 @@ function makeCharacter() {
       item = randomFromArr(item);
     }
     character.items.push(item);
-  }
-  for (let i = 0; i < character.items.length; i++) {
-    let item = character.items[i];
-    if (Array.isArray(item)) {
-      item = randomFromArr(item);
-      character.items[i] = item
-    }
   }
 
   // 3. Assign abilities --------------------------------------------------------------
@@ -331,9 +325,28 @@ function makeCharacter() {
     if (Array.isArray(item)) {
       item = randomFromArr(item);
     }
+    if (Array.isArray(item)) {
+      item = randomFromArr(item);
+    }
+
     character.items.push(item);
   }
 
+  for (let i = 0; i < character.items.length; i++) {
+    if (Array.isArray(character.items[i]) === true) {
+      character.items[i].forEach(item => {
+        character.items.push(item);
+      });
+      character.items = character.items.filter(item => {
+        return item !== character.items[i];
+      });
+    }
+  }
+  for (let i = 0; i < character.items.length; i++) {
+    if (character.items[i].contains !== undefined) {
+      character.items[i].contains.forEach(item => character.items.push(item));
+    }
+  }
 
   // 6. Assign gender, name -----------------------------------------------------------
 
@@ -352,6 +365,7 @@ function makeCharacter() {
   character.name = pickRandomName(character.race.name, character.gender);
 
   // 7. Assign skills -----------------------------------------------------------------
+
   //          Assign skill proficiencies
 
   for (let i = 0; i < character.proficiencies.skills.length; i++) {
@@ -386,25 +400,36 @@ function makeCharacter() {
     );
   }
 
-  // 10. Assign items -----------------------------------------------------------------
-
-  //      From class
-
- 
   return character;
 }
 
 makeCharacter();
-character.items.forEach(item => {console.log(item)})
 
 // 9. Assign feats ------------------------------------------------------------------
 
-//      From background
+//      At first level, only a variant human can have a feat
+
+if (character.subrace === resources.subraces.humanVariant) {
+  character.feats.push(randomFromObj(feats));
+}
 
 // 11. Assign equipment -------------------------------------------------------------
 
+for (let i = 0; i < character.items.length; i++) {
+  if (character.items[i].damage !== undefined) {
+    character.equipment.weapons.push(character.items[i]);
+  }
+  if (character.items[i].ac !== undefined) {
+    character.equipment.armor.push(character.items[i]);
+  }
+  if (character.items[i].wearable !== undefined) {
+    character.equipment.clothes.push(character.items[i]);
+  }
+}
+
 //-----------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------
+
 // 12. Assess -----------------------------------------------------------------------
 
 //      Behold the abilities of our character!
@@ -528,3 +553,18 @@ character.items.forEach(item => {console.log(item)})
 // 12. Export -----------------------------------------------------------------------
 
 module.exports = makeCharacter;
+
+console.log(character.class);
+
+character.equipment.weapons.forEach(item => {
+  console.log("weapon: " + item.name);
+});
+character.equipment.armor.forEach(item => {
+  console.log("armor: " + item.name);
+});
+character.equipment.clothes.forEach(item => {
+  console.log("clothing: " + item.name);
+});
+character.items.forEach(item => {
+  console.log(item);
+});

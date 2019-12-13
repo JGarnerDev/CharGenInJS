@@ -1,6 +1,4 @@
-let skills = require("../skills/skillsMain");
 let toolProficiencies = require("../skills/toolProficiencies");
-let languages = require("../languages/languagesMain");
 let items = require("../items/itemsMain");
 
 const acolyte = {
@@ -11,11 +9,11 @@ const acolyte = {
   toolProficiencies: [],
   languages: ["any", "any"],
   startingItems: [
-    items.adventuringGear.holySymbol(1),
-    items.adventuringGear.prayerBook(1),
-    items.adventuringGear.stickOfIncense(1),
-    items.adventuringGear.vestments(1),
-    items.adventuringGear.commonClothes(1),
+    items.adventuringGear.holySymbol(),
+    items.adventuringGear.prayerBook(),
+    items.adventuringGear.stickOfIncense(),
+    items.adventuringGear.vestments(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(15)
   ],
   feature: {
@@ -89,9 +87,14 @@ const charlatan = {
   ],
   languages: [],
   startingItems: [
-    items.adventuringGear.fineClothes(1),
-    items.adventuringGear.disguiseKit(1),
-    items.adventuringGear.charlatanChoice(1),
+    items.adventuringGear.fineClothes(),
+    items.adventuringGear.disguiseKit(),
+    [
+      items.adventuringGear.coloredLiquidInABottle(10),
+      items.adventuringGear.weightedDice(),
+      items.adventuringGear.setOfMarkedCards(),
+      items.adventuringGear.fakeSignetRing()
+    ],
     items.currency.gold(15)
   ],
   feature: {
@@ -163,13 +166,13 @@ const criminal = {
     "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.",
   skillProficiencies: ["deception", "Stealth"],
   toolProficiencies: [
-    [toolProficiencies.gamingSets],
+    toolProficiencies.gamingSets,
     toolProficiencies.thievesTools
   ],
   languages: [],
   startingItems: [
-    items.adventuringGear.crowbar(1),
-    items.adventuringGear.darkCommonClothes(1),
+    items.adventuringGear.crowbar(),
+    items.adventuringGear.darkCommonClothes(),
     items.currency.gold(15)
   ],
   feature: {
@@ -244,13 +247,17 @@ const gladiator = {
   skillProficiencies: ["acrobatics", "performance"],
   toolProficiencies: [
     toolProficiencies.disguiseKit,
-    [toolProficiencies.instruments]
+    toolProficiencies.instruments
   ],
   languages: [],
   startingItems: [
-    items.weapons.martial,
-    items.adventuringGear.entertainerOption(1),
-    items.adventuringGear.costume(1),
+    items.weapons.martial.any(),
+    [
+      items.adventuringGear.letterFromAdmirer(),
+      items.adventuringGear.lockOfHair(),
+      items.adventuringGear.trinket()
+    ],
+    items.adventuringGear.costume(),
     items.currency.gold(15)
   ],
   feature: {
@@ -327,13 +334,17 @@ const entertainer = {
   skillProficiencies: ["acrobatics", "performance"],
   toolProficiencies: [
     toolProficiencies.disguiseKit,
-    [toolProficiencies.instruments]
+    toolProficiencies.instruments
   ],
   languages: [],
   startingItems: [
-    items.adventuringGear.instruments,
-    items.adventuringGear.entertainerOption(1),
-    items.adventuringGear.costume(1),
+    items.adventuringGear.musicalInstrument.any(),
+    [
+      items.adventuringGear.letterFromAdmirer(),
+      items.adventuringGear.lockOfHair(),
+      items.adventuringGear.trinket()
+    ],
+    items.adventuringGear.costume(),
     items.currency.gold(15)
   ],
   feature: {
@@ -409,15 +420,15 @@ const folkHero = {
     "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
   skillProficiencies: ["animalHandling", "Survival"],
   toolProficiencies: [
-    [toolProficiencies.artisansTools],
+    toolProficiencies.artisansTools,
     toolProficiencies.vehicles("land")
   ],
   languages: [],
   startingItems: [
-    items.adventuringGear.artisansTools(1),
-    items.adventuringGear.shovel(1),
-    items.adventuringGear.ironPot(1),
-    items.adventuringGear.commonClothes(1),
+    items.adventuringGear.artisansTools,
+    items.adventuringGear.shovel(),
+    items.adventuringGear.ironPot(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(10)
   ],
   feature: {
@@ -502,9 +513,9 @@ const guildArtisan = {
   toolProficiencies: [[toolProficiencies.artisansTools]],
   languages: ["any"],
   startingItems: [
-    items.adventuringGear.artisansTools(1),
-    items.adventuringGear.letterFromGuild(1),
-    items.adventuringGear.travelersClothes(1),
+    items.adventuringGear.artisansTools,
+    items.adventuringGear.letterFromGuild(),
+    items.adventuringGear.travelersClothes(),
     items.currency.gold(15)
   ],
   feature: [
@@ -590,15 +601,14 @@ const guildMerchant = {
     "Instead of an artisans' guild, you might belong to a guild of traders, caravan masters, or shopkeepers. You don't craft items yourself but earn a living by buying and selling the works of others (or the raw materials artisans need to practice their craft). Your guild might be a large merchant consortium (or family) with interests across the region. Perhaps you transported goods from one place to another, by ship, wagon, or caravan, or bought them from traveling traders and sold them in your own little shop. In some ways, the traveling merchant's life lends itself to adventure far more than the life of an artisan. Rather than proficiency with artisan's tools, you might be proficient with navigator's tools or an additional language. And instead of artisan's tools, you can start with a mule and a cart.",
   skillProficiencies: ["Insight", "Persuasion"],
   toolProficiencies: [
-    [toolProficiencies.artisansTools],
+    toolProficiencies.artisansTools,
     toolProficiencies.navigatorsTools
   ],
   languages: ["any"],
   startingItems: [
-    items.adventuringGear.artisansTools(1),
-
-    items.adventuringGear.letterFromGuild(1),
-    items.adventuringGear.travelersClothes(1),
+    items.adventuringGear.artisansTools,
+    items.adventuringGear.letterFromGuild(),
+    items.adventuringGear.travelersClothes(),
     items.currency.gold(15)
   ],
   feature: [
@@ -665,10 +675,10 @@ const hermit = {
   toolProficiencies: [toolProficiencies.herbalismKit],
   languages: ["any"],
   startingItems: [
-    items.adventuringGear.hermitScrollCase(1),
-    items.adventuringGear.winterBlanket(1),
-    items.adventuringGear.commonClothes(1),
-    items.adventuringGear.herbalismKit(1),
+    items.adventuringGear.hermitScrollCase(),
+    items.adventuringGear.winterBlanket(),
+    items.adventuringGear.commonClothes(),
+    items.adventuringGear.herbalismKit(),
     items.currency.gold(5)
   ],
   feature: {
@@ -748,13 +758,13 @@ const knight = {
   details:
     "A knighthood is among the lowest noble titles in most societies, but it can be a path to higher status. One of your commoner retainers is replaced by a noble who serves as your squire, aiding you in exchange for training on his or her own path to knighthood. Your two remaining retainers might include a groom to care for your horse and a servant who polishes your armor (and even helps you put it on). As an emblem of chivalry and the ideals of courtly love, you might include among your equipment a banner or other token from a noble lord or lady to whom you have given your heart — in a chaste sort of devotion. This person could be your bond.",
   skillProficiencies: ["History", "Persuasion"],
-  toolProficiencies: [[toolProficiencies.gamingSets]],
+  toolProficiencies: [toolProficiencies.gamingSets],
   languages: ["any"],
   startingItems: [
-    [items.adventuringGear.banner, items.adventuringGear.tokenOfNoble],
-    items.adventuringGear.fineClothes(1),
-    items.adventuringGear.signetRing(1),
-    items.adventuringGear.scrollOfPidigree,
+    [items.adventuringGear.banner(), items.adventuringGear.tokenOfNoble()],
+    items.adventuringGear.fineClothes(),
+    items.adventuringGear.signetRing(),
+    items.adventuringGear.scrollOfPedigree(),
     items.currency.gold(25)
   ],
   feature: {
@@ -819,12 +829,12 @@ const noble = {
   details:
     "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them. Work with your DM to come up with an appropriate title and determine how much authority that title carries. A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you. Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them? What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family? Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family? These details help establish your family and your title as features of the world of the campaign.",
   skillProficiencies: ["History", "Persuasion"],
-  toolProficiencies: [[toolProficiencies.gamingSets]],
+  toolProficiencies: [toolProficiencies.gamingSets],
   languages: ["any"],
   startingItems: [
-    items.adventuringGear.fineClothes(1),
-    items.adventuringGear.signetRing(1),
-    items.adventuringGear.scrollOfPidigree,
+    items.adventuringGear.fineClothes(),
+    items.adventuringGear.signetRing(),
+    items.adventuringGear.scrollOfPedigree(),
     items.currency.gold(25)
   ],
   feature: {
@@ -889,13 +899,13 @@ const outlander = {
   details:
     "You grew up in the wilds, far from civilization and the comforts of town and technology. You've witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don't know the specific features of the terrain, you know the ways of the wild.",
   skillProficiencies: ["Atheletics", "Survival"],
-  toolProficiencies: [[toolProficiencies.instruments]],
+  toolProficiencies: [toolProficiencies.instruments],
   languages: ["any"],
   startingItems: [
-    items.adventuringGear.staff(1),
-    items.adventuringGear.huntingTrap(1),
-    items.adventuringGear.animalTrophy(1),
-    items.adventuringGear.travelersClothes(1),
+    items.adventuringGear.staff(),
+    items.adventuringGear.huntingTrap(),
+    items.adventuringGear.animalTrophy(),
+    items.adventuringGear.travelersClothes(),
     items.currency.gold(10)
   ],
   feature: {
@@ -971,11 +981,11 @@ const sage = {
   toolProficiencies: [],
   languages: ["any", "any"],
   startingItems: [
-    items.adventuringGear.ink(1),
-    items.adventuringGear.quill(1),
-    items.adventuringGear.smallKnife(1),
-    items.adventuringGear.letterFromDeadColleague(1),
-    items.adventuringGear.commonClothes(1),
+    items.adventuringGear.ink(),
+    items.adventuringGear.quill(),
+    items.adventuringGear.smallKnife(),
+    items.adventuringGear.letterFromDeadColleague(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(10)
   ],
   feature: {
@@ -1054,11 +1064,11 @@ const pirate = {
   ],
   languages: [],
   startingItems: [
-    [items.adventuringGear.luckyCharm(1), items.adventuringGear.trinket(1)],
-    items.adventuringGear.balayingPin(1),
-    items.adventuringGear.silkRope(1),
-    items.adventuringGear.luckyCharm(1),
-    items.adventuringGear.commonClothes(1),
+    [items.adventuringGear.luckyCharm(), items.adventuringGear.trinket()],
+    items.adventuringGear.balayingPin(),
+    items.adventuringGear.silkRope(),
+    items.adventuringGear.luckyCharm(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(10)
   ],
   feature: {
@@ -1129,11 +1139,11 @@ const sailor = {
   ],
   languages: [],
   startingItems: [
-    [items.adventuringGear.luckyCharm(1), items.adventuringGear.trinket(1)],
-    items.adventuringGear.balayingPin(1),
-    items.adventuringGear.silkRope(1),
-    items.adventuringGear.luckyCharm(1),
-    items.adventuringGear.commonClothes(1),
+    [items.adventuringGear.luckyCharm(), items.adventuringGear.trinket()],
+    items.adventuringGear.balayingPin(),
+    items.adventuringGear.silkRope(),
+    items.adventuringGear.luckyCharm(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(10)
   ],
   feature: {
@@ -1199,15 +1209,15 @@ const soldier = {
     "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war. When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company.",
   skillProficiencies: ["Atheletics", "Intimidation"],
   toolProficiencies: [
-    [toolProficiencies.gamingSets],
+    toolProficiencies.gamingSets,
     toolProficiencies.vehicles("land")
   ],
   languages: [],
   startingItems: [
     items.adventuringGear.gamingSets,
-    items.adventuringGear.insigniaOfRank(1),
-    items.adventuringGear.enemyTrophy(1),
-    items.adventuringGear.commonClothes(1),
+    items.adventuringGear.insigniaOfRank(),
+    items.adventuringGear.enemyTrophy(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(10)
   ],
   feature: {
@@ -1284,11 +1294,11 @@ const urchin = {
   ],
   languages: [],
   startingItems: [
-    items.adventuringGear.smallKnife(1),
-    items.adventuringGear.mapOfHomeCity(1),
-    items.adventuringGear.petMouse(1),
-    items.adventuringGear.tokenOfParents(1),
-    items.adventuringGear.commonClothes(1),
+    items.adventuringGear.smallKnife(),
+    items.adventuringGear.mapOfHomeCity(),
+    items.adventuringGear.petMouse(),
+    items.adventuringGear.tokenOfParents(),
+    items.adventuringGear.commonClothes(),
     items.currency.gold(10)
   ],
   feature: {
