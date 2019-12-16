@@ -1,5 +1,5 @@
 const acidSplash = {
-  name: "acidSplash",
+  name: "Acid Splash",
   desc:
     "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.",
   concentration: "No",
@@ -17,7 +17,7 @@ const acidSplash = {
 };
 
 const bladeWard = {
-  name: "bladeWard",
+  name: "Blade Ward",
   desc:
     "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.",
   concentration: "No",
@@ -35,7 +35,7 @@ const bladeWard = {
 };
 
 const chillTouch = {
-  name: "chillTouch",
+  name: "Chill Touch",
   desc:
     "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave. On a hit, the target takes 1d8 necrotic damage, and it can’t regain hit points until the start of your next turn. Until then, the hand clings to the target. If you hit an undead target, it also has disadvantage on attack rolls against you until the end of your next turn.",
   concentration: "No",
@@ -54,7 +54,7 @@ const chillTouch = {
 };
 
 const dancingLights = {
-  name: "dancingLights",
+  name: "Dancing Lights",
   desc:
     "You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius. As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell’s range.",
   concentration: "Yes",
@@ -72,7 +72,7 @@ const dancingLights = {
 };
 
 const druidCraft = {
-  name: "druidCraft",
+  name: "Druid Craft",
   desc: [
     "Whispering to the spirits of nature, you create one of the following effects within range:",
     "You create a tiny, harmless sensory effect that predicts what the weather will be at your location for the next 24 hours. The effect might manifest as a golden orb  for clear skies, a cloud for rain, falling snowflakes for snow, and so on. This effect persists for 1 round.",
@@ -95,7 +95,7 @@ const druidCraft = {
 };
 
 const eldritchBlast = {
-  name: "eldritchBlast",
+  name: "Eldritch Blast",
   desc:
     "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.",
   concentration: "No",
@@ -114,7 +114,7 @@ const eldritchBlast = {
 };
 
 const fireBolt = {
-  name: "fireBolt",
+  name: "Fire Bolt",
   desc:
     "You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried.",
   concentration: "No",
@@ -133,7 +133,7 @@ const fireBolt = {
 };
 
 const friends = {
-  name: "friends",
+  name: "Friends",
   desc:
     "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn’t hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM’s discretion), depending on the nature of your interaction with it.",
   concentration: "Yes",
@@ -156,7 +156,7 @@ const friends = {
 };
 
 const guidance = {
-  name: "guidance",
+  name: "Guidance",
   desc:
     "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.",
   concentration: "Yes",
@@ -174,7 +174,7 @@ const guidance = {
 };
 
 const light = {
-  name: "light",
+  name: "Light",
   desc:
     "You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action. If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.",
   concentration: "No",
@@ -192,7 +192,7 @@ const light = {
 };
 
 const mageHand = {
-  name: "mageHand",
+  name: "Mage Hand",
   desc:
     "A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again. You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it. The hand can’t attack, activate magical items, or carry more than 10 pounds.",
   concentration: "No",
@@ -210,7 +210,7 @@ const mageHand = {
 };
 
 const mending = {
-  name: "mending",
+  name: "Mending",
   desc:
     "This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage. This spell can physically repair a magic item or construct, but the spell can’t restore magic to such an object.",
   concentration: "No",
@@ -222,13 +222,13 @@ const mending = {
   range: 5,
   area: "N/A",
   targets: "1 object",
-  components: [0,"V", "S", "M", "two lodestones"],
+  components: [0,"V", "S", "M", "Two lodestones"],
   ritual: "No",
   atHigherLevels: undefined
 };
 
 const message = {
-  name: "message",
+  name: "Message",
   desc:
     "You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear. You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn’t have to follow a straight line and can travel freely around corners or through openings.",
   concentration: "No",
@@ -246,7 +246,7 @@ const message = {
 };
 
 const minorIllusion = {
-  name: "minorIllusion",
+  name: "Minor Illusion",
   desc:
     "You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again. If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else’s voice, a lion’s roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends. If you create an image of an objectsuch as a chair, muddy footprints, or a small chestit must be no larger than a 5-foot cube. The image can’t create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it. If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature.",
   concentration: "No",
@@ -264,7 +264,7 @@ const minorIllusion = {
 };
 
 const poisonSpray = {
-  name: "poisonSpray",
+  name: "Poison Spray",
   desc:
     "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage.",
   concentration: "No",
@@ -282,7 +282,7 @@ const poisonSpray = {
 };
 
 const prestidigitation = {
-  name: "prestidigitation",
+  name: "Prestidigitation",
   desc: [
     "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range:",
     "You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.",
@@ -308,7 +308,7 @@ const prestidigitation = {
 };
 
 const produceFlame = {
-  name: "produceFlame",
+  name: "Produce Flame",
   desc:
     "A flickering flame appears in your hand. The flame remains there for the duration and harms neither you nor your equipment. The flame sheds bright light in a 10-foot radius and dim light for an additional 10 feet. The spell ends if you dismiss it as an action or if you cast it again. You can also attack with the flame, although doing so ends the spell. When you cast this spell, or as an action on a later turn, you can hurl the flame at a creature within 30 feet of you. Make a ranged spell attack. On a hit, the target takes 1d8 fire damage.",
   concentration: "No",
@@ -326,7 +326,7 @@ const produceFlame = {
 };
 
 const rayOfFrost = {
-  name: "rayOfFrost",
+  name: "Ray Of Frost",
   desc:
     "A frigid beam of blue-white light streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, it takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn.",
   concentration: "No",
@@ -345,7 +345,7 @@ const rayOfFrost = {
 };
 
 const resistance = {
-  name: "resistance",
+  name: "Resistance",
   desc:
     "You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after the saving throw. The spell then ends.",
   concentration: "Yes",
@@ -363,7 +363,7 @@ const resistance = {
 };
 
 const sacredFlame = {
-  name: "sacredFlame",
+  name: "Sacred Flame",
   desc:
     "Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.",
   concentration: "No",
@@ -382,7 +382,7 @@ const sacredFlame = {
 };
 
 const shillelagh = {
-  name: "shillelagh",
+  name: "Shillelagh",
   desc:
     "The wood of a club or quarterstaff you are holding is imbued with nature’s power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon’s damage die becomes a d8. The weapon also becomes magical, if it isn’t already. The spell ends if you cast it again or if you let go of the weapon.",
   concentration: "No",
@@ -398,14 +398,14 @@ const shillelagh = {
     "V",
     "S",
     "M",
-    "mistletoe, a shamrock leaf, and a club or quarterstaff"
+    "Mistletoe, a shamrock leaf, and a club or quarterstaff"
   ],
   ritual: "No",
   atHigherLevels: undefined
 };
 
 const shockingGrasp = {
-  name: "shockingGrasp",
+  name: "Shocking Grasp",
   desc:
     "Lightning springs from your hand to deliver a shock to a creature you try to touch. Make a melee spell attack against the target. You have advantage on the attack roll if the target is wearing armor made of metal. On a hit, the target takes 1d8 lightning damage, and it can’t take reactions until the start of its next turn.",
   concentration: "No",
@@ -424,7 +424,7 @@ const shockingGrasp = {
 };
 
 const spareTheDying = {
-  name: "spareTheDying",
+  name: "Spare the Dying",
   desc:
     "You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.",
   concentration: "No",
@@ -442,7 +442,7 @@ const spareTheDying = {
 };
 
 const thaumaturgy = {
-  name: "thaumaturgy",
+  name: "Thaumaturgy",
   desc: [
     "You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:",
     " Your voice booms up to three times as loud as normal for 1 minute.",
@@ -468,7 +468,7 @@ const thaumaturgy = {
 };
 
 const thornWhip = {
-  name: "thornWhip",
+  name: "Thorn Whip",
   desc:
     "You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. If the attack hits, the creature takes 1d6 piercing damage, and if the creature is Large or smaller, you pull the creature up to 10 feet closer to you.",
   concentration: "No",
@@ -480,14 +480,14 @@ const thornWhip = {
   range: 30,
   area: "N/A",
   targets: "N/A",
-  components: [0,"V", "S", "M", "the stem of a plant with thorns"],
+  components: [0,"V", "S", "M", "The stem of a plant with thorns"],
   ritual: "No",
   atHigherLevels:
     "This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
 };
 
 const trueStrike = {
-  name: "trueStrike",
+  name: "True Strike",
   desc:
     "You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target’s defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn’t ended.",
   concentration: "Yes",
@@ -505,7 +505,7 @@ const trueStrike = {
 };
 
 const viciousMockery = {
-  name: "viciousMockery",
+  name: "Vicious Mockery",
   desc:
     "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (thought it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.",
   concentration: "No",
@@ -523,7 +523,7 @@ const viciousMockery = {
     "This spell’s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4)."
 };
 
-const bard = [
+const Bard = [
   bladeWard,
   dancingLights,
   friends,
@@ -537,7 +537,7 @@ const bard = [
   viciousMockery
 ];
 
-const cleric = [
+const Cleric = [
   guidance,
   light,
   mending,
@@ -547,7 +547,7 @@ const cleric = [
   thaumaturgy
 ];
 
-const druid = [
+const Druid = [
   druidCraft,
   guidance,
   mending,
@@ -557,11 +557,11 @@ const druid = [
   thornWhip
 ];
 
-const paladin = [];
+const Paladin = [];
 
-const ranger = [];
+const Ranger = [];
 
-const sorcerer = [
+const Sorcerer = [
   acidSplash,
   bladeWard,
   chillTouch,
@@ -579,7 +579,7 @@ const sorcerer = [
   trueStrike
 ];
 
-const warlock = [
+const Warlock = [
   bladeWard,
   chillTouch,
   eldritchBlast,
@@ -590,7 +590,7 @@ const warlock = [
   trueStrike
 ];
 
-const wizard = [
+const Wizard = [
   acidSplash,
   bladeWard,
   chillTouch,
@@ -610,14 +610,14 @@ const wizard = [
 ];
 
 const cantrips = {
-   bard,
-   cleric,
-   druid,
-   paladin,
-   ranger,
-   sorcerer,
-   warlock,
-   wizard
+   Bard,
+   Cleric,
+   Druid,
+   Paladin,
+   Ranger,
+   Sorcerer,
+   Warlock,
+   Wizard
 };
 
 module.exports = cantrips

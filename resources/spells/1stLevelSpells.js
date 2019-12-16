@@ -1197,7 +1197,7 @@ const wrathfulSmite = {
   atHigherLevels: ""
 };
 
-const bard = [
+const Bard = [
   animalFriendship,
   bane,
   charmPerson,
@@ -1220,7 +1220,7 @@ const bard = [
   thunderwave,
   unseenServant
 ];
-const cleric = [
+const Cleric = [
   bane,
   bless,
   command,
@@ -1238,7 +1238,7 @@ const cleric = [
   shieldOfFaith
 ];
 
-const druid = [
+const Druid = [
   animalFriendship,
   charmPerson,
   createOrDestroyWater,
@@ -1256,7 +1256,7 @@ const druid = [
   speakWithAnimals,
   thunderwave
 ];
-const paladin = [
+const Paladin = [
   bless,
   command,
   compelledDuel,
@@ -1273,7 +1273,7 @@ const paladin = [
   thunderousSmite,
   wrathfulSmite
 ];
-const ranger = [
+const Ranger = [
   alarm,
   animalFriendship,
   cureWounds,
@@ -1288,7 +1288,7 @@ const ranger = [
   longstrider,
   speakWithAnimals
 ];
-const sorcerer = [
+const Sorcerer = [
   burningHands,
   charmPerson,
   chromaticOrb,
@@ -1310,7 +1310,7 @@ const sorcerer = [
   thunderwave,
   witchBolt
 ];
-const warlock = [
+const Warlock = [
   armorOfAgathys,
   armsOfHadar,
   charmPerson,
@@ -1323,7 +1323,7 @@ const warlock = [
   unseenServant,
   witchBolt
 ];
-const wizard = [
+const Wizard = [
   alarm,
   burningHands,
   charmPerson,
@@ -1357,14 +1357,14 @@ const wizard = [
 ];
 
 const levelOneSpells = {
-  bard,
-  cleric,
-  druid,
-  paladin,
-  ranger,
-  sorcerer,
-  warlock,
-  wizard
+  Bard,
+  Cleric,
+  Druid,
+  Paladin,
+  Ranger,
+  Sorcerer,
+  Warlock,
+  Wizard
 };
 
 module.exports = levelOneSpells;

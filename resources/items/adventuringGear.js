@@ -215,7 +215,6 @@ function candle(x) {
     value: 1 * q
   };
 }
-
 function chain(x) {
   let q = 1;
   if (x > q) {
@@ -230,7 +229,6 @@ function chalk(x) {
   }
   return { name: "Chalk", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
-
 function commonClothes(x) {
   let q = 1;
   if (x > q) {
@@ -418,7 +416,6 @@ function flute(x) {
   }
   return { name: "Flute", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
-
 function grapplingHook(x) {
   let q = 1;
   if (x > q) {
@@ -602,7 +599,6 @@ function ironSpikes(x) {
     value: 1 * q
   };
 }
-
 function jug(x) {
   let q = 1;
   if (x > q) {
@@ -781,7 +777,6 @@ function mapOfHomeCity(x) {
     value: 1 * q
   };
 }
-
 function merchantsScale(x) {
   let q = 1;
   if (x > q) {
@@ -808,7 +803,6 @@ function minersPick(x) {
     value: 1 * q
   };
 }
-
 function oil(x) {
   let q = 1;
   if (x > q) {
@@ -922,7 +916,6 @@ function portableRam(x) {
     value: 1 * q
   };
 }
-
 function pouch(x) {
   let q = 1;
   if (x > q) {
@@ -1129,7 +1122,6 @@ function smallKnife(x) {
     value: 1 * q
   };
 }
-
 function soap(x) {
   let q = 1;
   if (x > q) {
@@ -1203,7 +1195,6 @@ function tent(x) {
   }
   return { name: "Tent", quantity: q, desc: "", weight: 0 * q, value: 1 * q };
 }
-
 function tinderbox(x) {
   let q = 1;
   if (x > q) {
@@ -1217,7 +1208,6 @@ function tinderbox(x) {
     value: 1 * q
   };
 }
-
 function tokenOfParents(x) {
   let q = 1;
   if (x > q) {
@@ -1319,7 +1309,6 @@ function waterskin(x) {
     value: 1 * q
   };
 }
-
 function whetstone(x) {
   let q = 1;
   if (x > q) {
@@ -1346,7 +1335,6 @@ function winterBlanket(x) {
     value: 1 * q
   };
 }
-
 function woodenStaff(x) {
   let q = 1;
   if (x > q) {
@@ -1504,7 +1492,6 @@ function druidicFocus(x) {
     value: 1 * q
   };
 }
-
 function nail(x) {
   let q = 1;
   if (x > q) {
@@ -2129,7 +2116,6 @@ function glassBeaker(x) {
     value: 1 * q
   };
 }
-
 function climbersBootTip(x) {
   let q = 1;
   if (x > q) {
@@ -2707,6 +2693,7 @@ function scholarsPack(x) {
     value: 1 * q
   };
 }
+
 // Tools
 
 function carpentersTools(x) {

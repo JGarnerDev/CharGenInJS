@@ -3,10 +3,8 @@ const backgrounds = resources.backgrounds;
 const classes = resources.classes;
 const languages = resources.languages;
 const feats = resources.feats;
-const items = resources.items;
 const names = resources.names;
 const races = resources.races;
-const subraces = resources.subraces;
 const skills = resources.skills;
 const spells = resources.spells;
 const statsRoll = resources.statsRoll;
@@ -130,7 +128,6 @@ function makeCharacter() {
 
   character.levels.push(character.class.name);
 
-  //      Assign options
   //      Assign benefits
 
   character.proficiencyBonus = Math.floor(character.levels.length / 5) + 2;
@@ -222,7 +219,6 @@ function makeCharacter() {
 
   character.subrace = randomFromArr(character.race.subraces);
 
-  //      Assign options
   //      Assign benefits
 
   character.languages = character.race.details.languages.map(x => {
@@ -373,9 +369,42 @@ function makeCharacter() {
     character.skills[skillIdentity][1] = true;
   }
 
+  // 9. Assign feats ------------------------------------------------------------------
+
+  //      At first level, only a variant human can have a feat
+
+  if (character.subrace === resources.subraces.humanVariant) {
+    character.feats.push(randomFromObj(feats));
+  }
+
+  // 11. Assign equipment -------------------------------------------------------------
+
+  for (let i = 0; i < character.items.length; i++) {
+    if (character.items[i].damage !== undefined) {
+      character.equipment.weapons.push(character.items[i]);
+    }
+    if (character.items[i].ac !== undefined) {
+      character.equipment.armor.push(character.items[i]);
+    }
+    if (character.items[i].wearable !== undefined) {
+      character.equipment.clothes.push(character.items[i]);
+    }
+  }
+
   // 8. Assign spells (if caster) -----------------------------------------------------
 
   character.spellcastingLevel = Math.floor(character.class.spellcastingLevel);
+
+  if (character.class.name === "Bard" || "Druid" || "Warlock") {
+    character.spells[0][0] = 2;
+  } else if (character.class.name === "Cleric" || "Wizard") {
+    character.spells[0][0] = 3;
+  } else if (character.class.name === "Sorcerer") {
+    character.spells[0][0] = 4;
+  } else {
+    character.spells[0][0] = 0;
+  }
+
   if (character.spellcastingLevel > 0) {
     character.spells[1][0] = Math.min(4, 2 + (character.spellcastingLevel - 1));
     character.spells[2][0] = Math.min(3, 2 + (character.spellcastingLevel - 3));
@@ -398,6 +427,30 @@ function makeCharacter() {
       1,
       1 + (character.spellcastingLevel - 17)
     );
+
+    if (character.spells[0][0] > 0) {
+      let cantripOptions = spells.cantrips[character.class.name];
+      for (let i = 0; i < character.spells[0][0]; i++) {
+        let cantripSelection = randomFromArr(cantripOptions);
+        character.spells[0][1].push(cantripSelection);
+        cantripOptions.filter(spell => {
+          return spell !== cantripSelection;
+        });
+      }
+    }
+    if (character.spells[1][0] > 0) {
+      console.log(character.class.name);
+      let levelOneSpellOptions = spells.levelOneSpells[character.class.name];
+      for (let i = 0; i < character.spells[1][0]; i++) {
+        let levelOneSpellSelection = randomFromArr(levelOneSpellOptions);
+        character.spells[1][1].push(levelOneSpellSelection);
+        levelOneSpellOptions.filter(spell => {
+          return spell !== levelOneSpellSelection;
+        });
+        console.log(levelOneSpellSelection);
+        
+      }
+    }
   }
 
   return character;
@@ -405,166 +458,4 @@ function makeCharacter() {
 
 makeCharacter();
 
-// 9. Assign feats ------------------------------------------------------------------
-
-//      At first level, only a variant human can have a feat
-
-if (character.subrace === resources.subraces.humanVariant) {
-  character.feats.push(randomFromObj(feats));
-}
-
-// 11. Assign equipment -------------------------------------------------------------
-
-for (let i = 0; i < character.items.length; i++) {
-  if (character.items[i].damage !== undefined) {
-    character.equipment.weapons.push(character.items[i]);
-  }
-  if (character.items[i].ac !== undefined) {
-    character.equipment.armor.push(character.items[i]);
-  }
-  if (character.items[i].wearable !== undefined) {
-    character.equipment.clothes.push(character.items[i]);
-  }
-}
-
-//-----------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------
-
-// 12. Assess -----------------------------------------------------------------------
-
-//      Behold the abilities of our character!
-
-// console.log("name === " + character.name);
-// console.log(" ");
-// console.log("gender === " + character.gender);
-// console.log(" ");
-// console.log("race === " + character.race.name);
-// console.log(" ");
-// console.log("subrace === " + character.subrace.name);
-// console.log(" ");
-// console.log("class === " + character.class.name);
-// console.log(" ");
-// console.log("background === " + character.background.name);
-// console.log(" ");
-// console.log("Personality");
-// console.log(" ");
-// for (let i = 0; i < character.personality.length; i++) {
-//   console.log("- " + character.personality[i]);
-//   console.log(" ");
-// }
-// console.log(" ");
-
-// console.log("Languages");
-// for (let i = 0; i < character.languages.length; i++) {
-//   console.log("- " + character.languages[i].name);
-// }
-
-// console.log(" ");
-// console.log("character level === " + character.levels.length);
-// console.log(" ");
-// console.log("proficiencyBonus === " + character.proficiencyBonus);
-// console.log(" ");
-// console.log("primaryAbility === " + character.proficiencies.primaryAbility);
-// console.log(" ");
-// console.log(
-//   "savingThrows === " + character.proficiencies.savingThrows.join(" ")
-// );
-// console.log(" ");
-// console.log("Weapon proficiencies");
-// for (let i = 0; i < character.proficiencies.weapons.length; i++) {
-//   console.log("- " + character.proficiencies.weapons[i]);
-// }
-// console.log(" ");
-// console.log("armor proficiencies === ");
-// for (let i = 0; i < character.proficiencies.armor.length; i++) {
-//   console.log("- " + character.proficiencies.armor[i]);
-// }
-// console.log(" ");
-// console.log(
-//   "skill proficiencies === " + character.proficiencies.skills.join(", ")
-// );
-// console.log(" ");
-// console.log(
-//   "tool proficiencies === " + character.proficiencies.tools.join(", ")
-// );
-// console.log(" ");
-// console.log("HP === " + character.HP); // Currently just for level 1
-// console.log(" ");
-// console.log("hitDie === " + character.hitDie);
-// console.log(" ");
-// console.log("levels === " + character.levels.length);
-// console.log(" ");
-// console.log("abilities === " + Object.keys(character.abilities).join(" "));
-// console.log("abilities === " + Object.values(character.abilities).join("  "));
-// console.log(" ");
-// console.log("equipment === " + character.equipment)
-// console.log(" ")
-// console.log("weapons === " + character.weapons)
-// console.log(" ")
-// console.log("armor === " + character.armor)
-// console.log(" ")
-// console.log("magicItems === " + character.magicItems)
-// console.log(" ")
-// console.log("skills === " + character.skills)
-// console.log(" ")
-// console.log("atheletics === " + character.atheletics)
-// console.log(" ")
-// console.log("acrobatics === " + character.acrobatics)
-// console.log(" ")
-// console.log("sleightOfHand === " + character.sleightOfHand)
-// console.log(" ")
-// console.log("stealth === " + character.stealth)
-// console.log(" ")
-// console.log("arcana === " + character.arcana)
-// console.log(" ")
-// console.log("history === " + character.history)
-// console.log(" ")
-// console.log("investigation === " + character.investigation)
-// console.log(" ")
-// console.log("nature === " + character.nature)
-// console.log(" ")
-// console.log("religion === " + character.religion)
-// console.log(" ")
-// console.log("animalHandling === " + character.animalHandling)
-// console.log(" ")
-// console.log("insight === " + character.insight)
-// console.log(" ")
-// console.log("medicine === " + character.medicine)
-// console.log(" ")
-// console.log("perception === " + character.perception)
-// console.log(" ")
-// console.log("survival === " + character.survival)
-// console.log(" ")
-// console.log("deception === " + character.deception)
-// console.log(" ")
-// console.log("intimidation === " + character.intimidation)
-// console.log(" ")
-// console.log("performance === " + character.performance)
-// console.log(" ")
-// console.log("persuasion === " + character.persuasion)
-// console.log(" ")
-// console.log("feats === " + character.feats)
-// console.log(" ")
-// console.log("spells === " + character.spells)
-// console.log(" ")
-// console.log("items === " + character.items)
-// console.log(" ")
-
-// 12. Export -----------------------------------------------------------------------
-
 module.exports = makeCharacter;
-
-console.log(character.class);
-
-character.equipment.weapons.forEach(item => {
-  console.log("weapon: " + item.name);
-});
-character.equipment.armor.forEach(item => {
-  console.log("armor: " + item.name);
-});
-character.equipment.clothes.forEach(item => {
-  console.log("clothing: " + item.name);
-});
-character.items.forEach(item => {
-  console.log(item);
-});
